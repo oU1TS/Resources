@@ -1,4 +1,4 @@
-# Online-UITS-Resources
+# oUITS-Resources
 
 LINK --> https://drive.google.com/drive/folders/1cX1yk7AAqSKcC_cFdE5z2kb36wg34k8m?usp=drive_link <--
 
