@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dual YouTube Videos - Dark Theme</title>
+    <title>Dual YouTube Videos - Curved Borders</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -14,6 +14,8 @@
             --text-color: #e0e0e0;
             --subtitle-color: #b0b0b0;
             --accent-color: #3e8de3;
+            --regular-radius: 16px;
+            --shorts-radius: 24px;
         }
         
         body {
@@ -62,35 +64,43 @@
         
         .regular-video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 800px;
+            width: 800px;
+            max-width: 100%;
             margin: 0 auto;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-            border: 1px solid rgba(255,255,255,0.1);
+            line-height: 0; /* Removes any potential whitespace */
+            overflow: hidden;
+            border-radius: var(--regular-radius);
         }
         
         .shorts-video-container {
             position: relative;
-            padding-bottom: 177.77%; /* 9:16 aspect ratio for Shorts */
-            height: 0;
-            overflow: hidden;
-            max-width: 320px; /* Fixed width for better appearance */
+            width: 320px;
+            max-width: 100%;
             margin: 0 auto;
-            border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-            border: 1px solid rgba(255,255,255,0.1);
+            line-height: 0; /* Removes any potential whitespace */
+            overflow: hidden;
+            border-radius: var(--shorts-radius);
         }
         
-        .video-container iframe {
+        .aspect-ratio-box {
+            position: relative;
+        }
+        
+        .regular-aspect-ratio {
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+        }
+        
+        .shorts-aspect-ratio {
+            padding-top: 177.77%; /* 9:16 aspect ratio for Shorts */
+        }
+        
+        iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            border-radius: inherit;
+            background-color: transparent;
         }
         
         .footer {
@@ -110,7 +120,7 @@
             filter: blur(80px);
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 840px) {
             h1 {
                 font-size: 2rem;
             }
@@ -127,39 +137,39 @@
     <div class="glow"></div>
     <div class="container">
         <h1>Tutorial Collection</h1>
-        <p class="subtitle">(more ot be added later))</p>
+        <p class="subtitle">(more ot be added later)</p>
         
         <section class="video-section">
             <p>Google Drive can search for PDF by information inside of it - Tutorial</p>
             <div class="regular-video-container">
-                <iframe 
-                    width="800" 
-                    height="450" 
-                    src="https://www.youtube.com/embed/Zwx5VvdWbh8?si=oKj9CioROByiuwZu" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
+                <div class="aspect-ratio-box regular-aspect-ratio">
+                    <iframe 
+                        src="https://www.youtube.com/embed/Zwx5VvdWbh8?si=oKj9CioROByiuwZu" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
         </section>
         
         <section class="video-section">
             <p>Offline Browser | Making w3schools and geeksforgeeks accessible offline</p>
             <div class="shorts-video-container">
-                <iframe 
-                    width="320" 
-                    height="570" 
-                    src="https://www.youtube.com/embed/sFuVutbYbws?si=pwTIwD4gPRP2oge4" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
+                <div class="aspect-ratio-box shorts-aspect-ratio">
+                    <iframe 
+                        src="https://www.youtube.com/embed/sFuVutbYbws?si=pwTIwD4gPRP2oge4" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
         </section>
         
-        <p class="footer">Videos optimized for their respective formats</p>
+        <p class="footer" align=center><a style="color: #8c8c8c;"" href=index.html>Go back to index</a></>
     </div>
 </body>
 </html>
