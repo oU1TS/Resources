@@ -11,7 +11,7 @@
 
  .iframe-container {
    width: 95%;
-   height: 600px;
+   height: 400px;
    /* Increased height to accommodate zoomed content */
    overflow: hidden;
    position: relative;
