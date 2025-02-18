@@ -9,7 +9,7 @@
     table,
     th,
     td {
-      border: 2px solid rgba(31, 106, 168, 0.452);
+      border: 2px solid rgba(31, 106, 168, 0);
       border-radius: 10px;
     }
 
@@ -43,6 +43,12 @@
     .topnav {
       overflow: hidden;
       background-color: #333;
+      
+    }
+    .topnav3 {
+      overflow: hidden;
+      background-color: #333;
+      border-radius: 15px 15px 0 0;
     }
 
     .topnav a {
@@ -63,28 +69,35 @@
       background-color: #197dd5;
       color: white;
       text-align: center;
+      
     }
 
      /*blog windows css*/
 
+     /* Hide scrollbars for Chrome, Safari and Opera */
+     
+
      .top-bar2 {
-            position: relative;
+      position: relative;
             width: 100%;
             height: 250px;
             background-color: #f0f0f0;
             border-bottom: 1px solid #ddd;
             overflow: hidden;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            
         }
 
         .iframe-container2 {
             width: 100%;
             height: 100%;
             overflow: hidden;
-            position: static;
+            position: relative;
         }
 
         .iframe-container2 iframe {
-            width: 100%;
+            width: 103%;
             height: 200%;
             border: none;
             position: absolute;
@@ -94,10 +107,12 @@
             /* Prevents interaction with the iframe */
         }
 
+/*View More*/
         .view-more-link2 {
-            position: absolute;
-            bottom: 10px;
+            position: relative;
+            bottom: 30px;
             right: 10px;
+            text-align: center;
             background-color: #0066cc;
             color: white;
             padding: 8px 15px;
@@ -134,6 +149,7 @@
       position: fixed;
       bottom: 0;
       width: 100%;
+      z-index:1000 ;
     }
 
     .navbar a {
@@ -169,27 +185,22 @@
 
 <body style="background-color:rgba(170, 238, 169, 0.233);">
   <div class="topnav">
-    <font size="24"></font>
-    <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>oUITS Resources</i></p>
-    </font>
+    <a class="active" href=page-depth-01\Tutorials.html>Resources Tutorial</a>
+    <a class="active" href=page-depth-01\References.html>Future References</a>
+    <a class="active" href=page-depth-01\code-blogs.html>Coding Blogs</a>
     <!--<a class="active" href="#home">Home</a>-->
 
   </div>
 
-  <div class="top-bar2">
-    <div class="iframe-container2">
-        <iframe src="https://b1tranger-coding.blogspot.com/" title="Blog Preview"></iframe>
-    </div>
-    <div class="overlay2"></div>
-    <a href="https://b1tranger-coding.blogspot.com/" class="view-more-link2" target="_blank">View More</a>
-</div>
+  
 
   <div style="padding-left:16px">
   </div>
   <div class="navbar">
-    <a class="active" href=page-depth-01\Tutorials.html>Resources Tutorial</a>
-    <a class="active" href=page-depth-01\References.html>Future References</a>
-    <a class="active" href=page-depth-01\code-blogs.html>Coding Blogs</a>
+    <font size="24"></font>
+    <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>oUITS Resources</i></p>
+    </font>
+    
   </div>
 
 
@@ -304,6 +315,25 @@
   <br>
   <br>
   <br>
+<table border="10" align=center style="width:90%">
+<tr>
+  <th>
+    <div class="topnav3">
+      <font size="24"></font>
+    <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>Latest Blog</i></p>
+    </font>
+    </div>
+<div class="top-bar2">
+    <div class="iframe-container2">
+        <iframe src="https://b1tranger-coding.blogspot.com/" title="Blog Preview"></iframe>
+    </div>
+    <div class="overlay2"></div>
+    <a href="https://b1tranger-coding.blogspot.com/" class="view-more-link2" target="_blank">View More</a>
+</div>
+</th>
+</tr>
+</table>
+  
   <br>
   <br>
   <br>
