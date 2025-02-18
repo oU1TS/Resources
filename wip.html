@@ -8,19 +8,18 @@
   border-radius: 10px;
 }
 
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.topnav {
+/*BOTTOM BAR CSS*/
+.navbar {
   overflow: hidden;
   background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-.topnav a {
+.navbar a {
   float: left;
+  display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -28,15 +27,52 @@ body {
   font-size: 17px;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
+.navbar a:hover {
+  background: #f1f1f1;
   color: black;
 }
 
-.topnav a.active {
+.navbar a.active {
   background-color: #04AA6D;
   color: white;
 }
+
+.main {
+  padding: 16px;
+  margin-bottom: 30px;
+}
+
+  /*TOP BAR CSS*/
+
+  body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+      text-align: center;
+    }
 
     </style>
 <title>
@@ -48,6 +84,24 @@ body {
     (wip page)</h1>
 <p align=center><a href =index.html >Go back</a></p>
 <p align=center><a href ="#end" >Go to end</a></p>
+<hr>
+
+
+
+
+
+<div class="navbar">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="main">
+  <h1>Bottom Navigation Bar</h1>
+  <p>Some text some text some text.</p>
+</div>
+
+
 
 
 <hr>
