@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>
     oUITS Resources
@@ -12,7 +12,7 @@
 
 <body style="background-color:rgb(225, 230, 241);">
 
-<!-- TOP BAR -->
+  <!-- TOP BAR -->
 
   <div class="topnav">
     <a class="active" href=page-depth-01\Tutorials.html><small>Resources<br>Tutorials</small></a>
@@ -22,12 +22,12 @@
 
   </div>
 
-<!-- GO BOTTOM RELATIVE LINK -->
+  <!-- GO BOTTOM RELATIVE LINK -->
 
-<p id="top" align="right"><small><a href="#bottom" style="color:rgba(0, 0, 0, 0.24);">go to bottom</a></small></p>
+  <p id="top" align="right"><small><a href="#bottom" style="color:rgba(0, 0, 0, 0.24);">go to bottom</a></small></p>
 
 
-<!-- BLOGGER IFRAMER -->
+  <!-- BLOGGER IFRAMER -->
 
 
   <table border="10" align=center style="width:90%;">
@@ -56,45 +56,37 @@
   </table>
 
 
-  <!-- BOTTOM BAR "navbar" -->
 
-  <div style="padding-left:16px">
-  </div>
-  <div class="navbar">
-    <font size="24"></font>
-    <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>oUITS Resources</i></p>
-    </font>
 
-  </div>
 
-  
 
- <!-- GOOGLE DRIVE IFRAME (CLAUDE) -->
+  <!-- GOOGLE DRIVE IFRAME (CLAUDE) -->
 
- <table border="10" align=center style="width:100%;">
-  <tr>
-    <th>
-  <div class="container4" >
-    <div class="iframe-wrapper4">
-        <div class="iframe-controls4">
-            <button onclick="zoomIn()">Zoom In</button>
-            <button onclick="zoomOut()">Zoom Out</button>
-            <button onclick="resetZoom()">Reset</button>
-        </div>
-        <iframe 
-            src="https://drive.google.com/embeddedfolderview?id=1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL#list"
-            allowfullscreen
-            sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-presentation"
-        ></iframe>
-    </div>
-</div>
-</tr>
-</th>
-
+  <table border="10" align="center" style="width:100%;">
+    <tr>
+        <td>
+            <div class="container-4">
+                <div class="iframe-wrapper-4">
+                    <div class="iframe-controls-4">
+                        <button class="button-4" onclick="zoomIn()">Zoom In</button>
+                        <button class="button-4" onclick="zoomOut()">Zoom Out</button>
+                        <button class="button-4" onclick="resetZoom()">Reset</button>
+                    </div>
+                    <iframe 
+                        class="iframe-4"
+                        src="https://drive.google.com/embeddedfolderview?id=1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL#list"
+                        allowfullscreen
+                        sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-presentation">
+                    </iframe>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
 
 <script>
     let currentZoom = 1;
-    const iframe4 = document.querySelector('iframe');
+    const iframe = document.querySelector('.iframe-4');
 
     function zoomIn() {
         currentZoom += 0.1;
@@ -118,7 +110,7 @@
     }
 </script>
 
-<!-- HIGHLIGHTS OF DRIVE -->
+  <!-- HIGHLIGHTS OF DRIVE -->
 
   <table align=center style="width:50%;border-color:rgba(60, 60, 82, 0.733);">
     <tr>
@@ -176,27 +168,49 @@
     </tr>
   </table>
 
-<!-- ANON NOTE (FEEDBACK) -->
+  <!-- ANON NOTE (FEEDBACK) -->
 
-<p align=center ><a href="https://forms.gle/9BPzJRNz1rmaPh3Q8"  target="_blank" style="color:rgb(0, 0, 0);">( Leave a note? )</a></p>
+  <p align=center><a href="https://forms.gle/9BPzJRNz1rmaPh3Q8" target="_blank" style="color:rgb(0, 0, 0);">( Leave a
+      note? )</a></p>
 
-<p align=center ><a href="https://docs.google.com/spreadsheets/d/1G5Fn-z3ML3m7OskaPaJ9sh-4R-C6udKUx6-11znQXoI/edit?usp=sharing" target="_blank" style="color:rgba(0, 0, 0, 0.14);"><small>( See note? )</small></a></p>
+  <p align=center><a
+      href="https://docs.google.com/spreadsheets/d/1G5Fn-z3ML3m7OskaPaJ9sh-4R-C6udKUx6-11znQXoI/edit?usp=sharing"
+      target="_blank" style="color:rgba(0, 0, 0, 0.14);"><small>( See note? )</small></a></p>
 
 
-<!-- BOTTOM CREDITS -->
+  <!-- BOTTOM CREDITS -->
 
-<table align="center" style="width:60%">
-  <td><p align=center style="color:rgba(0, 0, 0, 0.422);"><small>This is the first try on the web version of the <b>UNOFFICIAL</b>
-      Online
-      Resources for the <i>students</i> of UITS. Note that I will be primarily working on <a href="https://b1tranger.github.io/oUITS-Resources/" style="color:rgba(4, 0, 128, 0.806);">GitHub's Hosting</a>. Most of the materials here are publicly available and you are free to modify and reuse them but please be mindful of possible Legal issues (like Copyright materials)</small></p></td></table>
+  <table align="center" style="width:60%">
+    <td>
+      <p align=center style="color:rgba(0, 0, 0, 0.422);"><small>This is the first try on the web version of the
+          <b>UNOFFICIAL</b>
+          Online
+          Resources for the <i>students</i> of UITS. Note that I will be primarily working on <a
+            href="https://b1tranger.github.io/oUITS-Resources/" style="color:rgba(4, 0, 128, 0.806);">GitHub's
+            Hosting</a>. Most of the materials here are publicly available and you are free to modify and reuse them but
+          please be mindful of possible Legal issues (like Copyright materials)</small></p>
+    </td>
+  </table>
   <p align=center><a href=wip.html style="color:rgba(74, 170, 214, 0.801);">Click Here to see work in progress</a></p>
 
-<!-- GO TOP RELATIVE LINK -->
+  <!-- GO TOP RELATIVE LINK -->
 
   <p id="bottom" align="right"><small><a href="#top" style="color:rgba(0, 0, 0, 0.24);">go to top</a></small></p>
 
   <br>
   <br>
+
+  <!-- BOTTOM BAR "navbar" -->
+
+  <div style="padding-left:16px">
+  </div>
+  <div class="navbar">
+    <font size="24"></font>
+    <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>oUITS Resources</i></p>
+    </font>
+
+  </div>
+
 </body>
 
 </html>
