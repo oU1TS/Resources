@@ -7,34 +7,15 @@
    border-radius: 10px;
  }
 
- /*Drive iframe CSS*/
 
- .iframe-container {
-   width: 95%;
-   height: 400px;
-   /* Increased height to accommodate zoomed content */
-   overflow: hidden;
-   position: relative;
- }
+ /* TOP BAR CSS [ 1 ] */
 
- #drive-frame {
-   width: 100%;
-   height: 100%;
-   border: 0;
-   transform: scale(1.2);
-   /* Constant zoom factor */
-   transform-origin: top left;
-   /* Scale from top-left corner */
- }
-
- /*TOP BAR CSS*/
-
- body1 {
+ body {
    margin: 0;
    font-family: Arial, Helvetica, sans-serif;
  }
 
- .topnav1 {
+ .topnav {
    overflow: hidden;
    background-color: #333;
    
@@ -49,7 +30,7 @@
    border-radius: 15px 15px 0 0;
  }
 
- .topnav1 a {
+ .topnav a {
    float: left;
    color: #f2f2f2;
    text-align: center;
@@ -58,12 +39,12 @@
    font-size: 17px;
  }
 
- .topnav1 a:hover {
+ .topnav a:hover {
    background-color: #ddd;
    color: black;
  }
 
- .topnav1 a.active {
+ .topnav a.active {
    background-color: #197dd5;
    color: white;
    text-align: center;
@@ -140,6 +121,30 @@ float : right;
          background: transparent;
          z-index: 5;
      }
+
+
+
+ /*Drive iframe CSS*/
+
+ .iframe-container {
+  width: 95%;
+  height: 400px;
+  /* Increased height to accommodate zoomed content */
+  overflow: hidden;
+  position: relative;
+}
+
+#drive-frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  transform: scale(1.2);
+  /* Constant zoom factor */
+  transform-origin: top left;
+  /* Scale from top-left corner */
+}
+
+
  /*BOTTOM BAR CSS*/
 
  .navbar {
