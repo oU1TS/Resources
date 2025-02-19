@@ -91,6 +91,7 @@ float : right;
          height: 100%;
          overflow: hidden;
          position: relative;
+         
      }
 
      .iframe-container2 iframe {
@@ -126,6 +127,7 @@ float : right;
 
      .content2 {
          padding: 20px;
+         
      }
 
      /* Overlay to prevent iframe interaction */
@@ -150,6 +152,7 @@ float : right;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: #ffffff;
+  max-width: 850px;
 }
 
 
@@ -204,12 +207,12 @@ body {
 }
 
 .container-5 {
-  background-color: #00000096;
+  background-color: #000000c5;
   border-radius: 15px;
   padding: 25px;
   margin: 20px auto;
   width: 80%;
-  max-width: 1000px;
+  max-width: 800px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -240,7 +243,7 @@ body {
 }
 
 .resources-table-5 td {
-  background-color: #363636;
+  background-color: #00000044;
   border-radius: 8px;
   padding: 12px;
   transition: background-color 0.3s ease;
@@ -251,7 +254,7 @@ body {
 }
 
 .resources-table-5 a {
-  color: #a8a8c7;
+  color: #ffffffba;
   text-decoration: none;
   display: block;
   text-align: center;
