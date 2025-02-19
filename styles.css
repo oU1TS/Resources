@@ -34,7 +34,8 @@ body {
 .topnav {
   overflow: hidden;
   background-color: #333;
-
+  display: flex; /* Use Flexbox */
+  justify-content: flex-end; /* Align items to the right */
 }
 
 /*    .topnav3     */
@@ -47,7 +48,6 @@ body {
 }
 
 .topnav a {
-  float: left;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -63,9 +63,6 @@ body {
 .topnav a.active {
   background-color: #197dd5;
   color: white;
-  text-align: center;
-  float: right;
-
 }
 
 /*blog windows css [ 2 ]*/
