@@ -6,6 +6,26 @@
   border: 2px solid rgba(31, 106, 168, 0.452);
   border-radius: 10px;
 }
+
+/*Drive iframe CSS*/
+
+.iframe-container {
+  width: 95%;
+  height: 400px;
+  /* Increased height to accommodate zoomed content */
+  overflow: hidden;
+  position: relative;
+}
+
+#drive-frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  transform: scale(1.2);
+  /* Constant zoom factor */
+  transform-origin: top left;
+  /* Scale from top-left corner */
+}
     </style>
 <title>
     Image Page
@@ -20,6 +40,36 @@
 
 <br><br>
 <hr>
+
+<!-- GOOGLE DRIVE IFRAME -->
+
+<table border="10" align="center" style=" width:70%">
+  <tr>
+
+
+    <!--<h3 align =center>Primary Directories?</h3>-->
+
+
+  </tr>
+  <tr>
+    <td>
+      <div class="iframe-container">
+        <iframe id="drive-frame"
+          src="https://drive.google.com/embeddedfolderview?id=1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL#list"></iframe>
+      </div>
+
+    </td>
+
+  </tr>
+  <tr>
+    <p align=center><i><a style="color:rgba(60, 60, 82, 0.733);"
+          href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL" target="_blank"><small><b>(
+              Link to the Google Drive? )</b></small></a></i></p>
+  </tr>
+</table>
+
+<hr>
+
 <ul>External Sources?
   <li><a href=page-depth-01\References.html>See References for Future Updates</a></li>
   <br>

@@ -2,7 +2,8 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>
     oUITS Resources
@@ -66,35 +67,56 @@
 
   </div>
 
-  <hr>
+  
 
+ <!-- GOOGLE DRIVE IFRAME (CLAUDE) -->
 
-  <!-- GOOGLE DRIVE IFRAME -->
-
-  <table border="10" align="center" style=" width:70%">
-    <tr>
-
-
-      <!--<h3 align =center>Primary Directories?</h3>-->
-
-
-    </tr>
-    <tr>
-      <td>
-        <div class="iframe-container">
-          <iframe id="drive-frame"
-            src="https://drive.google.com/embeddedfolderview?id=1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL#list"></iframe>
+ <table border="10" align=center style="width:100%;">
+  <tr>
+    <th>
+  <div class="container4" >
+    <div class="iframe-wrapper4">
+        <div class="iframe-controls4">
+            <button onclick="zoomIn()">Zoom In</button>
+            <button onclick="zoomOut()">Zoom Out</button>
+            <button onclick="resetZoom()">Reset</button>
         </div>
+        <iframe 
+            src="https://drive.google.com/embeddedfolderview?id=1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL#list"
+            allowfullscreen
+            sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-presentation"
+        ></iframe>
+    </div>
+</div>
+</tr>
+</th>
 
-      </td>
 
-    </tr>
-    <tr>
-      <p align=center><i><a style="color:rgba(60, 60, 82, 0.733);"
-            href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL" target="_blank"><small><b>(
-                Link to the Google Drive? )</b></small></a></i></p>
-    </tr>
-  </table>
+<script>
+    let currentZoom = 1;
+    const iframe4 = document.querySelector('iframe');
+
+    function zoomIn() {
+        currentZoom += 0.1;
+        updateZoom();
+    }
+
+    function zoomOut() {
+        if (currentZoom > 0.5) {
+            currentZoom -= 0.1;
+            updateZoom();
+        }
+    }
+
+    function resetZoom() {
+        currentZoom = 1;
+        updateZoom();
+    }
+
+    function updateZoom() {
+        iframe.style.transform = `scale(${currentZoom})`;
+    }
+</script>
 
 <!-- HIGHLIGHTS OF DRIVE -->
 
