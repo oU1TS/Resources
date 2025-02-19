@@ -119,7 +119,7 @@ body {
 
 @keyframes scroll-vertical {
   from {
-    transform: translateY(10%);
+    transform: translateY(5%);
   }
 
   to {
