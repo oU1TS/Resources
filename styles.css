@@ -72,7 +72,7 @@ body {
 
 /* Active link style */
 .topnav-1 a.active-1 {
-  background-color: #197dd5;
+  background-color: #197dd500;
   color: white;
 }
 
@@ -81,6 +81,10 @@ body {
   display: block;
   text-align: center;
   line-height: 1.2;
+}
+.topnav-1 a:hover {
+  background-color: #197dd5;
+  color: rgb(255, 255, 255);
 }
 
 /* Media query for smaller screens */
