@@ -236,7 +236,7 @@ body {
 .container-5 {
   background-color: #000000c5;
   border-radius: 15px;
-  min-width: 300px;
+  /* min-width: 300px; */
   padding: 25px;
   margin: 20px auto;
   width: 80%;
