@@ -15,12 +15,12 @@ html {zoom: 110%;} /* sets default zoom level */
 
 /*Table CSS*/
 
-table,
+/* table,
 th,
 td {
-  border: 2px solid rgba(31, 106, 168, 0);
+  border: 2px solid rgba(0, 0, 0, 0);
   border-radius: 10px;
-}
+} */
 
 /*    .topnav3     */
 /* FOR BLOGGER IFRAME HEADER */
@@ -313,10 +313,36 @@ now Browse Curated Resources*/
 
 
 
+/* HOME BUTTON */
 
 
+.home-button {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.2s;
+}
 
+.home-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
 
+.home-icon {
+  width: 24px;
+  height: 24px;
+}
 
 
 
