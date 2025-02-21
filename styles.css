@@ -174,7 +174,7 @@ body {
 
 
 .container-4 {
-  width: 90%;
+  width: 89%;
   margin: 20px auto;
   border-radius: 15px;
   overflow: hidden;
@@ -230,7 +230,8 @@ body {
   background: #0056b3;
 }
 
-/* HIGHLIGHTS SECTION [ 5 ] */
+/* HIGHLIGHTS SECTION [ 5 ] 
+now Browse Curated Resources*/
 
 
 .container-5 {
@@ -239,8 +240,8 @@ body {
   /* min-width: 300px; */
   padding: 25px;
   margin: 20px auto;
-  width: 80%;
-  max-width: 800px;
+  width: 79%;
+  max-width: 800px; 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
