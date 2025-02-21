@@ -2,33 +2,121 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
     <style>
-        table {
-            border: 4px solid rgba(10, 10, 54, 0.411);
-            border-radius: 10px;
-            max-width: 800px;
-            border-top-style: dashed;
-            text-align: center;
-            padding: 0%;
-            border-spacing: 20px;
-           
-        }
+        .university-resources {
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
 
-        th,td {
-            text-align: left;
-            border: 4px solid rgba(10, 10, 54, 0.411);
-            border-radius: 10px;
-            max-width: 800px;
-            border-top-style: dashed;
-            padding: 2%;
-            
-        }
+.table-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
 
-        a {
-            color: rgba(0, 0, 0, 0.594);
+.table-container {
+    overflow-x: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: #475569;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+}
+
+td {
+    color: #1a202c;
+}
+
+tr:hover {
+    background-color: #f8fafc;
+}
+
+.link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.link-group a {
+    color: #2563eb;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.2s;
+}
+
+.link-group a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.feature-title {
+    font-weight: 600;
+    color: #475569;
+}
+
+.feature-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.feature-list li {
+    background-color: #f1f5f9;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    color: #475569;
+}
+
+@media (max-width: 768px) {
+    .table-container {
+        margin: 0 -1rem;
+        border-radius: 0;
+    }
+    
+    th, td {
+        padding: 0.75rem;
+    }
+    
+    .feature-list ul {
+        flex-direction: column;
+    }
+}
     </style>
     <title>
         References for oUITS
@@ -80,22 +168,13 @@
                 </font>
             </div>
 <div>
-
-    
-</div>
-
             <table class="container-4"  cellpadding: 20px>
-                <tr>
-
-                   
-                    
-
-                </tr>
+                
                 <tr>
                     <td>
                         <font size="3">
                             <ul>
-                                <li style="color:rgba(60, 60, 82, 0.733);"><a href=" http://akibreza.github.io/uitsBOT"
+                                <li style="color:rgba(0, 0, 0, 0.162);"><a href=" http://akibreza.github.io/uitsBOT"
                                         target="_blank" style="color:rgba(60, 60, 82, 0.733);">uitsBOT by Akib Reza
                                         (0432220005101061)</a></li>
 
@@ -106,183 +185,119 @@
 
                 </tr>
             </table>
-            <br>
-            <br>
-            <br>
-            <p align="center">(Other Universities doing skibidi)</p>
-
-            <table align="center" style="width:90%;">
-                <tr>
-                    <th>
-                    (University)
-                    </th>
-                    <th>
-                        (Website)
-                    </th>
-                    <th>
-                        (Student-made)
-                    </th>
-                </tr>
-                <tr align="center">
-                    <td>
-                        UIU
-                    </td>
-                    <td>
-
-                    </td>
-                    <td>
-                        <ul>
-                            <li><a href="https://nurulalamador.github.io/UIUQuestionBank/">UIU Question Bank</a></li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr align="center">
-                    <td>
-                        DIU
-                    </td>
-                    <td>
-                        <ul>
-
-                    <td>
-                        <li> <a href="https://routine.zohirrayhan.me/">DIU Routine Scrapper</a> <br>+ <a
-                                href="https://play.google.com/store/apps/details?id=com.zohirrayhan.routinescrapper">PlayStore
-                                App</a>
-                        </li>
-
-                    </td>
-
-                </tr>
-                <tr align="center">
-                    <td>
-                        IUT
-                    </td>
-                    <td>
-                        <ul>
-                            <li> <a href="https://www.iutoic-dhaka.edu/e-resources">E Resources</a></li>
-                        </ul>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr align="center">
-                    <td>
-                        AUST
-                    </td>
-                    <td>
-                        <ul>
-                            <li> <a href="https://aust.edu/library/e_resources">E Resources</a> + <a
-                                    href="https://onlinelibrary.wiley.com/action/showPublications">E Books</a></li>
-                            <br>
-                            <li> <a href="https://www.scopus.com/home.uri">Scopus</a></li>
-                            <br>
-                            <li> <a href="https://www.turnitin.com/">turnitin</a></li>
-                    </td>
-                    <td></td>
-                </tr>
-                </td>
-                </tr>
-                <tr align="center">
-                    <td>
-                        NSU
-                    </td>
-                    <td>
-                        <ul>
-                            <li> <a href="https://www.northsouth.edu/archive.html">Archive(records?)</a></li>
-                            <br>
-                            <li> <a href="https://library.northsouth.edu/">Library</a></li>
-                        </ul>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr align="center">
-                    <td>
-                        BRACU
-                    </td>
-                    <td>
-                        <ul>
-                            <li> <a href="https://library.bracu.ac.bd/">Library</a></li>
-                            <br>
-                            <li> <a href="https://www.bracu.ac.bd/students">Other Facilities for the Students</a></li>
-                        </ul>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr align="center">
-                    <td>
-                        SEU
-                    </td>
-                    <td>
-                        <ul>
-                            <li> UCAM Dashboard: <br>summarizes important sections like,
-                                <ul>
-                                    <li>student info</li>
-                                    <li>register course</li>
-                                    <li>cg overview</li>
-                                    <li>routine</li>
-                                    <li>advisor</li>
-                                    <li>payment (extensive)</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr align="center">
-                    <td>
-                        IUB
-                    </td>
-                    <td>
-                        <ul>
-                            <li> <a href="https://ar.iub.edu.bd/">IUB Academic Repository</a></li>
-                            <br>
-                            <li> <a href="https://library.iub.edu.bd/">Library and E Resources</a></li>
-                            <br>
-                            <li> <a href="https://iub.ac.bd/directory">Directory</a></li>
-                        </ul>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr align="center">
-                    <td>
-                        AIUB
-                    </td>
-                    <td>
-                        <ul>
-                            <li> <a href="https://www.aiub.edu/about/Resources">Resource List</a></li>
-                            <br>
-                            <li> <a href="https://www.aiub.edu/faculties/fst/ug-course-catalog">Course Catalogue</a>
-                            </li>
-                        </ul>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr align="center">
-                    <td>
-                        EWU
-                    </td>
-                    <td>
-                        <ul>
-                            <li> <a href="...">...</a></li>
-                            <br>
-
-                        </ul>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr align="center">
-                    <td>
-                        SUB
-                    </td>
-                    <td>
-                        <ul>
-                            <li> <a href="...">...</a></li>
-                            <br>
-
-                        </ul>
-                    </td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
+          
+            <div class="university-resources">
+                <h2 class="table-title" >University Resources Directory</h2>
+                <p align="center"  style="color:rgba(0, 0, 0, 0.393);">(Other Universities doing skibidi)</p>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>University</th>
+                                <th>Official Resources</th>
+                                <th>Student Projects</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>UIU</td>
+                                <td>-</td>
+                                <td>
+                                    <a href="https://nurulalamador.github.io/UIUQuestionBank/">UIU Question Bank</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DIU</td>
+                                <td>-</td>
+                                <td>
+                                    <div class="link-group">
+                                        <a href="https://routine.zohirrayhan.me/">DIU Routine Scrapper</a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.zohirrayhan.routinescrapper">PlayStore App</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IUT</td>
+                                <td>
+                                    <a href="https://www.iutoic-dhaka.edu/e-resources">E Resources</a>
+                                </td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>AUST</td>
+                                <td>
+                                    <div class="link-group">
+                                        <a href="https://aust.edu/library/e_resources">E Resources</a>
+                                        <a href="https://onlinelibrary.wiley.com/action/showPublications">E Books</a>
+                                        <a href="https://www.scopus.com/home.uri">Scopus</a>
+                                        <a href="https://www.turnitin.com/">Turnitin</a>
+                                    </div>
+                                </td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>NSU</td>
+                                <td>
+                                    <div class="link-group">
+                                        <a href="https://www.northsouth.edu/archive.html">Archive</a>
+                                        <a href="https://library.northsouth.edu/">Library</a>
+                                    </div>
+                                </td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>BRACU</td>
+                                <td>
+                                    <div class="link-group">
+                                        <a href="https://library.bracu.ac.bd/">Library</a>
+                                        <a href="https://www.bracu.ac.bd/students">Student Facilities</a>
+                                    </div>
+                                </td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>SEU</td>
+                                <td>
+                                    <div class="feature-list">
+                                        <span class="feature-title">UCAM Dashboard Features:</span>
+                                        <ul>
+                                            <li>Student Info</li>
+                                            <li>Course Registration</li>
+                                            <li>CG Overview</li>
+                                            <li>Routine</li>
+                                            <li>Advisor</li>
+                                            <li>Payment System</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>IUB</td>
+                                <td>
+                                    <div class="link-group">
+                                        <a href="https://ar.iub.edu.bd/">Academic Repository</a>
+                                        <a href="https://library.iub.edu.bd/">Library & E-Resources</a>
+                                        <a href="https://iub.ac.bd/directory">Directory</a>
+                                    </div>
+                                </td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>AIUB</td>
+                                <td>
+                                    <div class="link-group">
+                                        <a href="https://www.aiub.edu/about/Resources">Resource List</a>
+                                        <a href="https://www.aiub.edu/faculties/fst/ug-course-catalog">Course Catalogue</a>
+                                    </div>
+                                </td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
 
         <!-- <p id=" bottom" align=center><a style="color: #8c8c8c;" href="../index.html">Go back to index</a> -->
 
