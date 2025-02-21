@@ -1,41 +1,111 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
-    <link rel="stylesheet" href="../../styles.css">
-    <title>
-        CSE-Files
-    </title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
 
+        .container-5 {
+            background-color: #000000c5;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px auto;
+            width: min(90%, 800px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .highlights {
+            color: rgba(240, 248, 255, 0.649);
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .resource-link {
+            background-color: #00000044;
+            border-radius: 8px;
+            padding: 12px;
+            transition: background-color 0.3s ease;
+        }
+
+        .resource-link:hover {
+            background-color: #424242;
+        }
+
+        .resource-link a {
+            color: #ffffffba;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+
+        .resource-link a:hover {
+            color: #ffffff;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-link a {
+            color: #8c8c8c;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resource-link {
+                margin: 5px 0;
+            }
+        }
+    </style>
+    <title>CSE-Files</title>
+</head>
 <body>
-    <br><br><br>
-    <div  class="container-5" align=center>
-        <table class="resources-table-5" align=center style="width:90%;">
-            <tr>
-                <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">1st Semester FIles</p>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://drive.google.com/drive/folders/1a4dYGziykFyiGarcowV8rioWyIlAzvA1?usp=drive_link" target="_blank">S01 Notes + <b>Classroom Files</b></a>
-                </td>
-                <td>
-                    <a href="https://drive.google.com/drive/folders/1aNeGzO__4pQiyohr7jADZYy7ODM3rC3t?usp=drive_link" target="_blank">S01 Books</a>
-                </td>
-                <td>
-                    <a href="https://drive.google.com/drive/folders/14ecyN1EotbW1F-5Ulbk_9QbU3F0en8Cm?usp=drive_link" target="_blank">S01 Outlines</a>
-                </td>
-                <td>
-                    <a href="https://drive.google.com/drive/folders/1bI8ewiui3Cv09A5DWc59RwHADIQB_mnn?usp=drive_link" target="_blank">S01 Questions</a>
-                </td>
-            </tr>
-        </table>
+    <div class="container-5">
+        <p class="highlights">1st Semester Files</p>
+        <div class="resources-grid">
+            <div class="resource-link">
+                <a href="https://drive.google.com/drive/folders/1a4dYGziykFyiGarcowV8rioWyIlAzvA1?usp=drive_link" target="_blank">
+                    S01 Notes + <b>Classroom Files</b>
+                </a>
+            </div>
+            <div class="resource-link">
+                <a href="https://drive.google.com/drive/folders/1aNeGzO__4pQiyohr7jADZYy7ODM3rC3t?usp=drive_link" target="_blank">
+                    S01 Books
+                </a>
+            </div>
+            <div class="resource-link">
+                <a href="https://drive.google.com/drive/folders/14ecyN1EotbW1F-5Ulbk_9QbU3F0en8Cm?usp=drive_link" target="_blank">
+                    S01 Outlines
+                </a>
+            </div>
+            <div class="resource-link">
+                <a href="https://drive.google.com/drive/folders/1bI8ewiui3Cv09A5DWc59RwHADIQB_mnn?usp=drive_link" target="_blank">
+                    S01 Questions
+                </a>
+            </div>
+        </div>
     </div>
 
-
-    <div align=center>
-        <p id=" bottom" align=center><a style="color: #8c8c8c;" href="../CSE-Files.html">Go back to CSE-Files</a>
+    <div class="back-link">
+        <a href="../CSE-Files.html">Go back to CSE-Files</a>
     </div>
 </body>
-
 </html>

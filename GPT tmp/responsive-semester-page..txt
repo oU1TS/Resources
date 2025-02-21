@@ -1,0 +1,17 @@
+Key changes I made to fix the mobile responsiveness:
+
+Added a viewport meta tag for proper mobile scaling
+Replaced the table layout with CSS Grid using grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+Used min() function for responsive widths that work on all screen sizes
+Simplified the HTML structure and removed unnecessary nested tables
+Removed redundant align attributes and replaced with CSS text-align
+Made the container and spacing more responsive with percentage-based widths
+Improved typography and spacing for better readability
+Streamlined the CSS classes and reduced redundancy
+
+The page will now:
+
+Display in a single column on mobile devices
+Maintain consistent spacing and padding
+Be more readable and accessible
+Scale properly across all device sizes

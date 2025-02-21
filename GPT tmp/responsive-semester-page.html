@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .container-5 {
+            background-color: #000000c5;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px auto;
+            width: min(90%, 800px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .intro-text {
+            width: min(90%, 600px);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .highlights {
+            color: rgba(240, 248, 255, 0.649);
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .semester-link {
+            background-color: #00000044;
+            border-radius: 8px;
+            padding: 12px;
+            transition: background-color 0.3s ease;
+        }
+
+        .semester-link:hover {
+            background-color: #424242;
+        }
+
+        .semester-link a {
+            color: #ffffffba;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+
+        .semester-link a:hover {
+            color: #ffffff;
+        }
+
+        .drive-link {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .drive-link a {
+            color: rgba(60, 60, 82, 0.733);
+            text-decoration: none;
+        }
+
+        .back-link {
+            text-align: center;
+        }
+
+        .back-link a {
+            color: #8c8c8c;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .resources-grid {
+                grid-template-columns: 1fr;
+                width: 100%;
+            }
+
+            .semester-link {
+                margin: 5px 0;
+            }
+        }
+    </style>
+    <title>CSE-Files</title>
+</head>
+<body>
+    <div class="intro-text">
+        <p><small><b>Most of these files are in relevance with CSE-55 batch</b><br><br>
+        Take Note that Files may be outdated or not organized to the latest course list. 
+        In that case, please email me at b1tranger.01@gmail.com and let me know of the specific shortcomings of this page.
+        <br>Thanks in advance!!</small></p>
+    </div>
+
+    <div class="container-5">
+        <p class="highlights">Select your semester</p>
+        <div class="resources-grid">
+            <div class="semester-link">
+                <a href="page-depth-02/1st-Semester.html">1st Semester</a>
+            </div>
+            <div class="semester-link">
+                <a href="page-depth-02/2nd-Semester.html">2nd Semester</a>
+            </div>
+            <div class="semester-link">
+                <a href="page-depth-02/3rd-Semester.html">3rd Semester</a>
+            </div>
+            <div class="semester-link">
+                <a href="page-depth-02/4th-Semester.html">4th Semester</a>
+            </div>
+            <div class="semester-link">
+                <a href="page-depth-02/5th-Semester.html">5th Semester</a>
+            </div>
+            <div class="semester-link">
+                <a href="page-depth-02/6th-Semester.html">6th Semester</a>
+            </div>
+            <div class="semester-link">
+                <a href="page-depth-02/7th-Semester.html">7th Semester</a>
+            </div>
+            <div class="semester-link">
+                <a href="page-depth-02/8th-Semester.html">8th Semester</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="drive-link">
+        <a href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL" target="_blank">
+            <small><b>( Link to the Google Drive instead? )</b></small>
+        </a>
+    </div>
+
+    <div class="back-link">
+        <a href="../index.html">Go back to index</a>
+    </div>
+</body>
+</html>
