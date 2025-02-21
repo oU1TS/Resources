@@ -4,70 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles.css">
-    <style>
-        /* body {
-        margin: 0;
-        padding: 20px;
-        font-family: system-ui, -apple-system, sans-serif;
-    } */
-
-        .container-5 {
-            background-color: #000000c5;
-            border-radius: 15px;
-            padding: 25px;
-            margin: 20px auto;
-            width: min(90%, 800px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .highlights {
-            color: rgba(240, 248, 255, 0.649);
-            margin: 15px 0;
-            text-align: center;
-        }
-
-        .resources-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-            width: 100%;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .resource-link {
-            background-color: #00000044;
-            border-radius: 8px;
-            padding: 12px;
-            transition: background-color 0.3s ease;
-        }
-
-        .resource-link:hover {
-            background-color: #424242;
-        }
-
-        .resource-link a {
-            color: #ffffffba;
-            text-decoration: none;
-            display: block;
-            text-align: center;
-            transition: color 0.3s ease;
-        }
-
-        .resource-link a:hover {
-            color: #ffffff;
-        }
-
-        .back-link {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .back-link a {
-            color: #8c8c8c;
-            text-decoration: none;
-        }
-    </style>
+   
     <title>
         CSE-Files
     </title>
@@ -75,21 +12,24 @@
 
 <body>
 
-    <!-- Replaced the table layout with a CSS Grid structure Removed unnecessary table rows and cells Used a single-column grid since all items should stack vertically Simplified the CSS structure and removed redundant styles Added proper spacing and margins Removed inline styles and deprecated HTML attributes Ensured consistent width and centering of elements Removed unnecessary line breaks at the top of the body The page will now: Display consistently on all devices Match the styling of your other pages Have proper spacing between elements Be more maintainable due to simplified structure -->
+
     <!-- TOP BAR -->
 
     <div class="topnav-1">
-        <a class="active-1" href="page-depth-01/Tutorials.html">
+
+        <a class="active-1" href="Tutorials.html">
             <small>Resources<br>Tutorials</small>
         </a>
-        <a class="active-1" href="page-depth-01/References.html">
+        <a class="active-1" href="References.html">
             <small>References<br>(updates)</small>
         </a>
         <a class="active-1" href="https://b1tranger-coding.blogspot.com/">
             <small>Coding<br>Blogs</small>
         </a>
+        <a class="active-1" href="CSE-Files.html">
+            <small>CSE<br>Files</small>
+        </a>
     </div>
-
 
     <!-- BOTTOM BAR "navbar" -->
 
@@ -149,9 +89,12 @@
     </div>
 
 
-    <div align=center>
+    <!-- <div align=center>
         <p id=" bottom" align=center><a style="color: #8c8c8c;" href="../CSE-Files.html">Go back to CSE-Files</a>
-    </div><br><br><br><br><br>
+    </div> -->
+
+    <br><br><br><br><br>
+
     <!-- HOME BUTTON -->
 
     <a href="../../index.html" class="home-button">
@@ -160,6 +103,11 @@
                 d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>
     </a>
+
+    <!-- BACK BUTTON -->
+
+    <a href="javascript:history.back()" class="back-icon">&#8592;</a>
+
 </body>
 
 </html>

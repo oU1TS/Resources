@@ -344,9 +344,27 @@ now Browse Curated Resources*/
   height: 24px;
 }
 
+/* BACK BUTTON */
 
-
-
+.back-icon {
+  position: fixed;
+  bottom: 60px;
+  right: 65px;
+  background-color: #007bff;
+  color: white;
+  padding: 9px 10px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+.back-icon:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
 
 
 
