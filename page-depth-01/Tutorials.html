@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources Tutorials</title>
+    <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -17,7 +19,7 @@
             --regular-radius: 16px;
             --shorts-radius: 24px;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
@@ -26,14 +28,14 @@
             padding: 0;
             min-height: 100vh;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
             text-align: center;
         }
-        
+
         h1 {
             font-weight: 600;
             margin-bottom: 0.5em;
@@ -41,9 +43,9 @@
             background: linear-gradient(90deg, var(--text-color), var(--subtitle-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 30px rgba(255,255,255,0.1);
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
         }
-        
+
         h2 {
             font-weight: 600;
             font-size: 1.8rem;
@@ -51,49 +53,53 @@
             margin-top: 2em;
             margin-bottom: 0.8em;
         }
-        
+
         .subtitle {
             font-size: 1.1rem;
             margin-bottom: 2em;
             color: var(--subtitle-color);
         }
-        
+
         .video-section {
             margin-bottom: 4em;
         }
-        
+
         .regular-video-container {
             position: relative;
             width: 800px;
             max-width: 100%;
             margin: 0 auto;
-            line-height: 0; /* Removes any potential whitespace */
+            line-height: 0;
+            /* Removes any potential whitespace */
             overflow: hidden;
             border-radius: var(--regular-radius);
         }
-        
+
         .shorts-video-container {
             position: relative;
             width: 320px;
             max-width: 100%;
             margin: 0 auto;
-            line-height: 0; /* Removes any potential whitespace */
+            line-height: 0;
+            /* Removes any potential whitespace */
             overflow: hidden;
             border-radius: var(--shorts-radius);
         }
-        
+
         .aspect-ratio-box {
             position: relative;
         }
-        
+
         .regular-aspect-ratio {
-            padding-top: 56.25%; /* 16:9 aspect ratio */
+            padding-top: 56.25%;
+            /* 16:9 aspect ratio */
         }
-        
+
         .shorts-aspect-ratio {
-            padding-top: 177.77%; /* 9:16 aspect ratio for Shorts */
+            padding-top: 177.77%;
+            /* 9:16 aspect ratio for Shorts */
         }
-        
+
         iframe {
             position: absolute;
             top: 0;
@@ -102,101 +108,104 @@
             height: 100%;
             background-color: transparent;
         }
-        
+
         .footer {
             margin-top: 3em;
             color: #8c8c8c;
             font-size: 0.9rem;
         }
-        
+
         .glow {
             position: fixed;
             width: 70%;
             height: 70%;
-            background: radial-gradient(circle, rgba(90,90,255,0.05) 0%, rgba(70,70,220,0) 70%);
+            background: radial-gradient(circle, rgba(90, 90, 255, 0.05) 0%, rgba(70, 70, 220, 0) 70%);
             top: 15%;
             left: 15%;
             z-index: -1;
             filter: blur(80px);
         }
-        
+
         @media (max-width: 840px) {
             h1 {
                 font-size: 2rem;
             }
+
             h2 {
                 font-size: 1.5rem;
             }
+
             .container {
                 padding: 20px 10px;
             }
         }
     </style>
 </head>
+
 <body>
-<!-- TOP BAR -->
+    <!-- TOP BAR -->
 
-<div class="topnav-1">
-    <a class="active-1" href="page-depth-01/Tutorials.html">
-        <small>Resources<br>Tutorials</small>
-    </a>
-    <a class="active-1" href="page-depth-01/References.html">
-        <small>References<br>(updates)</small>
-    </a>
-    <a class="active-1" href="https://b1tranger-coding.blogspot.com/">
-        <small>Coding<br>Blogs</small>
-    </a>
-</div>
+    <div class="topnav-1">
+
+        <a class="active-1" href="Tutorials.html">
+            <small>Resources<br>Tutorials</small>
+        </a>
+        <a class="active-1" href="References.html">
+            <small>References<br>(updates)</small>
+        </a>
+        <a class="active-1" href="https://b1tranger-coding.blogspot.com/">
+            <small>Coding<br>Blogs</small>
+        </a>
+        <a class="active-1" href="CSE-Files.html">
+            <small>CSE<br>Files</small>
+        </a>
+    </div>
 
 
-  <!-- BOTTOM BAR "navbar" -->
+    <!-- BOTTOM BAR "navbar" -->
 
-  <div style="padding-left:16px">
-</div>
-<div class="navbar-5">
-  <font size="24"></font>
-  <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>oUITS Resources</i></p>
-  </font>
+    <div style="padding-left:16px">
+    </div>
+    <div class="navbar-5">
+        <font size="24"></font>
+        <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>oUITS Resources</i></p>
+        </font>
 
-</div>
-<!-- ----------------------------------------------------------------------- -->
+    </div>
+    <!-- ----------------------------------------------------------------------- -->
 
 
     <div class="glow"></div>
     <div class="container">
         <h1>Tutorial Collection</h1>
         <p class="subtitle">(more to be added later)</p>
-        
+
         <section class="video-section">
             <p>Google Drive can search for PDF by information inside of it - Tutorial</p>
             <div class="regular-video-container">
                 <div class="aspect-ratio-box regular-aspect-ratio">
-                    <iframe 
-                        src="https://www.youtube.com/embed/Zwx5VvdWbh8?si=oKj9CioROByiuwZu" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    <iframe src="https://www.youtube.com/embed/Zwx5VvdWbh8?si=oKj9CioROByiuwZu"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen>
                     </iframe>
                 </div>
             </div>
         </section>
-        
+
         <section class="video-section">
             <p>Offline Browser | Making w3schools and geeksforgeeks accessible offline</p>
             <div class="shorts-video-container">
                 <div class="aspect-ratio-box shorts-aspect-ratio">
-                    <iframe 
-                        src="https://www.youtube.com/embed/sFuVutbYbws?si=pwTIwD4gPRP2oge4" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    <iframe src="https://www.youtube.com/embed/sFuVutbYbws?si=pwTIwD4gPRP2oge4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen>
                     </iframe>
                 </div>
             </div>
         </section>
-        
+
         <p class="footer" align=center><a style="color: #8c8c8c;"" href=../index.html>Go back to index</a>
     </div>
     <br><br><br><br><br>
