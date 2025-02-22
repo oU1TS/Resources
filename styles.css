@@ -82,6 +82,7 @@ body {
   text-align: center;
   line-height: 1.2;
 }
+
 .topnav-1 a:hover {
   background-color: #197dd5;
   color: rgb(255, 255, 255);
@@ -93,12 +94,13 @@ body {
     flex-wrap: nowrap;
     overflow-x: auto;
   }
-  
+
   .topnav-1 a {
     padding: 8px 12px;
     font-size: 14px;
   }
 }
+
 /*blog windows css [ 2 ]*/
 
 /* Hide scrollbars for Chrome, Safari and Opera */
@@ -390,7 +392,7 @@ now Browse Curated Resources*/
   background-color: #007bff;
   color: white;
   padding: 8px 10px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   text-decoration: none;
   font-size: 20px;
   display: flex;
@@ -412,6 +414,58 @@ now Browse Curated Resources*/
   transform: scale(1.1);
 }
 
+
+/* SCROLL UP OR DOWN BUTTON */
+
+
+.scroll-button {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  width: 40px;
+  /* Fixed width */
+  height: 40px;
+  /* Fixed height */
+  border-radius: 50%;
+  position: fixed;
+  bottom: 60px;
+  right: 110px;
+  padding: 20px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  /* border-radius: 5px; */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Arial, sans-serif;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.scroll-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.scroll-button.visible {
+  opacity: 1;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transition: transform 0.3s;
+}
+
+.arrow-up {
+  transform: rotate(-135deg);
+}
+
+.arrow-down {
+  transform: rotate(45deg);
+}
 
 
 /*BOTTOM BAR CSS*/

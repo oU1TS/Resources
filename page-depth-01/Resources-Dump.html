@@ -6305,47 +6305,103 @@
 <div class="topnav-1">
 
     <a class="active-1" href="page-depth-01/Tutorials.html">
-      <small>Tutorials</small>
+        <small>Tutorials</small>
     </a>
     <a class="active-1" href="page-depth-01/References.html">
-      <small>References</small>
+        <small>References</small>
     </a>
     <a class="active-1" href="https://b1tranger-coding.blogspot.com/">
-      <small>Blogs</small>
+        <small>Blogs</small>
     </a>
-    <a class="active-1" href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL?usp=sharing" target="_blank">
-      <small>UITS<br>G-Drive</small>
+    <a class="active-1" href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL?usp=sharing"
+        target="_blank">
+        <small>UITS<br>G-Drive</small>
     </a>
-  </div>
-  
-  
-    <!-- BOTTOM BAR "navbar" -->
-  
-    <div style="padding-left:16px">
-    </div>
-    <div class="navbar-5">
-      <font size="24"></font>
-      <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>oUITS Resources</i></p>
-      </font>
-  
-    </div>
-  
-      <!-- HOME BUTTON -->
-  
-      <a href="../index.html" class="home-button">
-        <svg class="home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path
-                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-        </svg>
-    </a>
-  
-    <!-- BACK BUTTON -->
-  
-    <a href="javascript:history.back()" class="back-icon">&#8592;</a>
+</div>
 
 
+<!-- BOTTOM BAR "navbar" -->
 
+<div style="padding-left:16px">
+</div>
+<div class="navbar-5">
+    <font size="24"></font>
+    <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>oUITS Resources</i></p>
+    </font>
 
+</div>
+
+<!-- HOME BUTTON -->
+
+<a href="../index.html" class="home-button">
+    <svg class="home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path
+            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+    </svg>
+</a>
+
+<!-- BACK BUTTON -->
+
+<a href="javascript:history.back()" class="back-icon">&#8592;</a>
+
+<!-- SCROLL TOP OR BOTTOM BUTTON -->
+
+<button id="scrollButton" class="scroll-button">
+    <i class="arrow arrow-up"></i>
+    <span id="buttonText">Top</span>
+</button>
+
+<script>
+    const scrollButton = document.getElementById('scrollButton');
+    const buttonText = document.getElementById('buttonText');
+    const arrow = scrollButton.querySelector('.arrow');
+
+    // Show button only when scrolling
+    window.onscroll = function () {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollButton.classList.add('visible');
+        } else {
+            scrollButton.classList.remove('visible');
+        }
+        updateButtonState();
+    };
+
+    // Update button state based on scroll position
+    function updateButtonState() {
+        const scrollPosition = window.scrollY;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const isNearBottom = maxScroll - scrollPosition < 20;
+
+        if (isNearBottom) {
+            buttonText.textContent = '';
+            arrow.className = 'arrow arrow-up';
+        } else {
+            buttonText.textContent = '';
+            arrow.className = 'arrow arrow-down';
+        }
+    }
+
+    // Handle button click
+    scrollButton.onclick = function () {
+        const scrollPosition = window.scrollY;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const isNearBottom = maxScroll - scrollPosition < 20;
+
+        if (isNearBottom) {
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        } else {
+            // Scroll to bottom
+            window.scrollTo({
+                top: maxScroll,
+                behavior: 'smooth'
+            });
+        }
+    };
+</script>
 
 
 <div style="word-wrap: break-word;width:95%;;">
@@ -6472,7 +6528,7 @@
         <li class="c0 li-bullet-0"><span>UITS Study Hub </span><span class="c7"><a class="c1"
                     href="https://www.google.com/url?q=https://www.facebook.com/groups/1291086962213796/?ref%3Dshare%26mibextid%3DNSMWBT&amp;sa=D&amp;source=editors&amp;ust=1740231817073845&amp;usg=AOvVaw1Y7kuS9pBDxEeQszSA7dPN">https://www.facebook.com/groups/1291086962213796/?ref=share&amp;mibextid=NSMWBT</a></span><span
                 class="c3">&nbsp;</span></li>
-      
+
         <li class="c0 li-bullet-0"><span>Study Hub Community Chat: </span><span class="c7"><a class="c1"
                     href="https://www.google.com/url?q=https://m.me/cm/AbZkJRcUk9bujlJT/?send_source%3Dcm%253Acopy_invite_link&amp;sa=D&amp;source=editors&amp;ust=1740231817074516&amp;usg=AOvVaw2yHdE_qgcwNNaXcJHOvzG_">https://m.me/cm/AbZkJRcUk9bujlJT/?send_source=cm%3Acopy_invite_link</a></span><span
                 class="c3">&nbsp;</span></li>
@@ -8069,7 +8125,9 @@
             class="c3">&nbsp;</span></p>
     <p class="c6"><span class="c3"></span></p>
 
-    </div>
+    <br><br><br><br><br><br><br><br>
+
+</div>
 
 
 </body>

@@ -1,50 +1,53 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-    <style>
-   table, th, td {
-  border: 2px solid rgba(31, 106, 168, 0.452);
-  border-radius: 10px;
-}
+  <style>
+    table,
+    th,
+    td {
+      border: 2px solid rgba(31, 106, 168, 0.452);
+      border-radius: 10px;
+    }
 
-/*Drive iframe CSS*/
+    /*Drive iframe CSS*/
 
-.iframe-container {
-  width: 95%;
-  height: 400px;
-  /* Increased height to accommodate zoomed content */
-  overflow: hidden;
-  position: relative;
-}
+    .iframe-container {
+      width: 95%;
+      height: 400px;
+      /* Increased height to accommodate zoomed content */
+      overflow: hidden;
+      position: relative;
+    }
 
-#drive-frame {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  transform: scale(1.2);
-  /* Constant zoom factor */
-  transform-origin: top left;
-  /* Scale from top-left corner */
-}
-    </style>
-<title>
+    #drive-frame {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      transform: scale(1.2);
+      /* Constant zoom factor */
+      transform-origin: top left;
+      /* Scale from top-left corner */
+    }
+  </style>
+  <title>
     Image Page
-</title>
+  </title>
 </head>
 
 
 <body>
-<h1 id="top" align = center> 
+  <h1 id="top" align=center>
     (wip page)</h1>
-<p align=center><a href =../index.html >Go back</a></p>
-<p align=center><a href ="#end" >Go to end</a></p>
+  <p align=center><a href=../index.html>Go back</a></p>
+  <p align=center><a href="#end">Go to end</a></p>
 
 
-<br><br>
+  <br><br>
 
-<hr><!----------------------------------------------------------------- -->
+  <hr><!----------------------------------------------------------------- -->
 
-<!-- 
+  <!-- 
 ************************************************
 ************************************************
 *******COMMON CODES FOR ALL PAGES??*************
@@ -53,23 +56,30 @@
 -->
 
 
-<!-- TOP BAR -->
+  <!-- <HEAD> section -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
 
-<div class="topnav-1">
 
-  <a class="active-1" href="page-depth-01/Tutorials.html">
-    <small>Tutorials</small>
-  </a>
-  <a class="active-1" href="page-depth-01/References.html">
-    <small>References</small>
-  </a>
-  <a class="active-1" href="https://b1tranger-coding.blogspot.com/">
-    <small>Blogs</small>
-  </a>
-  <a class="active-1" href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL?usp=sharing" target="_blank">
-    <small>UITS<br>G-Drive</small>
-  </a>
-</div>
+
+  <!-- TOP BAR -->
+
+  <div class="topnav-1">
+
+    <a class="active-1" href="page-depth-01/Tutorials.html">
+      <small>Tutorials</small>
+    </a>
+    <a class="active-1" href="page-depth-01/References.html">
+      <small>References</small>
+    </a>
+    <a class="active-1" href="https://b1tranger-coding.blogspot.com/">
+      <small>Blogs</small>
+    </a>
+    <a class="active-1" href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL?usp=sharing"
+      target="_blank">
+      <small>UITS<br>G-Drive</small>
+    </a>
+  </div>
 
 
   <!-- BOTTOM BAR "navbar" -->
@@ -83,13 +93,13 @@
 
   </div>
 
-    <!-- HOME BUTTON -->
+  <!-- HOME BUTTON -->
 
-    <a href="../index.html" class="home-button">
-      <svg class="home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path
-              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-      </svg>
+  <a href="../index.html" class="home-button">
+    <svg class="home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path
+        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+    </svg>
   </a>
 
   <!-- BACK BUTTON -->
@@ -100,56 +110,120 @@
 
 
 
+  <!-- ADD SCROLL BUTTON FOR LONG PAGES ONLY -->
 
-<hr><!----------------------------------------------------------------- -->
 
-    <!-- GOOGLE DRIVE IFRAME (CLAUDE) -->
+  <!-- SCROLL TOP OR BOTTOM BUTTON -->
 
-    <!-- <script src="myscripts.js"></script> -->
+  <button id="scrollButton" class="scroll-button">
+    <i class="arrow arrow-up"></i>
+    <span id="buttonText">Top</span>
+  </button>
 
-    <div>
-      <table border="0" align="center" style="width:75%;">
-          <tr>
-              <td>
-                  <div class="container-4">
-                      <div class="iframe-wrapper-4" style="padding:30px;">
-                          <p align=center>→ <a style="color:rgba(60, 60, 82, 0.733);"
-                                  href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL"
-                                  target="_blank"><small><b>(
-                                          Shortcut to oUITS Resources )</b></small></a> ←</p>
-                          <!-- <div class="iframe-controls-4">
+  <script>
+    const scrollButton = document.getElementById('scrollButton');
+    const buttonText = document.getElementById('buttonText');
+    const arrow = scrollButton.querySelector('.arrow');
+
+    // Show button only when scrolling
+    window.onscroll = function () {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollButton.classList.add('visible');
+      } else {
+        scrollButton.classList.remove('visible');
+      }
+      updateButtonState();
+    };
+
+    // Update button state based on scroll position
+    function updateButtonState() {
+      const scrollPosition = window.scrollY;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const isNearBottom = maxScroll - scrollPosition < 20;
+
+      if (isNearBottom) {
+        buttonText.textContent = 'Top';
+        arrow.className = 'arrow arrow-up';
+      } else {
+        buttonText.textContent = 'Bottom';
+        arrow.className = 'arrow arrow-down';
+      }
+    }
+
+    // Handle button click
+    scrollButton.onclick = function () {
+      const scrollPosition = window.scrollY;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const isNearBottom = maxScroll - scrollPosition < 20;
+
+      if (isNearBottom) {
+        // Scroll to top
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      } else {
+        // Scroll to bottom
+        window.scrollTo({
+          top: maxScroll,
+          behavior: 'smooth'
+        });
+      }
+    };
+  </script>
+
+
+
+
+
+  <hr><!----------------------------------------------------------------- -->
+
+  <!-- GOOGLE DRIVE IFRAME (CLAUDE) -->
+
+  <!-- <script src="myscripts.js"></script> -->
+
+  <div>
+    <table border="0" align="center" style="width:75%;">
+      <tr>
+        <td>
+          <div class="container-4">
+            <div class="iframe-wrapper-4" style="padding:30px;">
+              <p align=center>→ <a style="color:rgba(60, 60, 82, 0.733);"
+                  href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL"
+                  target="_blank"><small><b>(
+                      Shortcut to oUITS Resources )</b></small></a> ←</p>
+              <!-- <div class="iframe-controls-4">
             <button class="button-4" onclick="zoomIn()">Zoom In</button>
             <button class="button-4" onclick="zoomOut()">Zoom Out</button>
             <button class="button-4" onclick="resetZoom()">Reset</button>
           </div> -->
-                          <iframe class="iframe-4"
-                              src="https://drive.google.com/embeddedfolderview?id=1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL"
-                              allowfullscreen
-                              sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-presentation">
-                          </iframe>
-                      </div>
-                  </div>
-              </td>
-          </tr>
-      </table>
+              <iframe class="iframe-4"
+                src="https://drive.google.com/embeddedfolderview?id=1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL" allowfullscreen
+                sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-presentation">
+              </iframe>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
   </div>
 
   <hr><!----------------------------------------------------------------- -->
-<!-- SOCIAL LINKS -->
+  <!-- SOCIAL LINKS -->
 
-<h4 align=center style="color:rgba(0, 0, 0, 0.564)">Socials? </h4>
-<table align=center>
-  <tr>
-    <th><a href="https://discord.gg/weetUpfS5X" target="_blank"><img src=images\discord-logo.png
-          alt="Discord Server (Protein Shake)" width="100" height="100"></a></th>
-    <th><a href="https://t.me/oUITS_ORnU" target="_blank"><img src=images\telegram-logo2.png
-          alt="Telegram Channel (oUITS - Online Resources and Updates)" width="100" height="100"></a></th>
-    <th><a href="https://facebook.com/groups/1074592960836263/" target="_blank"><img src=images\fb-logo.png
-          alt="Facebook Group (oUITS - Online Resources)" width="100" height="100"></a></th>
-  </tr>
-</table>
+  <h4 align=center style="color:rgba(0, 0, 0, 0.564)">Socials? </h4>
+  <table align=center>
+    <tr>
+      <th><a href="https://discord.gg/weetUpfS5X" target="_blank"><img src=images\discord-logo.png
+            alt="Discord Server (Protein Shake)" width="100" height="100"></a></th>
+      <th><a href="https://t.me/oUITS_ORnU" target="_blank"><img src=images\telegram-logo2.png
+            alt="Telegram Channel (oUITS - Online Resources and Updates)" width="100" height="100"></a></th>
+      <th><a href="https://facebook.com/groups/1074592960836263/" target="_blank"><img src=images\fb-logo.png
+            alt="Facebook Group (oUITS - Online Resources)" width="100" height="100"></a></th>
+    </tr>
+  </table>
 
-<hr><!----------------------------------------------------------------- -->
+  <hr><!----------------------------------------------------------------- -->
 
   <!-- BOTTOM CREDITS -->
 
@@ -165,37 +239,37 @@
     </td>
   </table>
 
-<hr><!----------------------------------------------------------------- -->
+  <hr><!----------------------------------------------------------------- -->
 
-<!-- GOOGLE DRIVE IFRAME -->
+  <!-- GOOGLE DRIVE IFRAME -->
 
-<table border="10" align="center" style=" width:70%">
-  <tr>
-
-
-    <!--<h3 align =center>Primary Directories?</h3>-->
+  <table border="10" align="center" style=" width:70%">
+    <tr>
 
 
-  </tr>
-  <tr>
-    <td>
-      <div class="iframe-container">
-        <iframe id="drive-frame"
-          src="https://drive.google.com/embeddedfolderview?id=1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL#list"></iframe>
-      </div>
-
-    </td>
-
-  </tr>
-  <tr>
-    <p align=center><i><a style="color:rgba(60, 60, 82, 0.733);"
-          href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL" target="_blank"><small><b>(
-              Link to the Google Drive? )</b></small></a></i></p>
-  </tr>
-</table>
+      <!--<h3 align =center>Primary Directories?</h3>-->
 
 
-<hr><!----------------------------------------------------------------- -->
+    </tr>
+    <tr>
+      <td>
+        <div class="iframe-container">
+          <iframe id="drive-frame"
+            src="https://drive.google.com/embeddedfolderview?id=1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL#list"></iframe>
+        </div>
+
+      </td>
+
+    </tr>
+    <tr>
+      <p align=center><i><a style="color:rgba(60, 60, 82, 0.733);"
+            href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL" target="_blank"><small><b>(
+                Link to the Google Drive? )</b></small></a></i></p>
+    </tr>
+  </table>
+
+
+  <hr><!----------------------------------------------------------------- -->
 
   <!-- HIGHLIGHTS OF DRIVE -->
 
@@ -232,113 +306,136 @@
     </tr>
   </table>
 
-<hr><!----------------------------------------------------------------- -->
+  <hr><!----------------------------------------------------------------- -->
 
-<ul>External Sources?
-  <li><a href=page-depth-01\References.html>See References for Future Updates</a></li>
+  <ul>External Sources?
+    <li><a href=page-depth-01\References.html>See References for Future Updates</a></li>
+    <br>
+    <li><a href=page-depth-01\Tutorials.html>See Tutorials for Resources</a></li>
+    <br>
+    <li><a href=page-depth-01\code-blogs.html>See Coding Blogs</a></li>
+  </ul>
+
+
+
+  <hr><!----------------------------------------------------------------- -->
+
+  <p><a href="https://codeforces.com/"><img src=codeforces-sponsored-by-ton.png alt="CodeForces" width=555
+        height=130></a></p>
   <br>
-  <li><a href=page-depth-01\Tutorials.html>See Tutorials for Resources</a></li>
   <br>
-  <li><a href=page-depth-01\code-blogs.html>See Coding Blogs</a></li>
-</ul>
+  <a href=index.html>Go back to index</a>
+  <br><br>
+  <a href=wip.html>Go back to wip</a>
 
 
 
-<hr><!----------------------------------------------------------------- -->
-
-<p><a href= "https://codeforces.com/"><img src = codeforces-sponsored-by-ton.png alt = "CodeForces" width=555 height=130></a></p>
-<br>
-<br>
-<a href =index.html>Go back to index</a>
-<br><br>
-<a href =wip.html>Go back to wip</a>
+  <hr><!----------------------------------------------------------------- -->
 
 
-
-<hr><!----------------------------------------------------------------- -->
-
-
-<h1 align = center> 
-  This is an image
-</h1>
-<p><img src=github-img.png alt="this is an alt text" width="=200" height="200"></p>
-<p><img alt="this is an alt text" width="=100" height="100"></p>
-<br>
-<br>
-<a href =../index.html>Go back to index</a>
-<br><br>
-<a href =wip.html>Go back to wip</a>
+  <h1 align=center>
+    This is an image
+  </h1>
+  <p><img src=github-img.png alt="this is an alt text" width="=200" height="200"></p>
+  <p><img alt="this is an alt text" width="=100" height="100"></p>
+  <br>
+  <br>
+  <a href=../index.html>Go back to index</a>
+  <br><br>
+  <a href=wip.html>Go back to wip</a>
 
 
 
-<hr><!----------------------------------------------------------------- -->
+  <hr><!----------------------------------------------------------------- -->
 
-<table style="border: 1px solid rgba(31, 106, 168, 0);" align="center">
-  <tr>
+  <table style="border: 1px solid rgba(31, 106, 168, 0);" align="center">
+    <tr>
 
-    <th style="border: 1px solid rgba(31, 106, 168, 0);" align="center">
+      <th style="border: 1px solid rgba(31, 106, 168, 0);" align="center">
 
-      <h3 align=center>Similar Projects ! !</h3>
+        <h3 align=center>Similar Projects ! !</h3>
 
-      <p style="border: 1px solid rgba(31, 106, 168, 0);color:rgba(60, 60, 82, 0.733);""><small>(for references)</small></p>
+        <p style="border: 1px solid rgba(31, 106, 168, 0);color:rgba(60, 60, 82, 0.733);""><small>(for references)</small></p>
 </th >
 
 </tr>
 <tr>
 <td style=" border: 1px solid rgba(31, 106, 168, 0);" align="center">
-        <font size="5">
-          <p align=center>
+          <font size="5">
+            <p align=center>
 
-          <ul>
-            <li style="color:rgba(60, 60, 82, 0.733);"><a href=" http://akibreza.github.io/uitsBOT" target="_blank"
-                style="color:rgba(60, 60, 82, 0.733);">uitsBOT by Akib Reza (432220005101061)</a></li>
+            <ul>
+              <li style="color:rgba(60, 60, 82, 0.733);"><a href=" http://akibreza.github.io/uitsBOT" target="_blank"
+                  style="color:rgba(60, 60, 82, 0.733);">uitsBOT by Akib Reza (432220005101061)</a></li>
 
-          </ul>
-      </p>
-      </font>
-      </td>
+            </ul>
+        </p>
+        </font>
+        </td>
 
-  </tr>
+    </tr>
 
-</table>
+  </table>
 
-<hr><!----------------------------------------------------------------- -->
+  <hr><!----------------------------------------------------------------- -->
 
-<p>(trying to fit it all in a table)</p>
-<h3 align = center>Primary Directories?</h3>
-<br>
-
-<ul style="color:rgba(0, 0, 0, 0.249);"><i>
-    <li><a href ="https://drive.google.com/drive/folders/1oMbT_6PIS8cEnTdRXuue9-KccctiFJZA" target="_blank">Info-Guides</a></li>
-    <br><li><a href ="https://drive.google.com/drive/folders/1i0UUsgy68Nypc2ylPsaB-Teljkf0NSUD" target="_blank">UITS Questions</a></li>
-    <br><li><a href ="https://drive.google.com/drive/folders/1n29sfMaCF_S4ffbjudBBSGBd6Q7l3Sqp" target="_blank">Departments</a></li>
-    <br><li><a href ="https://drive.google.com/drive/folders/1htCYkklo4zgP16a3Ailmo6hk9pAi8Psm" target="_blank">Elective Courses</a></li>
-    <br><li><a href ="https://drive.google.com/drive/folders/1hTWa-Z7gV3GaUUMJhT2KPasmq5L1ha3p" target="_blank">Skills Dev Resources</a></li></i>
-</ul>
-
-<br><br><br>
-<h3 align = center> Highlights? </h3>
-<br>
-<ul style="color:rgba(0, 0, 0, 0.249);"><i>
-  <li><a href ="https://drive.google.com/drive/folders/1rVrADxgpbuEPC5miD7_gP3fGKTMkRfoC" target="_blank">CSE Files</a></li>
-  <br><li><a href ="https://drive.google.com/drive/folders/150xxD5x-4sGyC9b83gWFrglAyw25rGNU" target="_blank">Modified Library Questions</a></li>
-  <br><li><a href ="https://drive.google.com/drive/folders/1HKkXWBglI1Ffb22k7z7qLFqQqWlEcaI1" target="_blank">Routine Format</a></li>
-  <br><li><a href ="https://drive.google.com/drive/folders/1RyEfnky5cr22HnjMu5qnm3q8loP2jIqa" target="_blank">Curated Book List</a></li>
-  <br><li><a href ="https://drive.google.com/drive/folders/1tKdvGoeoYQJ6ms-p7ZPlA2EvYPJ4SWFt" target="_blank">Programming References</a></li>
-</i></ul>
-
-
-
-
-<ul style="color:rgba(0, 0, 0, 0.249);"><i>
-    <li><a href ="https://discord.gg/weetUpfS5X" target="_blank">Discord Server (Protein Shake)</a></li>
+  <p>(trying to fit it all in a table)</p>
+  <h3 align=center>Primary Directories?</h3>
   <br>
-  <li><a href ="https://t.me/UITS_ORnU" target="_blank">Telegram Channel (UITS - Online Resources and Updates)</a></li>
-  <br><li><a href ="https://facebook.com/groups/1074592960836263/" target="_blank">Facebook Group (UITS - Online Resources) </a></li>
-    <br>
-  </i></ul>
 
-  
+  <ul style="color:rgba(0, 0, 0, 0.249);"><i>
+      <li><a href="https://drive.google.com/drive/folders/1oMbT_6PIS8cEnTdRXuue9-KccctiFJZA"
+          target="_blank">Info-Guides</a></li>
+      <br>
+      <li><a href="https://drive.google.com/drive/folders/1i0UUsgy68Nypc2ylPsaB-Teljkf0NSUD" target="_blank">UITS
+          Questions</a></li>
+      <br>
+      <li><a href="https://drive.google.com/drive/folders/1n29sfMaCF_S4ffbjudBBSGBd6Q7l3Sqp"
+          target="_blank">Departments</a></li>
+      <br>
+      <li><a href="https://drive.google.com/drive/folders/1htCYkklo4zgP16a3Ailmo6hk9pAi8Psm" target="_blank">Elective
+          Courses</a></li>
+      <br>
+      <li><a href="https://drive.google.com/drive/folders/1hTWa-Z7gV3GaUUMJhT2KPasmq5L1ha3p" target="_blank">Skills Dev
+          Resources</a></li>
+    </i>
+  </ul>
+
+  <br><br><br>
+  <h3 align=center> Highlights? </h3>
+  <br>
+  <ul style="color:rgba(0, 0, 0, 0.249);"><i>
+      <li><a href="https://drive.google.com/drive/folders/1rVrADxgpbuEPC5miD7_gP3fGKTMkRfoC" target="_blank">CSE
+          Files</a></li>
+      <br>
+      <li><a href="https://drive.google.com/drive/folders/150xxD5x-4sGyC9b83gWFrglAyw25rGNU" target="_blank">Modified
+          Library Questions</a></li>
+      <br>
+      <li><a href="https://drive.google.com/drive/folders/1HKkXWBglI1Ffb22k7z7qLFqQqWlEcaI1" target="_blank">Routine
+          Format</a></li>
+      <br>
+      <li><a href="https://drive.google.com/drive/folders/1RyEfnky5cr22HnjMu5qnm3q8loP2jIqa" target="_blank">Curated
+          Book List</a></li>
+      <br>
+      <li><a href="https://drive.google.com/drive/folders/1tKdvGoeoYQJ6ms-p7ZPlA2EvYPJ4SWFt" target="_blank">Programming
+          References</a></li>
+    </i></ul>
+
+
+
+
+  <ul style="color:rgba(0, 0, 0, 0.249);"><i>
+      <li><a href="https://discord.gg/weetUpfS5X" target="_blank">Discord Server (Protein Shake)</a></li>
+      <br>
+      <li><a href="https://t.me/UITS_ORnU" target="_blank">Telegram Channel (UITS - Online Resources and Updates)</a>
+      </li>
+      <br>
+      <li><a href="https://facebook.com/groups/1074592960836263/" target="_blank">Facebook Group (UITS - Online
+          Resources) </a></li>
+      <br>
+    </i></ul>
+
+
 </body>
 
 </html>
