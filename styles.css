@@ -380,57 +380,6 @@ now Browse Curated Resources*/
 /* -----------------------------------------------------------------  */
 /* -----------------------------------------------------------------  */
 
-/* DROP DOWN BUTTON */
-
-.dropbtn {
-  
- 
-  color: white;
-  font-size: 16px;
-  border: none;
-  background-color: #00000044;
-  border-radius: 8px;
-  padding: 12px;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-  float: right;
-  padding-right: 40%;
-  
-}
-
-.dropdown-content {
-  
-  display: none;
-  position: absolute;
-  background-color: #00000044;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  transition: color 0.3s ease;
-}
-
-.dropdown-content a {
-  background-color: #000000c5;
-  color: rgb(255, 255, 255);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-content a:hover { background-color: #424242;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {color: rgba(255, 255, 255, 0.7);}
-
-/* -----------------------------------------------------------------  */
-/* -----------------------------------------------------------------  */
-/* -----------------------------------------------------------------  */
 
 /* HOME BUTTON */
 
