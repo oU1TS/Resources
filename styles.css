@@ -17,6 +17,13 @@ html {
   zoom: 110%;
 }
 
+
+/* https://stackoverflow.com/questions/10853881/how-to-remove-underline-from-a-link-in-html*/
+
+a {
+  text-decoration: none;
+}
+
 /* sets default zoom level */
 
 
@@ -504,6 +511,7 @@ now Browse Curated Resources*/
   align-items: center;
   justify-content: center;
 }
+
 .arrow-up {
   transform: rotate(-135deg);
 }
@@ -551,4 +559,3 @@ now Browse Curated Resources*/
   padding: 16px;
   margin-bottom: 30px;
 }
-
