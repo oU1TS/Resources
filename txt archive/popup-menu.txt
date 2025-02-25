@@ -1,0 +1,24 @@
+1. Lighter Theme
+
+Changed the dark colors to softer blue-purple tones
+Adjusted from nearly black (#000000c5) to a lighter navy blue (rgba(50, 50, 70, 0.95))
+Increased text contrast and visibility
+Added subtle purple tints to the background colors
+Brightened the menu elements for better visibility
+
+2. Repositioned Menu Button
+
+Moved the menu button from a fixed position to be inside the container
+Positioned it in the top-right corner of the container div
+Made it slightly smaller to fit better within the container
+Changed z-index to ensure proper layering
+
+Other Improvements
+
+Improved color contrast for better readability
+Added slightly more transparency to background elements for a lighter feel
+Maintained the same functionality with the centered popup
+Kept the grid layout for organized links
+Ensured mobile responsiveness
+
+The menu button now appears directly in the container rather than floating in the corner of the browser window, and the overall color scheme is lighter and more vibrant with purple-blue tones instead of the previous dark blacks and grays.
