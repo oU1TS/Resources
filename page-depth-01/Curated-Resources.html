@@ -48,7 +48,7 @@
             border-radius: 8px;
             padding: 12px;
             position: relative;
-
+           
             cursor: pointer;
             display: flex;
             flex-direction: column;
@@ -219,7 +219,6 @@
             transition: opacity 0.3s ease;
         }
 
-
         .popup-backdrop.open {
             opacity: 1;
             visibility: visible;
@@ -320,51 +319,32 @@
                 <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">More Links</p>
             </td>
             </tr>
-            <tr><!-- Second container with different menu button -->
+<!-- ------------------------------------------------------------------------ -->
+ <!-- ------------------------------------------------------------------------ -->
+            <tr><!-- 3rd container with menu button -->
+                <td class="menu-button" id="menuButton3" align="center" style="color: rgba(240, 248, 255, 0.85);">
+                    <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">Career Guides
+                    </p>
+            </td>
+        </tr>
+            <tr><!-- 1st container with different menu button -->
                 <td class="menu-button" id="menuButton2" align="center" style="color: rgba(240, 248, 255, 0.85);">
-                    <!-- <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div> -->
+
                     <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">Open Source Learning
                     </p>
                 </td>
             </tr>
-            <tr><!-- First container with menu button -->
+            <tr><!-- 2ndcontainer with menu button -->
                 <td class="menu-button" id="menuButton1" align="center" style="color: rgba(240, 248, 255, 0.85);">
-                    <!-- <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div> -->
+                    
                     <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">People I want to
                         keep following</p>
                 </td>
             </tr>
+            
         </table>
     </div>
 
-    <tr>
-        <td style="background-color: rgba(240, 248, 255, 0);">
-            <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">More Links</p>
-        </td>
-    </tr>
-    <tr><!-- Second container with different menu button -->
-        <td class="menu-button" id="menuButton1" align="center" style="color: rgba(240, 248, 255, 0.85);">
-            <!-- <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div> -->
-            <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">Open Source Learning</p>
-        </td>
-    </tr>
-    <tr><!-- First container with menu button -->
-        <td class="menu-button" id="menuButton2" align="center" style="color: rgba(240, 248, 255, 0.85);">
-            <!-- <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div> -->
-            <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">People I want to keep
-                following</p>
-        </td>
-    </tr>
-    </table>
-    </div>
 
     <!-- -------------------------------------------------------------- -->
     <!-- -------------------------------------------------------------- -->
@@ -451,14 +431,55 @@
             </div>
         </div>
     </div>
+     
+    <!-- 3rd popup menu with different content -->
+    <div class="popup-menu" id="popupMenu3">
+        <div class="popup-close popup-close-btn"></div>
+        <!-- <div class="popup-menu-title">Resources & Tools</div> -->
+        <div class="popup-menu-categories">
+            <div class="popup-menu-category" align="center">
+                <!-- <div class="category-title">Coding Resources</div> -->
+                <div class="link-item">
+                    <a href="https://roadmap.sh/">
+                        Standard Roadmaps
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://80000hours.org/" target="_blank">
+                        80000 hours Experts' Tips
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://majestic-epoch-fb4.notion.site/Google-X-Y-Z-Resume-Formula-16ed553489b24c078c5c1d2bfd60ca7a" target="_blank">
+                        Google's CV Format
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://www.techinterviewhandbook.org/" target="_blank">
+                        Interview Guide
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://shed.gov.bd/site/view/scholarship/%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%AC%E0%A7%83%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%AC%E0%A6%BF%E0%A6%9C%E0%A7%8D%E0%A6%9E%E0%A6%AA%E0%A7%8D%E0%A6%A4%E0%A6%BF" target="_blank">
+                        BD govt. Scholarships<br>
+                        (Abroad Scholarships)
+                    </a>
+                </div>
+                <!-- More links here -->
+            </div>
+        </div>
+    </div>
+
     <!-- Shared backdrop for all popups -->
     <div class="popup-backdrop" id="popupBackdrop"></div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
+   
+   <script>
+         document.addEventListener('DOMContentLoaded', function () {
             // Button and popup pairs
             const menuPairs = [
                 { button: 'menuButton1', popup: 'popupMenu1' },
-                { button: 'menuButton2', popup: 'popupMenu2' }
+                { button: 'menuButton2', popup: 'popupMenu2' },
+                { button: 'menuButton3', popup: 'popupMenu3' }
                 // Add more pairs as needed
             ];
 
