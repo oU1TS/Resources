@@ -30,6 +30,251 @@
       /* Scale from top-left corner */
     }
   </style>
+  <style>
+    /* body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+        color: #fff;
+    } */
+
+    .container-5 {
+
+        border-radius: 15px;
+        padding: 25px;
+        margin: 20px auto;
+        width: 79%;
+        max-width: 800px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        /*the button visibility*/
+        position: relative;
+        background-color: #000000c5;
+
+    }
+
+    .drive-link-5 {
+        margin-bottom: 20px;
+    }
+
+    .drive-link-5 a {
+        color: #b8b8e5;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .drive-link-5 a:hover {
+        color: #ffffff;
+    }
+
+    .menu-button {
+        background-color: #00000000;
+        border-radius: 8px;
+        padding: 12px;
+        position: relative;
+
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        z-index: 50;
+        transition: background-color 0.3s ease;
+    }
+
+    .menu-button:hover {
+        background-color: rgba(100, 100, 150, 0.9);
+    }
+
+    .menu-line {
+        width: 20px;
+        height: 2px;
+        background-color: #d8d8ff;
+        transition: all 0.3s ease;
+    }
+
+    .menu-button:hover .menu-line {
+        background-color: #ffffff;
+    }
+
+    .menu-button.active .menu-line:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-button.active .menu-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-button.active .menu-line:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Modal Popup */
+    .popup-menu {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        width: 80%;
+        max-width: 600px;
+        max-height: 80vh;
+        background-color: rgba(50, 50, 70, 0.95);
+        border-radius: 15px;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        overflow-y: auto;
+
+        pointer-events: none;
+    }
+
+    .popup-menu.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+        pointer-events: auto;
+    }
+
+    /* .popup-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: rgba(80, 80, 120, 0.4);
+        transition: background-color 0.3s ease;
+    } */
+
+    .popup-close:hover {
+        background-color: #424242;
+    }
+
+    /* .popup-close::before,
+    .popup-close::after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        background-color: #424242;
+    } */
+
+    .popup-close::before {
+        transform: rotate(45deg);
+    }
+
+    .popup-close::after {
+        transform: rotate(-45deg);
+    }
+
+    .popup-menu-title {
+        color: #ffffff;
+        font-size: 1.4rem;
+        margin-bottom: 30px;
+        text-align: center;
+        border-bottom: 1px solid rgba(200, 200, 255, 0.2);
+        padding-bottom: 15px;
+    }
+
+    .popup-menu-categories {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .popup-menu-category {
+        margin-bottom: 25px;
+    }
+
+    .category-title {
+        color: rgba(220, 220, 255, 0.9);
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        padding-left: 10px;
+        border-left: 3px solid #b8b8e5;
+    }
+
+    .link-item {
+        background-color: rgba(80, 80, 120, 0.4);
+        border-radius: 8px;
+        margin-bottom: 10px;
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+
+    .link-item:hover {
+        background-color: rgba(100, 100, 150, 0.6);
+        transform: translateY(-3px);
+    }
+
+    .link-item a {
+        color: rgba(240, 240, 255, 0.9);
+        text-decoration: none;
+        display: block;
+        padding: 15px;
+        transition: color 0.3s ease;
+    }
+
+    .link-item a:hover {
+        color: #ffffff;
+    }
+
+    .popup-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(30, 30, 40, 0.7);
+        z-index: 997;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+    }
+
+
+    .popup-backdrop.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    @media (max-width: 768px) {
+        .popup-menu {
+            width: 90%;
+            padding: 20px;
+        }
+
+        .popup-menu-categories {
+            grid-template-columns: 1fr;
+        }
+
+        .resources-table-5 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resources-table-5 tr {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resources-table-5 td {
+            margin: 5px 0;
+            width: 90%;
+        }
+    }
+</style>
   
   <!-- STYLE FOR POPUP MENU -->
      <style>
@@ -428,8 +673,175 @@
     };
   </script>
 
+<tr>
+  <td style="background-color: rgba(240, 248, 255, 0);">
+      <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">More Links</p>
+  </td>
+</tr>
+<tr><!-- Second container with different menu button -->
+  <td class="menu-button" id="menuButton1" align="center" style="color: rgba(240, 248, 255, 0.85);">
+      <!-- <div class="menu-line"></div>
+              <div class="menu-line"></div>
+              <div class="menu-line"></div> -->
+      <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">Open Source Learning</p>
+  </td>
+</tr>
+<tr><!-- First container with menu button -->
+  <td class="menu-button" id="menuButton2" align="center" style="color: rgba(240, 248, 255, 0.85);">
+      <!-- <div class="menu-line"></div>
+              <div class="menu-line"></div>
+              <div class="menu-line"></div> -->
+      <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">People I want to keep
+          following</p>
+  </td>
+</tr>
+</table>
+</div>
+
+
+<!-- -------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------- -->
+
+
+
+<!-- First popup -->
+<div class="popup-menu" id="popupMenu1">
+  <div class="popup-close popup-close-btn"></div>
+  <!-- <div class="popup-menu-title">Resources & Tools</div> -->
+  <div class="popup-menu-categories">
+      <div class="popup-menu-category" align="center">
+          <!-- <div class="category-title">Coding Resources</div> -->
+          <div class="link-item">
+              <a href="https://github.com/ShahjalalShohag" target="_blank">
+                  youkn0wwho <br>(Shahjalal Shohag)
+              </a>
+          </div>
+          <div class="link-item">
+              <a href="https://thebigcb.com/" target="_blank">
+                  Code Bullet
+              </a>
+          </div>
+          <div class="link-item">
+              <a href="https://www.3blue1brown.com/" target="_blank">
+                  3blue1brown<br> (Grant Sanderson)
+              </a>
+          </div>
+          <div class="link-item">
+              <a href="https://www.youtube.com/@OnnorokomPathshala/playlists" target="_blank">
+                  Onnorokom Pathshala
+              </a>
+          </div>
+          <div class="link-item">
+              <a href="https://www.linkedin.com/in/md-maksudul-hossain-4300a095" target="_blank">
+                  Md Maksudul Hossain <br>(Onnorokom Pathshala)
+              </a>
+          </div>
+          <!-- More links here -->
+      </div>
+  </div>
+</div>
+
+<!-- 2nd popup menu -->
+<div class="popup-menu" id="popupMenu2">
+  <div class="popup-close popup-close-btn"></div>
+  <!-- <div class="popup-menu-title">Content Creators</div> -->
+  <div class="popup-menu-categories">
+      <div class="popup-menu-category" align="center">
+          <!-- <div class="category-title">People I Follow</div> -->
+          <div class="link-item">
+              <a href="page-depth-02\OSSU.html">
+                  OSSU<br> ( Open Source Society University )
+              </a>
+          </div>
+          <div class="link-item">
+              <a href="https://pll.harvard.edu/" target="_blank">
+                  CS50 Courses from Harvard
+              </a>
+          </div>
+          <div class="link-item">
+              <a href="https://ocw.mit.edu/" target="_blank">
+                  Some MIT Courses
+              </a>
+          </div>
+          <div class="link-item">
+              <a href="https://home.edx.org/" target="_blank">
+                  edX<br>(Harvard and MIT)
+              </a>
+          </div>
+          <div class="link-item">
+              <a href="https://stackexchange.com/" target="_blank">
+                  stackexchange
+              </a>
+          </div>
+          <div class="link-item">
+              <a href="https://teachyourselfcs.com/" target="_blank">
+                  A written Guide to CS<br>( Teach Yourself CS )
+              </a>
+          </div>
+
+          <!-- More links here -->
+      </div>
+  </div>
+</div>
+<!-- Shared backdrop for all popups -->
+<div class="popup-backdrop" id="popupBackdrop"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      // Button and popup pairs
+      const menuPairs = [
+          { button: 'menuButton1', popup: 'popupMenu1' },
+          { button: 'menuButton2', popup: 'popupMenu2' }
+          // Add more pairs as needed
+      ];
+
+      const popupBackdrop = document.getElementById('popupBackdrop');
+      let activePopup = null;
+
+      // Set up each button-popup pair
+      menuPairs.forEach(pair => {
+          const button = document.getElementById(pair.button);
+          const popup = document.getElementById(pair.popup);
+
+          button.addEventListener('click', function () {
+              // Open this specific popup
+              popup.classList.add('open');
+              popupBackdrop.classList.add('open');
+              button.classList.add('active');
+              activePopup = popup;
+          });
+      });
+
+      // Close buttons for all popups
+      const closeButtons = document.querySelectorAll('.popup-close-btn');
+      closeButtons.forEach(btn => {
+          btn.addEventListener('click', closeActivePopup);
+      });
+
+      // Backdrop click closes any open popup
+      popupBackdrop.addEventListener('click', closeActivePopup);
+
+      function closeActivePopup() {
+          // Remove active class from all buttons
+          document.querySelectorAll('.menu-button').forEach(btn => {
+              btn.classList.remove('active');
+          });
+
+          // Close all popups
+          document.querySelectorAll('.popup-menu').forEach(popup => {
+              popup.classList.remove('open');
+          });
+
+          // Hide backdrop
+          popupBackdrop.classList.remove('open');
+          activePopup = null;
+      }
+  });
+</script>
+
 
 <hr><!----------------------------------------------------------------- -->
+
 <p>code for pop up menu</p>
     <!-- <div class="container-5" align=center>
         <table class="resources-table-5" align=center style="width:90%;">
