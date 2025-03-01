@@ -2,36 +2,36 @@
 <html>
 
 <head>
-  <style>
-    table,
-    th,
-    td {
-      border: 2px solid rgba(31, 106, 168, 0.452);
-      border-radius: 10px;
-    }
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid rgba(31, 106, 168, 0.452);
+            border-radius: 10px;
+        }
 
-    /*Drive iframe CSS*/
+        /*Drive iframe CSS*/
 
-    .iframe-container {
-      width: 95%;
-      height: 400px;
-      /* Increased height to accommodate zoomed content */
-      overflow: hidden;
-      position: relative;
-    }
+        .iframe-container {
+            width: 95%;
+            height: 400px;
+            /* Increased height to accommodate zoomed content */
+            overflow: hidden;
+            position: relative;
+        }
 
-    #drive-frame {
-      width: 100%;
-      height: 100%;
-      border: 0;
-      transform: scale(1.2);
-      /* Constant zoom factor */
-      transform-origin: top left;
-      /* Scale from top-left corner */
-    }
-  </style>
-  <style>
-    /* body {
+        #drive-frame {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            transform: scale(1.2);
+            /* Constant zoom factor */
+            transform-origin: top left;
+            /* Scale from top-left corner */
+        }
+    </style>
+    <style>
+        /* body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
@@ -39,110 +39,110 @@
         color: #fff;
     } */
 
-    .container-5 {
+        .container-5 {
 
-        border-radius: 15px;
-        padding: 25px;
-        margin: 20px auto;
-        width: 79%;
-        max-width: 800px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        /*the button visibility*/
-        position: relative;
-        background-color: #000000c5;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px auto;
+            width: 79%;
+            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            /*the button visibility*/
+            position: relative;
+            background-color: #000000c5;
 
-    }
+        }
 
-    .drive-link-5 {
-        margin-bottom: 20px;
-    }
+        .drive-link-5 {
+            margin-bottom: 20px;
+        }
 
-    .drive-link-5 a {
-        color: #b8b8e5;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
+        .drive-link-5 a {
+            color: #b8b8e5;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-    .drive-link-5 a:hover {
-        color: #ffffff;
-    }
+        .drive-link-5 a:hover {
+            color: #ffffff;
+        }
 
-    .menu-button {
-        background-color: #00000000;
-        border-radius: 8px;
-        padding: 12px;
-        position: relative;
+        .menu-button {
+            background-color: #00000000;
+            border-radius: 8px;
+            padding: 12px;
+            position: relative;
 
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        z-index: 50;
-        transition: background-color 0.3s ease;
-    }
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            z-index: 50;
+            transition: background-color 0.3s ease;
+        }
 
-    .menu-button:hover {
-        background-color: rgba(100, 100, 150, 0.9);
-    }
+        .menu-button:hover {
+            background-color: rgba(100, 100, 150, 0.9);
+        }
 
-    .menu-line {
-        width: 20px;
-        height: 2px;
-        background-color: #d8d8ff;
-        transition: all 0.3s ease;
-    }
+        .menu-line {
+            width: 20px;
+            height: 2px;
+            background-color: #d8d8ff;
+            transition: all 0.3s ease;
+        }
 
-    .menu-button:hover .menu-line {
-        background-color: #ffffff;
-    }
+        .menu-button:hover .menu-line {
+            background-color: #ffffff;
+        }
 
-    .menu-button.active .menu-line:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-    }
+        .menu-button.active .menu-line:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
 
-    .menu-button.active .menu-line:nth-child(2) {
-        opacity: 0;
-    }
+        .menu-button.active .menu-line:nth-child(2) {
+            opacity: 0;
+        }
 
-    .menu-button.active .menu-line:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-    }
+        .menu-button.active .menu-line:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
 
-    /* Modal Popup */
-    .popup-menu {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0.9);
-        width: 80%;
-        max-width: 600px;
-        max-height: 80vh;
-        background-color: rgba(50, 50, 70, 0.95);
-        border-radius: 15px;
-        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
-        z-index: 999;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-        display: flex;
-        flex-direction: column;
-        padding: 30px;
-        overflow-y: auto;
+        /* Modal Popup */
+        .popup-menu {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            width: 80%;
+            max-width: 600px;
+            max-height: 80vh;
+            background-color: rgba(50, 50, 70, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            overflow-y: auto;
 
-        pointer-events: none;
-    }
+            pointer-events: none;
+        }
 
-    .popup-menu.open {
-        opacity: 1;
-        visibility: visible;
-        transform: translate(-50%, -50%) scale(1);
-        pointer-events: auto;
-    }
+        .popup-menu.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+            pointer-events: auto;
+        }
 
-    /* .popup-close {
+        /* .popup-close {
         position: absolute;
         top: 15px;
         right: 15px;
@@ -157,11 +157,11 @@
         transition: background-color 0.3s ease;
     } */
 
-    .popup-close:hover {
-        background-color: #424242;
-    }
+        .popup-close:hover {
+            background-color: #424242;
+        }
 
-    /* .popup-close::before,
+        /* .popup-close::before,
     .popup-close::after {
         content: '';
         position: absolute;
@@ -170,115 +170,115 @@
         background-color: #424242;
     } */
 
-    .popup-close::before {
-        transform: rotate(45deg);
-    }
+        .popup-close::before {
+            transform: rotate(45deg);
+        }
 
-    .popup-close::after {
-        transform: rotate(-45deg);
-    }
+        .popup-close::after {
+            transform: rotate(-45deg);
+        }
 
-    .popup-menu-title {
-        color: #ffffff;
-        font-size: 1.4rem;
-        margin-bottom: 30px;
-        text-align: center;
-        border-bottom: 1px solid rgba(200, 200, 255, 0.2);
-        padding-bottom: 15px;
-    }
-
-    .popup-menu-categories {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
-
-    .popup-menu-category {
-        margin-bottom: 25px;
-    }
-
-    .category-title {
-        color: rgba(220, 220, 255, 0.9);
-        font-size: 1.1rem;
-        margin-bottom: 15px;
-        padding-left: 10px;
-        border-left: 3px solid #b8b8e5;
-    }
-
-    .link-item {
-        background-color: rgba(80, 80, 120, 0.4);
-        border-radius: 8px;
-        margin-bottom: 10px;
-        transition: all 0.3s ease;
-        overflow: hidden;
-    }
-
-    .link-item:hover {
-        background-color: rgba(100, 100, 150, 0.6);
-        transform: translateY(-3px);
-    }
-
-    .link-item a {
-        color: rgba(240, 240, 255, 0.9);
-        text-decoration: none;
-        display: block;
-        padding: 15px;
-        transition: color 0.3s ease;
-    }
-
-    .link-item a:hover {
-        color: #ffffff;
-    }
-
-    .popup-backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(30, 30, 40, 0.7);
-        z-index: 997;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease;
-    }
-
-
-    .popup-backdrop.open {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    @media (max-width: 768px) {
-        .popup-menu {
-            width: 90%;
-            padding: 20px;
+        .popup-menu-title {
+            color: #ffffff;
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 1px solid rgba(200, 200, 255, 0.2);
+            padding-bottom: 15px;
         }
 
         .popup-menu-categories {
-            grid-template-columns: 1fr;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
-        .resources-table-5 {
-            display: flex;
-            flex-direction: column;
+        .popup-menu-category {
+            margin-bottom: 25px;
         }
 
-        .resources-table-5 tr {
-            display: flex;
-            flex-direction: column;
+        .category-title {
+            color: rgba(220, 220, 255, 0.9);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 3px solid #b8b8e5;
         }
 
-        .resources-table-5 td {
-            margin: 5px 0;
-            width: 90%;
+        .link-item {
+            background-color: rgba(80, 80, 120, 0.4);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            overflow: hidden;
         }
-    }
-</style>
-  
-  <!-- STYLE FOR POPUP MENU -->
-     <style>
-      /* body {
+
+        .link-item:hover {
+            background-color: rgba(100, 100, 150, 0.6);
+            transform: translateY(-3px);
+        }
+
+        .link-item a {
+            color: rgba(240, 240, 255, 0.9);
+            text-decoration: none;
+            display: block;
+            padding: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .link-item a:hover {
+            color: #ffffff;
+        }
+
+        .popup-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(30, 30, 40, 0.7);
+            z-index: 997;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+
+
+        .popup-backdrop.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media (max-width: 768px) {
+            .popup-menu {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .popup-menu-categories {
+                grid-template-columns: 1fr;
+            }
+
+            .resources-table-5 {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .resources-table-5 tr {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .resources-table-5 td {
+                margin: 5px 0;
+                width: 90%;
+            }
+        }
+    </style>
+
+    <!-- STYLE FOR POPUP MENU -->
+    <style>
+        /* body {
           font-family: Arial, sans-serif;
           margin: 0;
           padding: 0;
@@ -286,262 +286,262 @@
           color: #fff;
       } */
 
-      .container-5 {
+        .container-5 {
 
-          border-radius: 15px;
-          padding: 25px;
-          margin: 20px auto;
-          width: 79%;
-          max-width: 800px;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-          /*the button visibility*/
-          position: relative;
-          background-color: #000000c5;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px auto;
+            width: 79%;
+            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            /*the button visibility*/
+            position: relative;
+            background-color: #000000c5;
 
-      }
+        }
 
-      .drive-link-5 {
-          margin-bottom: 20px;
-      }
+        .drive-link-5 {
+            margin-bottom: 20px;
+        }
 
-      .drive-link-5 a {
-          color: #b8b8e5;
-          text-decoration: none;
-          transition: color 0.3s ease;
-      }
+        .drive-link-5 a {
+            color: #b8b8e5;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-      .drive-link-5 a:hover {
-          color: #ffffff;
-      }
+        .drive-link-5 a:hover {
+            color: #ffffff;
+        }
 
-      .menu-button {
-          background-color: #00000000;
-          border-radius: 8px;
-          padding: 12px;
-          transition: background-color 0.3s ease;
-          /* position: absolute; */
-          /* top: 20px;
+        .menu-button {
+            background-color: #00000000;
+            border-radius: 8px;
+            padding: 12px;
+            transition: background-color 0.3s ease;
+            /* position: absolute; */
+            /* top: 20px;
           right: 20px;
           width: 40px;
           height: 40px; */
-          /* background-color: rgba(80, 80, 120, 0.8); */
-          /* border-radius: 50%; */
-          cursor: pointer;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 5px;
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-          z-index: 100;
-          transition: background-color 0.3s ease;
-      }
+            /* background-color: rgba(80, 80, 120, 0.8); */
+            /* border-radius: 50%; */
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            transition: background-color 0.3s ease;
+        }
 
-      .menu-button:hover {
-          background-color: rgba(100, 100, 150, 0.9);
-      }
+        .menu-button:hover {
+            background-color: rgba(100, 100, 150, 0.9);
+        }
 
-      .menu-line {
-          width: 20px;
-          height: 2px;
-          background-color: #d8d8ff;
-          transition: all 0.3s ease;
-      }
+        .menu-line {
+            width: 20px;
+            height: 2px;
+            background-color: #d8d8ff;
+            transition: all 0.3s ease;
+        }
 
-      .menu-button:hover .menu-line {
-          background-color: #ffffff;
-      }
+        .menu-button:hover .menu-line {
+            background-color: #ffffff;
+        }
 
-      .menu-button.active .menu-line:nth-child(1) {
-          transform: translateY(7px) rotate(45deg);
-      }
+        .menu-button.active .menu-line:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
 
-      .menu-button.active .menu-line:nth-child(2) {
-          opacity: 0;
-      }
+        .menu-button.active .menu-line:nth-child(2) {
+            opacity: 0;
+        }
 
-      .menu-button.active .menu-line:nth-child(3) {
-          transform: translateY(-7px) rotate(-45deg);
-      }
+        .menu-button.active .menu-line:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
 
-      /* Modal Popup */
-      .popup-menu {
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%) scale(0.9);
-          width: 80%;
-          max-width: 600px;
-          max-height: 80vh;
-          background-color: rgba(50, 50, 70, 0.95);
-          border-radius: 15px;
-          box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
-          z-index: 999;
-          opacity: 0;
-          visibility: hidden;
-          transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-          display: flex;
-          flex-direction: column;
-          padding: 30px;
-          overflow-y: auto;
-      }
+        /* Modal Popup */
+        .popup-menu {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            width: 80%;
+            max-width: 600px;
+            max-height: 80vh;
+            background-color: rgba(50, 50, 70, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            overflow-y: auto;
+        }
 
-      .popup-menu.open {
-          opacity: 1;
-          visibility: visible;
-          transform: translate(-50%, -50%) scale(1);
-      }
+        .popup-menu.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
 
-      .popup-close {
-          position: absolute;
-          top: 15px;
-          right: 15px;
-          width: 30px;
-          height: 30px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-          border-radius: 50%;
-          background-color: rgba(80, 80, 120, 0.4);
-          transition: background-color 0.3s ease;
-      }
+        .popup-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 50%;
+            background-color: rgba(80, 80, 120, 0.4);
+            transition: background-color 0.3s ease;
+        }
 
-      .popup-close:hover {
-          background-color: #424242;
-      }
+        .popup-close:hover {
+            background-color: #424242;
+        }
 
-      .popup-close::before,
-      .popup-close::after {
-          content: '';
-          position: absolute;
-          width: 15px;
-          height: 2px;
-          background-color: #424242;
-      }
+        .popup-close::before,
+        .popup-close::after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 2px;
+            background-color: #424242;
+        }
 
-      .popup-close::before {
-          transform: rotate(45deg);
-      }
+        .popup-close::before {
+            transform: rotate(45deg);
+        }
 
-      .popup-close::after {
-          transform: rotate(-45deg);
-      }
+        .popup-close::after {
+            transform: rotate(-45deg);
+        }
 
-      .popup-menu-title {
-          color: #ffffff;
-          font-size: 1.4rem;
-          margin-bottom: 30px;
-          text-align: center;
-          border-bottom: 1px solid rgba(200, 200, 255, 0.2);
-          padding-bottom: 15px;
-      }
+        .popup-menu-title {
+            color: #ffffff;
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 1px solid rgba(200, 200, 255, 0.2);
+            padding-bottom: 15px;
+        }
 
-      .popup-menu-categories {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 20px;
-      }
+        .popup-menu-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
 
-      .popup-menu-category {
-          margin-bottom: 25px;
-      }
+        .popup-menu-category {
+            margin-bottom: 25px;
+        }
 
-      .category-title {
-          color: rgba(220, 220, 255, 0.9);
-          font-size: 1.1rem;
-          margin-bottom: 15px;
-          padding-left: 10px;
-          border-left: 3px solid #b8b8e5;
-      }
+        .category-title {
+            color: rgba(220, 220, 255, 0.9);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 3px solid #b8b8e5;
+        }
 
-      .link-item {
-          background-color: rgba(80, 80, 120, 0.4);
-          border-radius: 8px;
-          margin-bottom: 10px;
-          transition: all 0.3s ease;
-          overflow: hidden;
-      }
+        .link-item {
+            background-color: rgba(80, 80, 120, 0.4);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
 
-      .link-item:hover {
-          background-color: rgba(100, 100, 150, 0.6);
-          transform: translateY(-3px);
-      }
+        .link-item:hover {
+            background-color: rgba(100, 100, 150, 0.6);
+            transform: translateY(-3px);
+        }
 
-      .link-item a {
-          color: rgba(240, 240, 255, 0.9);
-          text-decoration: none;
-          display: block;
-          padding: 15px;
-          transition: color 0.3s ease;
-      }
+        .link-item a {
+            color: rgba(240, 240, 255, 0.9);
+            text-decoration: none;
+            display: block;
+            padding: 15px;
+            transition: color 0.3s ease;
+        }
 
-      .link-item a:hover {
-          color: #ffffff;
-      }
+        .link-item a:hover {
+            color: #ffffff;
+        }
 
-      .popup-backdrop {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(30, 30, 40, 0.7);
-          z-index: 998;
-          opacity: 0;
-          visibility: hidden;
-          transition: opacity 0.3s ease;
-      }
+        .popup-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(30, 30, 40, 0.7);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
 
-      .popup-backdrop.open {
-          opacity: 1;
-          visibility: visible;
-      }
+        .popup-backdrop.open {
+            opacity: 1;
+            visibility: visible;
+        }
 
-      @media (max-width: 768px) {
-          .popup-menu {
-              width: 90%;
-              padding: 20px;
-          }
+        @media (max-width: 768px) {
+            .popup-menu {
+                width: 90%;
+                padding: 20px;
+            }
 
-          .popup-menu-categories {
-              grid-template-columns: 1fr;
-          }
+            .popup-menu-categories {
+                grid-template-columns: 1fr;
+            }
 
-          .resources-table-5 {
-              display: flex;
-              flex-direction: column;
-          }
+            .resources-table-5 {
+                display: flex;
+                flex-direction: column;
+            }
 
-          .resources-table-5 tr {
-              display: flex;
-              flex-direction: column;
-          }
+            .resources-table-5 tr {
+                display: flex;
+                flex-direction: column;
+            }
 
-          .resources-table-5 td {
-              margin: 5px 0;
-              width: 90%;
-          }
-      }
-  </style>
-  <title>
-    Image Page
-  </title>
+            .resources-table-5 td {
+                margin: 5px 0;
+                width: 90%;
+            }
+        }
+    </style>
+    <title>
+        Image Page
+    </title>
 </head>
 
 
 <body>
-  <h1 id="top" align=center>
-    (wip page)</h1>
-  <p align=center><a href=../index.html>Go back</a></p>
-  <p align=center><a href="#end">Go to end</a></p>
+    <h1 id="top" align=center>
+        (wip page)</h1>
+    <p align=center><a href=../index.html>Go back</a></p>
+    <p align=center><a href="#end">Go to end</a></p>
 
 
-  <br><br>
+    <br><br>
 
-  <hr><!----------------------------------------------------------------- -->
+    <hr><!----------------------------------------------------------------- -->
 
-  <!-- 
+    <!-- 
 ************************************************
 ************************************************
 *******COMMON CODES FOR ALL PAGES??*************
@@ -550,299 +550,305 @@
 -->
 
 
-  <!-- <HEAD> section -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../styles.css">
+    <!-- <HEAD> section -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
 
 
 
-  <!-- TOP BAR -->
+    <!-- TOP BAR -->
 
-  <div class="topnav-1">
+    <div class="topnav-1">
 
-    <a class="active-1" href="page-depth-01/Tutorials.html">
-      <small>Tutorials</small>
-    </a>
-    <a class="active-1" href="page-depth-01/References.html">
-      <small>References</small>
-    </a>
-    <a class="active-1" href="https://b1tranger-coding.blogspot.com/">
-      <small>Blogs</small>
-    </a>
-    <a class="active-1" href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL?usp=sharing"
-      target="_blank">
-      <small>UITS<br>G-Drive</small>
-    </a>
-  </div>
+        <a class="active-1" href="page-depth-01/Tutorials.html">
+            <small>Tutorials</small>
+        </a>
+        <a class="active-1" href="page-depth-01/References.html">
+            <small>References</small>
+        </a>
+        <a class="active-1" href="https://b1tranger-coding.blogspot.com/">
+            <small>Blogs</small>
+        </a>
+        <a class="active-1" href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL?usp=sharing"
+            target="_blank">
+            <small>UITS<br>G-Drive</small>
+        </a>
+    </div>
 
 
-  <!-- BOTTOM BAR "navbar" -->
-<!-- 
+    <!-- BOTTOM BAR "navbar" -->
+    <!-- 
   <div style="padding-left:16px">
   </div> -->
 
-<!-- IF p class overrides -->
-  <!-- <div class="navbar-5">
+    <!-- IF p class overrides -->
+    <!-- <div class="navbar-5">
     <p align=center style="color: #f2f2f2;font-size: 16;z-index: 1000;padding: 14px 16px;display: block;overflow: hidden; background-color: #333; position: fixed;bottom: 0;width: 100%;text-decoration: none;"><i>oUITS
             Resources</i></p>
 </div> -->
 
-  <div class="navbar-5">
-    <font size="24"></font>
-    <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>oUITS Resources</i></p>
-    </font>
+    <div class="navbar-5">
+        <font size="24"></font>
+        <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>oUITS Resources</i></p>
+        </font>
 
-  </div>
+    </div>
 
-  <!-- HOME BUTTON -->
+    <!-- HOME BUTTON -->
 
-  <a href="../index.html" class="home-button">
-    <svg class="home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path
-        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-    </svg>
-  </a>
+    <a href="../index.html" class="home-button">
+        <svg class="home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+    </a>
 
-  <!-- BACK BUTTON -->
+    <!-- BACK BUTTON -->
 
-  <a href="javascript:history.back()" class="back-icon">&#8592;</a>
-
-
+    <a href="javascript:history.back()" class="back-icon">&#8592;</a>
 
 
 
-  <!-- ADD SCROLL BUTTON FOR LONG PAGES ONLY -->
 
 
-  <!-- SCROLL TOP OR BOTTOM BUTTON -->
+    <!-- ADD SCROLL BUTTON FOR LONG PAGES ONLY -->
 
-  <button id="scrollButton" class="scroll-button">
-    <i class="arrow arrow-up"></i>
-    <span id="buttonText">Top</span>
-  </button>
 
-  <script>
-    const scrollButton = document.getElementById('scrollButton');
-    const buttonText = document.getElementById('buttonText');
-    const arrow = scrollButton.querySelector('.arrow');
+    <!-- SCROLL TOP OR BOTTOM BUTTON -->
 
-    // Show button only when scrolling
-    window.onscroll = function () {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollButton.classList.add('visible');
-      } else {
-        scrollButton.classList.remove('visible');
-      }
-      updateButtonState();
-    };
+    <button id="scrollButton" class="scroll-button">
+        <i class="arrow arrow-up"></i>
+        <span id="buttonText">Top</span>
+    </button>
 
-    // Update button state based on scroll position
-    function updateButtonState() {
-      const scrollPosition = window.scrollY;
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      const isNearBottom = maxScroll - scrollPosition < 20;
+    <script>
+        const scrollButton = document.getElementById('scrollButton');
+        const buttonText = document.getElementById('buttonText');
+        const arrow = scrollButton.querySelector('.arrow');
 
-      if (isNearBottom) {
-        buttonText.textContent = 'Top';
-        arrow.className = 'arrow arrow-up';
-      } else {
-        buttonText.textContent = 'Bottom';
-        arrow.className = 'arrow arrow-down';
-      }
-    }
+        // Show button only when scrolling
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollButton.classList.add('visible');
+            } else {
+                scrollButton.classList.remove('visible');
+            }
+            updateButtonState();
+        };
 
-    // Handle button click
-    scrollButton.onclick = function () {
-      const scrollPosition = window.scrollY;
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      const isNearBottom = maxScroll - scrollPosition < 20;
+        // Update button state based on scroll position
+        function updateButtonState() {
+            const scrollPosition = window.scrollY;
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            const isNearBottom = maxScroll - scrollPosition < 20;
 
-      if (isNearBottom) {
-        // Scroll to top
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      } else {
-        // Scroll to bottom
-        window.scrollTo({
-          top: maxScroll,
-          behavior: 'smooth'
-        });
-      }
-    };
-  </script>
+            if (isNearBottom) {
+                buttonText.textContent = 'Top';
+                arrow.className = 'arrow arrow-up';
+            } else {
+                buttonText.textContent = 'Bottom';
+                arrow.className = 'arrow arrow-down';
+            }
+        }
 
-<tr>
-  <td style="background-color: rgba(240, 248, 255, 0);">
-      <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">More Links</p>
-  </td>
-</tr>
-<tr><!-- Second container with different menu button -->
-  <td class="menu-button" id="menuButton1" align="center" style="color: rgba(240, 248, 255, 0.85);">
-      <!-- <div class="menu-line"></div>
+        // Handle button click
+        scrollButton.onclick = function () {
+            const scrollPosition = window.scrollY;
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            const isNearBottom = maxScroll - scrollPosition < 20;
+
+            if (isNearBottom) {
+                // Scroll to top
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                // Scroll to bottom
+                window.scrollTo({
+                    top: maxScroll,
+                    behavior: 'smooth'
+                });
+            }
+        };
+    </script>
+
+
+
+    <div class="container-5" align=center>
+        <table class="resources-table-5" align=center style="width:90%;">
+            <tr>
+                <td style="background-color: rgba(240, 248, 255, 0);">
+                    <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">More Links</p>
+                </td>
+            </tr>
+            <tr><!-- Second container with different menu button -->
+                <td class="menu-button" id="menuButton1" align="center" style="color: rgba(240, 248, 255, 0.85);">
+                    <!-- <div class="menu-line"></div>
               <div class="menu-line"></div>
               <div class="menu-line"></div> -->
-      <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">Open Source Learning</p>
-  </td>
-</tr>
-<tr><!-- First container with menu button -->
-  <td class="menu-button" id="menuButton2" align="center" style="color: rgba(240, 248, 255, 0.85);">
-      <!-- <div class="menu-line"></div>
+                    <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">Open Source Learning
+                    </p>
+                </td>
+            </tr>
+            <tr><!-- First container with menu button -->
+                <td class="menu-button" id="menuButton2" align="center" style="color: rgba(240, 248, 255, 0.85);">
+                    <!-- <div class="menu-line"></div>
               <div class="menu-line"></div>
               <div class="menu-line"></div> -->
-      <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">People I want to keep
-          following</p>
-  </td>
-</tr>
-</table>
-</div>
+                    <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">People I want to
+                        keep
+                        following</p>
+                </td>
+            </tr>
+        </table>
+    </div>
 
 
-<!-- -------------------------------------------------------------- -->
-<!-- -------------------------------------------------------------- -->
-<!-- -------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------- -->
 
 
 
-<!-- First popup -->
-<div class="popup-menu" id="popupMenu1">
-  <div class="popup-close popup-close-btn"></div>
-  <!-- <div class="popup-menu-title">Resources & Tools</div> -->
-  <div class="popup-menu-categories">
-      <div class="popup-menu-category" align="center">
-          <!-- <div class="category-title">Coding Resources</div> -->
-          <div class="link-item">
-              <a href="https://github.com/ShahjalalShohag" target="_blank">
-                  youkn0wwho <br>(Shahjalal Shohag)
-              </a>
-          </div>
-          <div class="link-item">
-              <a href="https://thebigcb.com/" target="_blank">
-                  Code Bullet
-              </a>
-          </div>
-          <div class="link-item">
-              <a href="https://www.3blue1brown.com/" target="_blank">
-                  3blue1brown<br> (Grant Sanderson)
-              </a>
-          </div>
-          <div class="link-item">
-              <a href="https://www.youtube.com/@OnnorokomPathshala/playlists" target="_blank">
-                  Onnorokom Pathshala
-              </a>
-          </div>
-          <div class="link-item">
-              <a href="https://www.linkedin.com/in/md-maksudul-hossain-4300a095" target="_blank">
-                  Md Maksudul Hossain <br>(Onnorokom Pathshala)
-              </a>
-          </div>
-          <!-- More links here -->
-      </div>
-  </div>
-</div>
+    <!-- First popup -->
+    <div class="popup-menu" id="popupMenu1">
+        <div class="popup-close popup-close-btn"></div>
+        <!-- <div class="popup-menu-title">Resources & Tools</div> -->
+        <div class="popup-menu-categories">
+            <div class="popup-menu-category" align="center">
+                <!-- <div class="category-title">Coding Resources</div> -->
+                <div class="link-item">
+                    <a href="https://github.com/ShahjalalShohag" target="_blank">
+                        youkn0wwho <br>(Shahjalal Shohag)
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://thebigcb.com/" target="_blank">
+                        Code Bullet
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://www.3blue1brown.com/" target="_blank">
+                        3blue1brown<br> (Grant Sanderson)
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://www.youtube.com/@OnnorokomPathshala/playlists" target="_blank">
+                        Onnorokom Pathshala
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://www.linkedin.com/in/md-maksudul-hossain-4300a095" target="_blank">
+                        Md Maksudul Hossain <br>(Onnorokom Pathshala)
+                    </a>
+                </div>
+                <!-- More links here -->
+            </div>
+        </div>
+    </div>
 
-<!-- 2nd popup menu -->
-<div class="popup-menu" id="popupMenu2">
-  <div class="popup-close popup-close-btn"></div>
-  <!-- <div class="popup-menu-title">Content Creators</div> -->
-  <div class="popup-menu-categories">
-      <div class="popup-menu-category" align="center">
-          <!-- <div class="category-title">People I Follow</div> -->
-          <div class="link-item">
-              <a href="page-depth-02\OSSU.html">
-                  OSSU<br> ( Open Source Society University )
-              </a>
-          </div>
-          <div class="link-item">
-              <a href="https://pll.harvard.edu/" target="_blank">
-                  CS50 Courses from Harvard
-              </a>
-          </div>
-          <div class="link-item">
-              <a href="https://ocw.mit.edu/" target="_blank">
-                  Some MIT Courses
-              </a>
-          </div>
-          <div class="link-item">
-              <a href="https://home.edx.org/" target="_blank">
-                  edX<br>(Harvard and MIT)
-              </a>
-          </div>
-          <div class="link-item">
-              <a href="https://stackexchange.com/" target="_blank">
-                  stackexchange
-              </a>
-          </div>
-          <div class="link-item">
-              <a href="https://teachyourselfcs.com/" target="_blank">
-                  A written Guide to CS<br>( Teach Yourself CS )
-              </a>
-          </div>
+    <!-- 2nd popup menu -->
+    <div class="popup-menu" id="popupMenu2">
+        <div class="popup-close popup-close-btn"></div>
+        <!-- <div class="popup-menu-title">Content Creators</div> -->
+        <div class="popup-menu-categories">
+            <div class="popup-menu-category" align="center">
+                <!-- <div class="category-title">People I Follow</div> -->
+                <div class="link-item">
+                    <a href="page-depth-02\OSSU.html">
+                        OSSU<br> ( Open Source Society University )
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://pll.harvard.edu/" target="_blank">
+                        CS50 Courses from Harvard
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://ocw.mit.edu/" target="_blank">
+                        Some MIT Courses
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://home.edx.org/" target="_blank">
+                        edX<br>(Harvard and MIT)
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://stackexchange.com/" target="_blank">
+                        stackexchange
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://teachyourselfcs.com/" target="_blank">
+                        A written Guide to CS<br>( Teach Yourself CS )
+                    </a>
+                </div>
 
-          <!-- More links here -->
-      </div>
-  </div>
-</div>
-<!-- Shared backdrop for all popups -->
-<div class="popup-backdrop" id="popupBackdrop"></div>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-      // Button and popup pairs
-      const menuPairs = [
-          { button: 'menuButton1', popup: 'popupMenu1' },
-          { button: 'menuButton2', popup: 'popupMenu2' }
-          // Add more pairs as needed
-      ];
+                <!-- More links here -->
+            </div>
+        </div>
+    </div>
+    <!-- Shared backdrop for all popups -->
+    <div class="popup-backdrop" id="popupBackdrop"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Button and popup pairs
+            const menuPairs = [
+                { button: 'menuButton1', popup: 'popupMenu1' },
+                { button: 'menuButton2', popup: 'popupMenu2' }
+                // Add more pairs as needed
+            ];
 
-      const popupBackdrop = document.getElementById('popupBackdrop');
-      let activePopup = null;
+            const popupBackdrop = document.getElementById('popupBackdrop');
+            let activePopup = null;
 
-      // Set up each button-popup pair
-      menuPairs.forEach(pair => {
-          const button = document.getElementById(pair.button);
-          const popup = document.getElementById(pair.popup);
+            // Set up each button-popup pair
+            menuPairs.forEach(pair => {
+                const button = document.getElementById(pair.button);
+                const popup = document.getElementById(pair.popup);
 
-          button.addEventListener('click', function () {
-              // Open this specific popup
-              popup.classList.add('open');
-              popupBackdrop.classList.add('open');
-              button.classList.add('active');
-              activePopup = popup;
-          });
-      });
+                button.addEventListener('click', function () {
+                    // Open this specific popup
+                    popup.classList.add('open');
+                    popupBackdrop.classList.add('open');
+                    button.classList.add('active');
+                    activePopup = popup;
+                });
+            });
 
-      // Close buttons for all popups
-      const closeButtons = document.querySelectorAll('.popup-close-btn');
-      closeButtons.forEach(btn => {
-          btn.addEventListener('click', closeActivePopup);
-      });
+            // Close buttons for all popups
+            const closeButtons = document.querySelectorAll('.popup-close-btn');
+            closeButtons.forEach(btn => {
+                btn.addEventListener('click', closeActivePopup);
+            });
 
-      // Backdrop click closes any open popup
-      popupBackdrop.addEventListener('click', closeActivePopup);
+            // Backdrop click closes any open popup
+            popupBackdrop.addEventListener('click', closeActivePopup);
 
-      function closeActivePopup() {
-          // Remove active class from all buttons
-          document.querySelectorAll('.menu-button').forEach(btn => {
-              btn.classList.remove('active');
-          });
+            function closeActivePopup() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.menu-button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
 
-          // Close all popups
-          document.querySelectorAll('.popup-menu').forEach(popup => {
-              popup.classList.remove('open');
-          });
+                // Close all popups
+                document.querySelectorAll('.popup-menu').forEach(popup => {
+                    popup.classList.remove('open');
+                });
 
-          // Hide backdrop
-          popupBackdrop.classList.remove('open');
-          activePopup = null;
-      }
-  });
-</script>
+                // Hide backdrop
+                popupBackdrop.classList.remove('open');
+                activePopup = null;
+            }
+        });
+    </script>
 
 
-<hr><!----------------------------------------------------------------- -->
+    <hr><!----------------------------------------------------------------- -->
 
-<p>code for pop up menu</p>
+    <p>code for pop up menu</p>
     <!-- <div class="container-5" align=center>
         <table class="resources-table-5" align=center style="width:90%;">
             <tr>
@@ -890,11 +896,11 @@
     </div> -->
 
 
-<!-- 
+    <!-- 
 
     <div class="container-5" align=center> -->
-        <!-- Menu Button inside container -->
-<!-- 
+    <!-- Menu Button inside container -->
+    <!-- 
         <table class="resources-table-5" align=center style="width:90%;">
 
             <tr>
@@ -987,264 +993,280 @@
 
 
 
-  <hr><!----------------------------------------------------------------- -->
+    <hr><!----------------------------------------------------------------- -->
 
-  <!-- GOOGLE DRIVE IFRAME (CLAUDE) -->
+    <!-- GOOGLE DRIVE IFRAME (CLAUDE) -->
 
-  <!-- <script src="myscripts.js"></script> -->
+    <!-- <script src="myscripts.js"></script> -->
 
-  <div>
-    <table border="0" align="center" style="width:75%;">
-      <tr>
-        <td>
-          <div class="container-4">
-            <div class="iframe-wrapper-4" style="padding:30px;">
-              <p align=center>→ <a style="color:rgba(60, 60, 82, 0.733);"
-                  href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL"
-                  target="_blank"><small><b>(
-                      Shortcut to oUITS Resources )</b></small></a> ←</p>
-              <!-- <div class="iframe-controls-4">
+    <div>
+        <table border="0" align="center" style="width:75%;">
+            <tr>
+                <td>
+                    <div class="container-4">
+                        <div class="iframe-wrapper-4" style="padding:30px;">
+                            <p align=center>→ <a style="color:rgba(60, 60, 82, 0.733);"
+                                    href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL"
+                                    target="_blank"><small><b>(
+                                            Shortcut to oUITS Resources )</b></small></a> ←</p>
+                            <!-- <div class="iframe-controls-4">
             <button class="button-4" onclick="zoomIn()">Zoom In</button>
             <button class="button-4" onclick="zoomOut()">Zoom Out</button>
             <button class="button-4" onclick="resetZoom()">Reset</button>
           </div> -->
-              <iframe class="iframe-4"
-                src="https://drive.google.com/embeddedfolderview?id=1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL" allowfullscreen
-                sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-presentation">
-              </iframe>
-            </div>
-          </div>
-        </td>
-      </tr>
+                            <iframe class="iframe-4"
+                                src="https://drive.google.com/embeddedfolderview?id=1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL"
+                                allowfullscreen
+                                sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-presentation">
+                            </iframe>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr><!----------------------------------------------------------------- -->
+    <!-- SOCIAL LINKS -->
+
+    <h4 align=center style="color:rgba(0, 0, 0, 0.564)">Socials? </h4>
+    <table align=center>
+        <tr>
+            <th><a href="https://discord.gg/weetUpfS5X" target="_blank"><img src=images\discord-logo.png
+                        alt="Discord Server (Protein Shake)" width="100" height="100"></a></th>
+            <th><a href="https://t.me/oUITS_ORnU" target="_blank"><img src=images\telegram-logo2.png
+                        alt="Telegram Channel (oUITS - Online Resources and Updates)" width="100" height="100"></a></th>
+            <th><a href="https://facebook.com/groups/1074592960836263/" target="_blank"><img src=images\fb-logo.png
+                        alt="Facebook Group (oUITS - Online Resources)" width="100" height="100"></a></th>
+        </tr>
     </table>
-  </div>
 
-  <hr><!----------------------------------------------------------------- -->
-  <!-- SOCIAL LINKS -->
+    <hr><!----------------------------------------------------------------- -->
 
-  <h4 align=center style="color:rgba(0, 0, 0, 0.564)">Socials? </h4>
-  <table align=center>
-    <tr>
-      <th><a href="https://discord.gg/weetUpfS5X" target="_blank"><img src=images\discord-logo.png
-            alt="Discord Server (Protein Shake)" width="100" height="100"></a></th>
-      <th><a href="https://t.me/oUITS_ORnU" target="_blank"><img src=images\telegram-logo2.png
-            alt="Telegram Channel (oUITS - Online Resources and Updates)" width="100" height="100"></a></th>
-      <th><a href="https://facebook.com/groups/1074592960836263/" target="_blank"><img src=images\fb-logo.png
-            alt="Facebook Group (oUITS - Online Resources)" width="100" height="100"></a></th>
-    </tr>
-  </table>
+    <!-- BOTTOM CREDITS -->
 
-  <hr><!----------------------------------------------------------------- -->
+    <table align="center" style="width:60%">
+        <td>
+            <p align=center style="color:rgba(0, 0, 0, 0.422);"><small>This is the first try on the web version of the
+                    <b>UNOFFICIAL</b>
+                    Online
+                    Resources for the <i>students</i> of UITS. Note that I will be primarily working on <a
+                        href="https://b1tranger.github.io/oUITS-Resources/"
+                        style="color:rgba(4, 0, 128, 0.806);">GitHub's
+                        Hosting</a>. Most of the materials here are publicly available and you are free to modify and
+                    reuse them but
+                    please be mindful of possible Legal issues (like Copyright materials)</small></p>
+        </td>
+    </table>
 
-  <!-- BOTTOM CREDITS -->
+    <hr><!----------------------------------------------------------------- -->
 
-  <table align="center" style="width:60%">
-    <td>
-      <p align=center style="color:rgba(0, 0, 0, 0.422);"><small>This is the first try on the web version of the
-          <b>UNOFFICIAL</b>
-          Online
-          Resources for the <i>students</i> of UITS. Note that I will be primarily working on <a
-            href="https://b1tranger.github.io/oUITS-Resources/" style="color:rgba(4, 0, 128, 0.806);">GitHub's
-            Hosting</a>. Most of the materials here are publicly available and you are free to modify and reuse them but
-          please be mindful of possible Legal issues (like Copyright materials)</small></p>
-    </td>
-  </table>
+    <!-- GOOGLE DRIVE IFRAME -->
 
-  <hr><!----------------------------------------------------------------- -->
-
-  <!-- GOOGLE DRIVE IFRAME -->
-
-  <table border="10" align="center" style=" width:70%">
-    <tr>
+    <table border="10" align="center" style=" width:70%">
+        <tr>
 
 
-      <!--<h3 align =center>Primary Directories?</h3>-->
+            <!--<h3 align =center>Primary Directories?</h3>-->
 
 
-    </tr>
-    <tr>
-      <td>
-        <div class="iframe-container">
-          <iframe id="drive-frame"
-            src="https://drive.google.com/embeddedfolderview?id=1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL#list"></iframe>
-        </div>
+        </tr>
+        <tr>
+            <td>
+                <div class="iframe-container">
+                    <iframe id="drive-frame"
+                        src="https://drive.google.com/embeddedfolderview?id=1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL#list"></iframe>
+                </div>
 
-      </td>
+            </td>
 
-    </tr>
-    <tr>
-      <p align=center><i><a style="color:rgba(60, 60, 82, 0.733);"
-            href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL" target="_blank"><small><b>(
-                Link to the Google Drive? )</b></small></a></i></p>
-    </tr>
-  </table>
+        </tr>
+        <tr>
+            <p align=center><i><a style="color:rgba(60, 60, 82, 0.733);"
+                        href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL"
+                        target="_blank"><small><b>(
+                                Link to the Google Drive? )</b></small></a></i></p>
+        </tr>
+    </table>
 
 
-  <hr><!----------------------------------------------------------------- -->
+    <hr><!----------------------------------------------------------------- -->
 
-  <!-- HIGHLIGHTS OF DRIVE -->
+    <!-- HIGHLIGHTS OF DRIVE -->
 
-  <table align=center style="width:50%;border-color:rgba(60, 60, 82, 0.733);">
-    <tr>
-      <p align=center style="color: rgba(0, 0, 0, 0.594);"> ( Highlights? ) </p>
-    </tr>
-    <tr>
-      <td align=center style="width:50%;border-color:rgba(60, 60, 82, 0.733);">
-        <a style="color:rgba(60, 60, 82, 0.733);"
-          href="https://drive.google.com/drive/folders/1rVrADxgpbuEPC5miD7_gP3fGKTMkRfoC" target="_blank">CSE
-          Files</a>
-      </td>
-      <td align=center style="width:50%;border-color:rgba(60, 60, 82, 0.733);">
-        <a style="color:rgba(60, 60, 82, 0.733);"
-          href="https://drive.google.com/drive/folders/150xxD5x-4sGyC9b83gWFrglAyw25rGNU" target="_blank">Modified
-          Library Questions</a>
-      </td>
-      <td align=center style="width:50%;border-color:rgba(60, 60, 82, 0.733);">
-        <a style="color:rgba(60, 60, 82, 0.733);"
-          href="https://drive.google.com/drive/folders/1HKkXWBglI1Ffb22k7z7qLFqQqWlEcaI1" target="_blank">Routine
-          Format</a>
-      </td>
-      <td align=center style="width:50%;border-color:rgba(60, 60, 82, 0.733);">
-        <a style="color:rgba(60, 60, 82, 0.733);"
-          href="https://drive.google.com/drive/folders/1RyEfnky5cr22HnjMu5qnm3q8loP2jIqa" target="_blank">Curated
-          Book List</a>
-      </td>
-      <td align=center style="width:50%;border-color:rgba(60, 60, 82, 0.733);">
-        <a style="color:rgba(60, 60, 82, 0.733);"
-          href="https://drive.google.com/drive/folders/1tKdvGoeoYQJ6ms-p7ZPlA2EvYPJ4SWFt" target="_blank">Programming
-          References</a>
-      </td>
-    </tr>
-  </table>
+    <table align=center style="width:50%;border-color:rgba(60, 60, 82, 0.733);">
+        <tr>
+            <p align=center style="color: rgba(0, 0, 0, 0.594);"> ( Highlights? ) </p>
+        </tr>
+        <tr>
+            <td align=center style="width:50%;border-color:rgba(60, 60, 82, 0.733);">
+                <a style="color:rgba(60, 60, 82, 0.733);"
+                    href="https://drive.google.com/drive/folders/1rVrADxgpbuEPC5miD7_gP3fGKTMkRfoC" target="_blank">CSE
+                    Files</a>
+            </td>
+            <td align=center style="width:50%;border-color:rgba(60, 60, 82, 0.733);">
+                <a style="color:rgba(60, 60, 82, 0.733);"
+                    href="https://drive.google.com/drive/folders/150xxD5x-4sGyC9b83gWFrglAyw25rGNU"
+                    target="_blank">Modified
+                    Library Questions</a>
+            </td>
+            <td align=center style="width:50%;border-color:rgba(60, 60, 82, 0.733);">
+                <a style="color:rgba(60, 60, 82, 0.733);"
+                    href="https://drive.google.com/drive/folders/1HKkXWBglI1Ffb22k7z7qLFqQqWlEcaI1"
+                    target="_blank">Routine
+                    Format</a>
+            </td>
+            <td align=center style="width:50%;border-color:rgba(60, 60, 82, 0.733);">
+                <a style="color:rgba(60, 60, 82, 0.733);"
+                    href="https://drive.google.com/drive/folders/1RyEfnky5cr22HnjMu5qnm3q8loP2jIqa"
+                    target="_blank">Curated
+                    Book List</a>
+            </td>
+            <td align=center style="width:50%;border-color:rgba(60, 60, 82, 0.733);">
+                <a style="color:rgba(60, 60, 82, 0.733);"
+                    href="https://drive.google.com/drive/folders/1tKdvGoeoYQJ6ms-p7ZPlA2EvYPJ4SWFt"
+                    target="_blank">Programming
+                    References</a>
+            </td>
+        </tr>
+    </table>
 
-  <hr><!----------------------------------------------------------------- -->
+    <hr><!----------------------------------------------------------------- -->
 
-  <ul>External Sources?
-    <li><a href=page-depth-01\References.html>See References for Future Updates</a></li>
+    <ul>External Sources?
+        <li><a href=page-depth-01\References.html>See References for Future Updates</a></li>
+        <br>
+        <li><a href=page-depth-01\Tutorials.html>See Tutorials for Resources</a></li>
+        <br>
+        <li><a href=page-depth-01\code-blogs.html>See Coding Blogs</a></li>
+    </ul>
+
+
+
+    <hr><!----------------------------------------------------------------- -->
+
+    <p><a href="https://codeforces.com/"><img src=codeforces-sponsored-by-ton.png alt="CodeForces" width=555
+                height=130></a></p>
     <br>
-    <li><a href=page-depth-01\Tutorials.html>See Tutorials for Resources</a></li>
     <br>
-    <li><a href=page-depth-01\code-blogs.html>See Coding Blogs</a></li>
-  </ul>
+    <a href=index.html>Go back to index</a>
+    <br><br>
+    <a href=wip.html>Go back to wip</a>
 
 
 
-  <hr><!----------------------------------------------------------------- -->
-
-  <p><a href="https://codeforces.com/"><img src=codeforces-sponsored-by-ton.png alt="CodeForces" width=555
-        height=130></a></p>
-  <br>
-  <br>
-  <a href=index.html>Go back to index</a>
-  <br><br>
-  <a href=wip.html>Go back to wip</a>
+    <hr><!----------------------------------------------------------------- -->
 
 
-
-  <hr><!----------------------------------------------------------------- -->
-
-
-  <h1 align=center>
-    This is an image
-  </h1>
-  <p><img src=github-img.png alt="this is an alt text" width="=200" height="200"></p>
-  <p><img alt="this is an alt text" width="=100" height="100"></p>
-  <br>
-  <br>
-  <a href=../index.html>Go back to index</a>
-  <br><br>
-  <a href=wip.html>Go back to wip</a>
+    <h1 align=center>
+        This is an image
+    </h1>
+    <p><img src=github-img.png alt="this is an alt text" width="=200" height="200"></p>
+    <p><img alt="this is an alt text" width="=100" height="100"></p>
+    <br>
+    <br>
+    <a href=../index.html>Go back to index</a>
+    <br><br>
+    <a href=wip.html>Go back to wip</a>
 
 
 
-  <hr><!----------------------------------------------------------------- -->
+    <hr><!----------------------------------------------------------------- -->
 
-  <table style="border: 1px solid rgba(31, 106, 168, 0);" align="center">
-    <tr>
+    <table style="border: 1px solid rgba(31, 106, 168, 0);" align="center">
+        <tr>
 
-      <th style="border: 1px solid rgba(31, 106, 168, 0);" align="center">
+            <th style="border: 1px solid rgba(31, 106, 168, 0);" align="center">
 
-        <h3 align=center>Similar Projects ! !</h3>
+                <h3 align=center>Similar Projects ! !</h3>
 
-        <p style="border: 1px solid rgba(31, 106, 168, 0);color:rgba(60, 60, 82, 0.733);""><small>(for references)</small></p>
+                <p style="border: 1px solid rgba(31, 106, 168, 0);color:rgba(60, 60, 82, 0.733);""><small>(for references)</small></p>
 </th >
 
 </tr>
 <tr>
 <td style=" border: 1px solid rgba(31, 106, 168, 0);" align="center">
-          <font size="5">
-            <p align=center>
+                    <font size="5">
+                        <p align=center>
 
-            <ul>
-              <li style="color:rgba(60, 60, 82, 0.733);"><a href=" http://akibreza.github.io/uitsBOT" target="_blank"
-                  style="color:rgba(60, 60, 82, 0.733);">uitsBOT by Akib Reza (432220005101061)</a></li>
+                        <ul>
+                            <li style="color:rgba(60, 60, 82, 0.733);"><a href=" http://akibreza.github.io/uitsBOT"
+                                    target="_blank" style="color:rgba(60, 60, 82, 0.733);">uitsBOT by Akib Reza
+                                    (432220005101061)</a></li>
 
-            </ul>
-        </p>
-        </font>
-        </td>
+                        </ul>
+                </p>
+                </font>
+                </td>
 
-    </tr>
+        </tr>
 
-  </table>
+    </table>
 
-  <hr><!----------------------------------------------------------------- -->
+    <hr><!----------------------------------------------------------------- -->
 
-  <p>(trying to fit it all in a table)</p>
-  <h3 align=center>Primary Directories?</h3>
-  <br>
+    <p>(trying to fit it all in a table)</p>
+    <h3 align=center>Primary Directories?</h3>
+    <br>
 
-  <ul style="color:rgba(0, 0, 0, 0.249);"><i>
-      <li><a href="https://drive.google.com/drive/folders/1oMbT_6PIS8cEnTdRXuue9-KccctiFJZA"
-          target="_blank">Info-Guides</a></li>
-      <br>
-      <li><a href="https://drive.google.com/drive/folders/1i0UUsgy68Nypc2ylPsaB-Teljkf0NSUD" target="_blank">UITS
-          Questions</a></li>
-      <br>
-      <li><a href="https://drive.google.com/drive/folders/1n29sfMaCF_S4ffbjudBBSGBd6Q7l3Sqp"
-          target="_blank">Departments</a></li>
-      <br>
-      <li><a href="https://drive.google.com/drive/folders/1htCYkklo4zgP16a3Ailmo6hk9pAi8Psm" target="_blank">Elective
-          Courses</a></li>
-      <br>
-      <li><a href="https://drive.google.com/drive/folders/1hTWa-Z7gV3GaUUMJhT2KPasmq5L1ha3p" target="_blank">Skills Dev
-          Resources</a></li>
-    </i>
-  </ul>
+    <ul style="color:rgba(0, 0, 0, 0.249);"><i>
+            <li><a href="https://drive.google.com/drive/folders/1oMbT_6PIS8cEnTdRXuue9-KccctiFJZA"
+                    target="_blank">Info-Guides</a></li>
+            <br>
+            <li><a href="https://drive.google.com/drive/folders/1i0UUsgy68Nypc2ylPsaB-Teljkf0NSUD" target="_blank">UITS
+                    Questions</a></li>
+            <br>
+            <li><a href="https://drive.google.com/drive/folders/1n29sfMaCF_S4ffbjudBBSGBd6Q7l3Sqp"
+                    target="_blank">Departments</a></li>
+            <br>
+            <li><a href="https://drive.google.com/drive/folders/1htCYkklo4zgP16a3Ailmo6hk9pAi8Psm"
+                    target="_blank">Elective
+                    Courses</a></li>
+            <br>
+            <li><a href="https://drive.google.com/drive/folders/1hTWa-Z7gV3GaUUMJhT2KPasmq5L1ha3p"
+                    target="_blank">Skills Dev
+                    Resources</a></li>
+        </i>
+    </ul>
 
-  <br><br><br>
-  <h3 align=center> Highlights? </h3>
-  <br>
-  <ul style="color:rgba(0, 0, 0, 0.249);"><i>
-      <li><a href="https://drive.google.com/drive/folders/1rVrADxgpbuEPC5miD7_gP3fGKTMkRfoC" target="_blank">CSE
-          Files</a></li>
-      <br>
-      <li><a href="https://drive.google.com/drive/folders/150xxD5x-4sGyC9b83gWFrglAyw25rGNU" target="_blank">Modified
-          Library Questions</a></li>
-      <br>
-      <li><a href="https://drive.google.com/drive/folders/1HKkXWBglI1Ffb22k7z7qLFqQqWlEcaI1" target="_blank">Routine
-          Format</a></li>
-      <br>
-      <li><a href="https://drive.google.com/drive/folders/1RyEfnky5cr22HnjMu5qnm3q8loP2jIqa" target="_blank">Curated
-          Book List</a></li>
-      <br>
-      <li><a href="https://drive.google.com/drive/folders/1tKdvGoeoYQJ6ms-p7ZPlA2EvYPJ4SWFt" target="_blank">Programming
-          References</a></li>
-    </i></ul>
+    <br><br><br>
+    <h3 align=center> Highlights? </h3>
+    <br>
+    <ul style="color:rgba(0, 0, 0, 0.249);"><i>
+            <li><a href="https://drive.google.com/drive/folders/1rVrADxgpbuEPC5miD7_gP3fGKTMkRfoC" target="_blank">CSE
+                    Files</a></li>
+            <br>
+            <li><a href="https://drive.google.com/drive/folders/150xxD5x-4sGyC9b83gWFrglAyw25rGNU"
+                    target="_blank">Modified
+                    Library Questions</a></li>
+            <br>
+            <li><a href="https://drive.google.com/drive/folders/1HKkXWBglI1Ffb22k7z7qLFqQqWlEcaI1"
+                    target="_blank">Routine
+                    Format</a></li>
+            <br>
+            <li><a href="https://drive.google.com/drive/folders/1RyEfnky5cr22HnjMu5qnm3q8loP2jIqa"
+                    target="_blank">Curated
+                    Book List</a></li>
+            <br>
+            <li><a href="https://drive.google.com/drive/folders/1tKdvGoeoYQJ6ms-p7ZPlA2EvYPJ4SWFt"
+                    target="_blank">Programming
+                    References</a></li>
+        </i></ul>
 
 
 
 
-  <ul style="color:rgba(0, 0, 0, 0.249);"><i>
-      <li><a href="https://discord.gg/weetUpfS5X" target="_blank">Discord Server (Protein Shake)</a></li>
-      <br>
-      <li><a href="https://t.me/UITS_ORnU" target="_blank">Telegram Channel (UITS - Online Resources and Updates)</a>
-      </li>
-      <br>
-      <li><a href="https://facebook.com/groups/1074592960836263/" target="_blank">Facebook Group (UITS - Online
-          Resources) </a></li>
-      <br>
-    </i></ul>
+    <ul style="color:rgba(0, 0, 0, 0.249);"><i>
+            <li><a href="https://discord.gg/weetUpfS5X" target="_blank">Discord Server (Protein Shake)</a></li>
+            <br>
+            <li><a href="https://t.me/UITS_ORnU" target="_blank">Telegram Channel (UITS - Online Resources and
+                    Updates)</a>
+            </li>
+            <br>
+            <li><a href="https://facebook.com/groups/1074592960836263/" target="_blank">Facebook Group (UITS - Online
+                    Resources) </a></li>
+            <br>
+        </i></ul>
 
 
 </body>
