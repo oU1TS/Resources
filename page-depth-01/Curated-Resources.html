@@ -259,10 +259,10 @@
 
     <div class="topnav-1">
         <!-- APK LINK -->
-        <div class="navigation"
+        <div class="navigation1"
             style="display: flex;justify-content: flex-end;background-color: #333;min-height: 50px;width: 100%;"></div>
         <script src="../apk-link.js"></script>
-        
+
         <a class="active-1" href="Tutorials.html">
             <small>Resources<br>Tutorials</small>
         </a>
@@ -344,7 +344,12 @@
                         keep following</p>
                 </td>
             </tr>
+            <tr><!-- 4th container with menu button -->
+                <td class="menu-button" id="menuButton4" align="center" style="color: rgba(240, 248, 255, 0.85);">
 
+                    <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">UITS Archive</p>
+                </td>
+            </tr>
         </table>
     </div>
 
@@ -475,6 +480,31 @@
         </div>
     </div>
 
+    <!-- 4th popup menu with different content -->
+    <div class="popup-menu" id="popupMenu4">
+        <div class="popup-close popup-close-btn"></div>
+        <!-- <div class="popup-menu-title">Resources & Tools</div> -->
+        <div class="popup-menu-categories">
+            <div class="popup-menu-category" align="center">
+                <!-- <div class="category-title">Coding Resources</div> -->
+                <div class="link-item">
+                    <a href="https://drive.google.com/drive/folders/1n8wBkN1nAhpW3Z0eMkU9OlMNaPByp88F?usp=drive_link"
+                        target="_blank">
+                        UITS Contests Archive
+                    </a>
+                </div>
+                <div class="link-item">
+                    <!-- Drive LINK -->
+                    <div class="navigation2">
+                    </div>
+                    <script src="../drive-link.js"></script>
+                </div>
+
+                <!-- More links here -->
+            </div>
+        </div>
+    </div>
+
     <!-- Shared backdrop for all popups -->
     <div class="popup-backdrop" id="popupBackdrop">
         <script>
@@ -483,7 +513,8 @@
                 const menuPairs = [
                     { button: 'menuButton1', popup: 'popupMenu1' },
                     { button: 'menuButton2', popup: 'popupMenu2' },
-                    { button: 'menuButton3', popup: 'popupMenu3' }
+                    { button: 'menuButton3', popup: 'popupMenu3' },
+                    { button: 'menuButton4', popup: 'popupMenu4' }
                     // Add more pairs as needed
                 ];
 
