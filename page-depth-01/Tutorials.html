@@ -261,8 +261,10 @@
     <!-- TOP BAR -->
 
     <div class="topnav-1">
-        <a class="active-1"
-            href="https://github.com/b1tranger/oUITS-Resources/releases/download/test/_oUITSr_appsgeyser.apk" target="_blank"><small>web-app</small></a>
+        <!-- APK LINK -->
+        <div class="navigation"
+            style="display: flex;justify-content: flex-end;background-color: #333;min-height: 50px;width: 100%;"></div>
+        <script src="../apk-link.js"></script>
         <a class="active-1" href="#">
             <small>Resources<br>Tutorials</small>
         </a>
@@ -329,13 +331,13 @@
                     </a>
                 </td>
             </tr>
-           
+
         </table>
     </div>
 
 
 
-    
+
     <!-- 3rd popup menu with different content -->
     <div class="popup-menu" id="popupMenu3">
         <div class="popup-close popup-close-btn"></div>
@@ -377,63 +379,63 @@
             </div>
         </div>
     </div>
- <!-- Shared backdrop for all popups -->
- <div class="popup-backdrop" id="popupBackdrop">
- <script>
-     document.addEventListener('DOMContentLoaded', function () {
-         // Button and popup pairs
-         const menuPairs = [
-            //  { button: 'menuButton1', popup: 'popupMenu1' },
-            //  { button: 'menuButton2', popup: 'popupMenu2' },
-             { button: 'menuButton3', popup: 'popupMenu3' }
-            //  { button: 'menuButton4', popup: 'popupMenu4' }
-             // Add more pairs as needed
-         ];
+    <!-- Shared backdrop for all popups -->
+    <div class="popup-backdrop" id="popupBackdrop">
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Button and popup pairs
+                const menuPairs = [
+                    //  { button: 'menuButton1', popup: 'popupMenu1' },
+                    //  { button: 'menuButton2', popup: 'popupMenu2' },
+                    { button: 'menuButton3', popup: 'popupMenu3' }
+                    //  { button: 'menuButton4', popup: 'popupMenu4' }
+                    // Add more pairs as needed
+                ];
 
-         const popupBackdrop = document.getElementById('popupBackdrop');
-         let activePopup = null;
+                const popupBackdrop = document.getElementById('popupBackdrop');
+                let activePopup = null;
 
-         // Set up each button-popup pair
-         menuPairs.forEach(pair => {
-             const button = document.getElementById(pair.button);
-             const popup = document.getElementById(pair.popup);
+                // Set up each button-popup pair
+                menuPairs.forEach(pair => {
+                    const button = document.getElementById(pair.button);
+                    const popup = document.getElementById(pair.popup);
 
-             button.addEventListener('click', function () {
-                 // Open this specific popup
-                 popup.classList.add('open');
-                 popupBackdrop.classList.add('open');
-                 button.classList.add('active');
-                 activePopup = popup;
-             });
-         });
+                    button.addEventListener('click', function () {
+                        // Open this specific popup
+                        popup.classList.add('open');
+                        popupBackdrop.classList.add('open');
+                        button.classList.add('active');
+                        activePopup = popup;
+                    });
+                });
 
-         // Close buttons for all popups
-         const closeButtons = document.querySelectorAll('.popup-close-btn');
-         closeButtons.forEach(btn => {
-             btn.addEventListener('click', closeActivePopup);
-         });
+                // Close buttons for all popups
+                const closeButtons = document.querySelectorAll('.popup-close-btn');
+                closeButtons.forEach(btn => {
+                    btn.addEventListener('click', closeActivePopup);
+                });
 
-         // Backdrop click closes any open popup
-         popupBackdrop.addEventListener('click', closeActivePopup);
+                // Backdrop click closes any open popup
+                popupBackdrop.addEventListener('click', closeActivePopup);
 
-         function closeActivePopup() {
-             // Remove active class from all buttons
-             document.querySelectorAll('.menu-button').forEach(btn => {
-                 btn.classList.remove('active');
-             });
+                function closeActivePopup() {
+                    // Remove active class from all buttons
+                    document.querySelectorAll('.menu-button').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
 
-             // Close all popups
-             document.querySelectorAll('.popup-menu').forEach(popup => {
-                 popup.classList.remove('open');
-             });
+                    // Close all popups
+                    document.querySelectorAll('.popup-menu').forEach(popup => {
+                        popup.classList.remove('open');
+                    });
 
-             // Hide backdrop
-             popupBackdrop.classList.remove('open');
-             activePopup = null;
-         }
-     });
- </script>
- </div>
+                    // Hide backdrop
+                    popupBackdrop.classList.remove('open');
+                    activePopup = null;
+                }
+            });
+        </script>
+    </div>
     <br><br><br><br><br>
     <!-- HOME BUTTON -->
 
