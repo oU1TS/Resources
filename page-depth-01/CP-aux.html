@@ -258,22 +258,22 @@
     <!-- TOP BAR -->
 
     <div class="topnav-1">
-        <a class="active-1"
-          href="https://drive.google.com/uc?export=download&id=1ZuYvpUCfQZWXR-FhFV16UaXa6L8cnqEG" target="_blank"><small>web-app</small></a>
-        <a class="active-1" href="page-depth-01/Tutorials.html">
-          <small>Resources<br>Tutorials</small>
+        <a class="active-1" href="https://drive.google.com/uc?export=download&id=1ZuYvpUCfQZWXR-FhFV16UaXa6L8cnqEG"
+            target="_blank"><small>web-app</small></a>
+        <a class="active-1" href="Tutorials.html">
+            <small>Resources<br>Tutorials</small>
         </a>
-        <a class="active-1" href="page-depth-01/References.html">
-          <small>Project<br>References</small>
+        <a class="active-1" href="References.html">
+            <small>Project<br>References</small>
         </a>
-        <a class="active-1" href="page-depth-01\Blog.html">
-          <small>CSE<br>Blog</small>
+        <a class="active-1" href="Blog.html">
+            <small>CSE<br>Blog</small>
         </a>
         <a class="active-1" href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL?usp=sharing"
-          target="_blank">
-          <small>UITS<br>G-Drive</small>
+            target="_blank">
+            <small>UITS<br>G-Drive</small>
         </a>
-      </div>
+    </div>
 
     <!-- BOTTOM BAR "navbar" -->
 
@@ -500,60 +500,60 @@
 
     <!-- Shared backdrop for all popups -->
     <div class="popup-backdrop" id="popupBackdrop">
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Button and popup pairs
-            const menuPairs = [
-                { button: 'menuButton1', popup: 'popupMenu1' },
-                { button: 'menuButton2', popup: 'popupMenu2' },
-                // { button: 'menuButton3', popup: 'popupMenu3' },
-                { button: 'menuButton4', popup: 'popupMenu4' }
-                // Add more pairs as needed
-            ];
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Button and popup pairs
+                const menuPairs = [
+                    { button: 'menuButton1', popup: 'popupMenu1' },
+                    { button: 'menuButton2', popup: 'popupMenu2' },
+                    // { button: 'menuButton3', popup: 'popupMenu3' },
+                    { button: 'menuButton4', popup: 'popupMenu4' }
+                    // Add more pairs as needed
+                ];
 
-            const popupBackdrop = document.getElementById('popupBackdrop');
-            let activePopup = null;
+                const popupBackdrop = document.getElementById('popupBackdrop');
+                let activePopup = null;
 
-            // Set up each button-popup pair
-            menuPairs.forEach(pair => {
-                const button = document.getElementById(pair.button);
-                const popup = document.getElementById(pair.popup);
+                // Set up each button-popup pair
+                menuPairs.forEach(pair => {
+                    const button = document.getElementById(pair.button);
+                    const popup = document.getElementById(pair.popup);
 
-                button.addEventListener('click', function () {
-                    // Open this specific popup
-                    popup.classList.add('open');
-                    popupBackdrop.classList.add('open');
-                    button.classList.add('active');
-                    activePopup = popup;
+                    button.addEventListener('click', function () {
+                        // Open this specific popup
+                        popup.classList.add('open');
+                        popupBackdrop.classList.add('open');
+                        button.classList.add('active');
+                        activePopup = popup;
+                    });
                 });
+
+                // Close buttons for all popups
+                const closeButtons = document.querySelectorAll('.popup-close-btn');
+                closeButtons.forEach(btn => {
+                    btn.addEventListener('click', closeActivePopup);
+                });
+
+                // Backdrop click closes any open popup
+                popupBackdrop.addEventListener('click', closeActivePopup);
+
+                function closeActivePopup() {
+                    // Remove active class from all buttons
+                    document.querySelectorAll('.menu-button').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    // Close all popups
+                    document.querySelectorAll('.popup-menu').forEach(popup => {
+                        popup.classList.remove('open');
+                    });
+
+                    // Hide backdrop
+                    popupBackdrop.classList.remove('open');
+                    activePopup = null;
+                }
             });
-
-            // Close buttons for all popups
-            const closeButtons = document.querySelectorAll('.popup-close-btn');
-            closeButtons.forEach(btn => {
-                btn.addEventListener('click', closeActivePopup);
-            });
-
-            // Backdrop click closes any open popup
-            popupBackdrop.addEventListener('click', closeActivePopup);
-
-            function closeActivePopup() {
-                // Remove active class from all buttons
-                document.querySelectorAll('.menu-button').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-
-                // Close all popups
-                document.querySelectorAll('.popup-menu').forEach(popup => {
-                    popup.classList.remove('open');
-                });
-
-                // Hide backdrop
-                popupBackdrop.classList.remove('open');
-                activePopup = null;
-            }
-        });
-    </script>
+        </script>
     </div>
 
 
