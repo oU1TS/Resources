@@ -372,6 +372,38 @@ body {
 /* -----------------------------------------------------------------  */
 /* -----------------------------------------------------------------  */
 
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Remove outline on focus */
+a:focus {
+  outline: none;
+}
+
+/* Remove active/clicked state visual effects */
+a:active {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Optional: Ensure no color change on click */
+a:visited {
+  color: inherit;
+}
+
+/* Transparent hover effect */
+a:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+/* -----------------------------------------------------------------  */
+/* -----------------------------------------------------------------  */
+/* -----------------------------------------------------------------  */
+
 /* HIGHLIGHTS SECTION [ 5 ] 
 now Browse Curated Resources*/
 
@@ -395,6 +427,7 @@ now Browse Curated Resources*/
   color: #a8a8c7;
   text-decoration: none;
   transition: color 0.3s ease;
+  
 }
 
 .drive-link-5 a:hover {
