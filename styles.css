@@ -125,6 +125,70 @@ body {
 /* -----------------------------------------------------------------  */
 /* -----------------------------------------------------------------  */
 
+
+/* Container for the dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Button styling */
+.dropbtn {
+  background-color: #4caf4f00;
+  color: white;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  /* border-radius: 4px; */
+}
+
+/* The dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0; /* Align to the right side of the button */
+  left: auto; /* Override default left alignment */
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  
+}
+
+/* Style for the links inside the dropdown */
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+  background-color: #048eff;
+  z-index: 2;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  
+}
+
+/* Change the background color of the dropdown button when hovering */
+.dropdown:hover .dropbtn {
+  background-color: #2478ff;
+  
+}
+
+/* -----------------------------------------------------------------  */
+/* -----------------------------------------------------------------  */
+/* -----------------------------------------------------------------  */
+
 /*blog windows css [ 2 ]*/
 
 /* Hide scrollbars for Chrome, Safari and Opera */
