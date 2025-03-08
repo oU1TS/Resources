@@ -69,6 +69,10 @@ body {
   background-color: #333;
   min-height: 50px;
   width: 100%;
+  
+  position: relative; /* Ensure proper stacking context */
+  z-index: 100; /* Higher z-index for the navbar */
+  overflow: visible !important; /* Critical: allows dropdowns to extend outside */
 }
 
 /* Navigation links */
@@ -168,22 +172,27 @@ body {
 }
 
 /* Change color on hover */
-.dropdown-content a:hover {
+.dropdown-content a:hover, 
+.dropdown-content a:active {
   background-color: #048eff;
   z-index: 2;
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+/* .dropdown:hover .dropdown-content {
   display: block;
   
+} */
+
+.show {
+  display: block;
 }
 
 /* Change the background color of the dropdown button when hovering */
-.dropdown:hover .dropbtn {
+/* .dropdown:hover .dropbtn {
   background-color: #2478ff;
   
-}
+} */
 
 /* -----------------------------------------------------------------  */
 /* -----------------------------------------------------------------  */
