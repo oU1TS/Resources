@@ -69,10 +69,13 @@ body {
   background-color: #333;
   min-height: 50px;
   width: 100%;
-  
-  position: relative; /* Ensure proper stacking context */
-  z-index: 100; /* Higher z-index for the navbar */
-  overflow: visible !important; /* Critical: allows dropdowns to extend outside */
+
+  position: relative;
+  /* Ensure proper stacking context */
+  z-index: 100;
+  /* Higher z-index for the navbar */
+  overflow: visible !important;
+  /* Critical: allows dropdowns to extend outside */
 }
 
 /* Navigation links */
@@ -151,15 +154,17 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  right: 0; /* Align to the right side of the button */
-  left: auto; /* Override default left alignment */
+  right: 0;
+  /* Align to the right side of the button */
+  left: auto;
+  /* Override default left alignment */
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 4px;
   overflow: hidden;
-  
+
 }
 
 /* Style for the links inside the dropdown */
@@ -172,7 +177,7 @@ body {
 }
 
 /* Change color on hover */
-.dropdown-content a:hover, 
+.dropdown-content a:hover,
 .dropdown-content a:active {
   background-color: #048eff;
   z-index: 2;
@@ -480,7 +485,7 @@ now Browse Curated Resources*/
 
 .highlights-5 {
   color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 20px ;
+  margin-bottom: 20px;
   margin-top: -5px;
   /* text-align: center; */
   /* justify-content: center;
@@ -501,9 +506,11 @@ now Browse Curated Resources*/
 .resources-table-5 td {
   background-color: #00000044;
   border-radius: 8px;
-  padding: 0; /* Remove padding from td */
+  padding: 0;
+  /* Remove padding from td */
   transition: background-color 0.3s ease;
-  text-align: center; /* Center the content */
+  text-align: center;
+  /* Center the content */
 }
 
 .resources-table-5 td:hover {
@@ -521,7 +528,7 @@ now Browse Curated Resources*/
   transition: color 0.3s ease;
   width: 100%;
   box-sizing: border-box;
-  
+
   /* Disable mobile tap highlight */
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -535,7 +542,8 @@ now Browse Curated Resources*/
 .resources-table-5 .cell-link:visited,
 .resources-table-5 .cell-link:active,
 .resources-table-5 .cell-link:focus {
-  color: #ffffffba; /* Keep the same color for all states */
+  color: #ffffffba;
+  /* Keep the same color for all states */
   outline: none;
 }
 
@@ -604,7 +612,28 @@ now Browse Curated Resources*/
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s, transform 0.2s;
+
+  /* Disable mobile tap highlight */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  outline: none;
+
 }
+
+
+
+/* Add rules for all link states to maintain the same color */
+.home-button:link,
+.home-button:visited,
+.home-button:active,
+.home-button:focus {
+  color: #ffffff;
+  /* Keep the same color for all states */
+  outline: none;
+}
+
 
 .home-button:hover {
   background-color: #0056b3;
@@ -646,6 +675,26 @@ now Browse Curated Resources*/
   line-height: 50px;
   /* Centering the icon */
   border-radius: 50%;
+
+  /* Disable mobile tap highlight */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  outline: none;
+
+}
+
+
+
+/* Add rules for all link states to maintain the same color */
+.back-icon:link,
+.back-icon:visited,
+.back-icon:active,
+.back-icon:focus {
+  color: #ffffff;
+  /* Keep the same color for all states */
+  outline: none;
 }
 
 .back-icon:hover {
