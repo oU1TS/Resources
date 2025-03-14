@@ -519,6 +519,17 @@ now Browse Curated Resources*/
   box-sizing: border-box; /* Include padding in width calculation */
 }
 
+.resources-table-5 .cell-link:link,
+.resources-table-5 .cell-link:visited,
+.resources-table-5 .cell-link:active {
+  color: #ffffffba; /* Keep the same color for all states */
+}
+
+/* Only change color on hover */
+.resources-table-5 .cell-link:hover {
+  color: #ffffff;
+}
+
 .resources-table-5 td:hover {
   background-color: #424242;
 }
