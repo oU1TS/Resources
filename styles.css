@@ -506,6 +506,10 @@ now Browse Curated Resources*/
   text-align: center; /* Center the content */
 }
 
+.resources-table-5 td:hover {
+  background-color: #424242;
+}
+
 /* FOR CLICKABLE BUTTON DIV */
 
 .resources-table-5 .cell-link {
@@ -513,16 +517,26 @@ now Browse Curated Resources*/
   text-decoration: none;
   display: block;
   text-align: center;
-  padding: 10%; /* Move the padding to the anchor */
+  padding: 10%;
   transition: color 0.3s ease;
   width: 100%;
-  box-sizing: border-box; /* Include padding in width calculation */
+  box-sizing: border-box;
+  
+  /* Disable mobile tap highlight */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  outline: none;
 }
 
+/* Add rules for all link states to maintain the same color */
 .resources-table-5 .cell-link:link,
 .resources-table-5 .cell-link:visited,
-.resources-table-5 .cell-link:active {
+.resources-table-5 .cell-link:active,
+.resources-table-5 .cell-link:focus {
   color: #ffffffba; /* Keep the same color for all states */
+  outline: none;
 }
 
 /* Only change color on hover */
@@ -530,9 +544,7 @@ now Browse Curated Resources*/
   color: #ffffff;
 }
 
-.resources-table-5 td:hover {
-  background-color: #424242;
-}
+
 
 .resources-table-5 a {
   text-align: center;
