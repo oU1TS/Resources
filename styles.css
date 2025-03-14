@@ -513,7 +513,7 @@ now Browse Curated Resources*/
   text-decoration: none;
   display: block;
   text-align: center;
-  padding: 8%; /* Move the padding to the anchor */
+  padding: 10%; /* Move the padding to the anchor */
   transition: color 0.3s ease;
   width: 100%;
   box-sizing: border-box; /* Include padding in width calculation */
