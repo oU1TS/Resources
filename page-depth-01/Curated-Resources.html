@@ -15,6 +15,46 @@
             color: #fff;
         } */
 
+        /* CONTAINER FOR GRID  */
+        .container-6 {
+            display: grid;
+            grid-template-columns: auto auto;
+            /* background-color: dodgerblue; */
+            /* padding: 10px; */
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px auto;
+            width: 79%;
+            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            /*the button visibility*/
+            position: relative;
+            /* background-color: #000000c5; */
+            column-gap: 5%;
+            row-gap: 5%;
+
+        }
+
+        /* .container-6>div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+        }  */
+
+        .container-5>div>div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+            /* color: #f2f2f200; */
+           
+        }
+
+
+
         .container-5 {
 
             border-radius: 15px;
@@ -34,6 +74,7 @@
         }
 
         .drive-link-5 a {
+            /* background-color: #424242; */
             color: #b8b8e5;
             text-decoration: none;
             transition: color 0.3s ease;
@@ -336,7 +377,7 @@
     </div>
     <!-- ----------------------------------------------------------------------- -->
 
-    <div class="container-5" align=center>
+    <div class="container-5" style="max-width: 500px;min-width: 300px;" align=center>
         <table class="resources-table-5" align=center style="width:90%;">
             <tr>
                 <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">
@@ -346,10 +387,10 @@
                 <td style="margin-left: auto;
     margin-right: auto;">
                     <!-- <p> -->
-                        <a class="cell-link" href="https://drive.google.com/drive/folders/1tKdvGoeoYQJ6ms-p7ZPlA2EvYPJ4SWFt"
-                            target="_blank">
-                            Programming References
-                        </a>
+                    <a class="cell-link" href="https://drive.google.com/drive/folders/1tKdvGoeoYQJ6ms-p7ZPlA2EvYPJ4SWFt"
+                        target="_blank">
+                        Programming References
+                    </a>
                     <!-- </p> -->
                 </td>
             </tr>
@@ -357,10 +398,10 @@
                 <td style="margin-left: auto;
     margin-right: auto;">
                     <!-- <p> -->
-                        <a class="cell-link" href="https://drive.google.com/drive/folders/1RyEfnky5cr22HnjMu5qnm3q8loP2jIqa"
-                            target="_blank">
-                            Curated Book List
-                        </a>
+                    <a class="cell-link" href="https://drive.google.com/drive/folders/1RyEfnky5cr22HnjMu5qnm3q8loP2jIqa"
+                        target="_blank">
+                        Curated Book List
+                    </a>
                     <!-- </p> -->
                 </td>
             </tr>
@@ -368,52 +409,106 @@
                 <td style="margin-left: auto;
     margin-right: auto;">
                     <!-- <p> -->
-                        <a class="cell-link" href="page-depth-02\Resources-Dump.html">
-                            Saraf's Resources List
-                        </a>
+                    <a class="cell-link" href="page-depth-02\Resources-Dump.html">
+                        Saraf's Resources List
+                    </a>
                     <!-- </p> -->
                 </td>
             </tr>
             <td style="background-color: rgba(240, 248, 255, 0);margin: auto;">
 
                 <!-- <p  style="color: rgba(240, 248, 255, 0.649);justify-content: center;"> -->
-                    <br><hr><br>
+                <br>
+                <hr>
+                <!-- <br> -->
                 <!-- </p> -->
 
             </td>
             </tr>
+            <!-- ------------------------------------------------------------------------ -->
+            <!-- ------------------------------------------------------------------------ -->
+
+            <tr>
+                <td style="background-color: #00000000;margin: auto;min-width: 280px;">
+                    <div class="container-6" style="max-width: 500px;background-color: #00000040;">
+                        <div class="menu-button" id="menuButton3" align="center"
+                            style="color: rgba(240, 248, 255, 0.85);">
+                            <p class="cell-link" align="center"
+                                style="color: rgba(255, 255, 255, 0.649);margin:auto;padding:10px;background-color: #00000000;">
+                                Career
+                                Guides
+                            </p>
+                        </div>
+                        <div class="menu-button" id="menuButton2" align="center"
+                            style="color: rgba(240, 248, 255, 0.85);">
+                            <p class="cell-link" align="center"
+                                style="color: rgba(255, 255, 255, 0.649);margin:auto;padding:10px">Open
+                                Source Learning
+                            </p>
+                        </div>
+                        <div class="menu-button" id="menuButton1" align="center" style="color: rgba(240, 248, 255, 0.85);margin-left: auto;
+        margin-right: auto;">
+                            <p class="cell-link" align="center"
+                                style="color: rgba(255, 255, 255, 0.649);margin:auto;padding:10px">
+                                Softwares</b>
+                            </p>
+                        </div>
+                        <div class=" menu-button" id="menuButton4" align="center"
+                            style="color: rgba(240, 248, 255, 0.85);">
+                            <p class="cell-link" align="center"
+                                style="color: rgba(253, 253, 253, 0.649);margin:auto;padding:10px">UITS
+                                Archive<br></p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
 
             <!-- ------------------------------------------------------------------------ -->
             <!-- ------------------------------------------------------------------------ -->
-            <tr><!-- 3rd container with menu button -->
+
+            <!-- 3rd container with menu button -->
+
+            <!-- <tr>
+                
                 <td class="menu-button" id="menuButton3" align="center" style="color: rgba(240, 248, 255, 0.85);margin-left: auto;
                 margin-right: auto;">
-                    <p class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);padding: 5%;">Career Guides
+                    <p class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);padding: 5%;">Career
+                        Guides
                     </p>
                 </td>
-            </tr>
-            <tr><!-- 1st container with different menu button -->
+            </tr> -->
+
+            <!-- 1st container with different menu button -->
+            <!-- <tr>
                 <td class="menu-button" id="menuButton2" align="center" style="color: rgba(240, 248, 255, 0.85);margin-left: auto;
                 margin-right: auto;">
 
-                    <p  class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);padding: 5%;">Open Source Learning
+                    <p class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);padding: 5%;">Open
+                        Source Learning
                     </p>
                 </td>
-            </tr>
-            <tr><!-- 3rd container with menu button -->
+            </tr> -->
+            <!-- 3rd container with menu button -->
+
+            <!-- <tr>
                 <td class="menu-button" id="menuButton1" align="center" style="color: rgba(240, 248, 255, 0.85);margin-left: auto;
                 margin-right: auto;">
-                    <p class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);padding: 5%;"">Softwares
+                    <p class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);padding: 5%;">Softwares
                     </p>
                 </td>
-            </tr>
-            <tr><!-- 4th container with menu button -->
-                <td class="menu-button" id="menuButton4" align="center" style="color: rgba(240, 248, 255, 0.85);margin-left: auto;
+            </tr> -->
+            <!-- 4th container with menu button -->
+
+            <!-- <tr>
+                <td class=" menu-button" id="menuButton4" align="center" style="color: rgba(240, 248, 255, 0.85);margin-left: auto;
                 margin-right: auto;">
 
-                    <p class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);padding: 5%;"">UITS Archive</p>
+                    <p class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);padding: 5%;">UITS
+                        Archive</p>
                 </td>
-            </tr>
+            </tr> -->
+
         </table>
     </div>
 
@@ -423,7 +518,7 @@
     <!-- -------------------------------------------------------------- -->
 
     <!-- 1st popup menu -->
-    <div class="popup-menu" id="popupMenu1" style="max-width:70%;">
+    <div class=" popup-menu" id="popupMenu1" style="max-width:70%;">
         <div class="popup-close popup-close-btn"></div>
         <!-- <div class="popup-menu-title">Content Creators</div> -->
         <div class="popup-menu-categories">
