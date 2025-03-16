@@ -15,6 +15,56 @@
             color: #fff;
         } */
 
+        /* CONTAINER FOR GRID  */
+        .container-6 {
+            display: grid;
+            grid-template-columns: auto;
+            /* background-color: dodgerblue; */
+            /* padding: 10px; */
+            border-radius: 15px;
+            padding: 25px;
+            /* margin-top:auto; */
+            /* margin-bottom: 50px; */
+            /* width: 79%; */
+            /* max-width: 800px; */
+            /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); */
+            /*the button visibility*/
+            position: relative;
+            /* background-color: #000000c5; */
+            /* column-gap: 2%; */
+            row-gap: 5%;
+            /* justify-content: center; */
+        }
+
+        /* .container-6>div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+        }  */
+
+        .container-5>div>div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+            /* color: #f2f2f200; */
+            /* width: 100%; */
+
+        }
+
+        /* .container-5>div>div>p {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+           
+
+        } */
+
         .container-5 {
 
             border-radius: 15px;
@@ -44,11 +94,11 @@
         }
 
         .menu-button {
-            background-color: #00000000;
+            /* background-color: #00000000; */
+            background-color: #00000044;
             border-radius: 8px;
             padding: 12px;
             position: relative;
-
             cursor: pointer;
             display: flex;
             flex-direction: column;
@@ -61,7 +111,7 @@
         }
 
         .menu-button:hover {
-            background-color: rgba(100, 100, 150, 0.9);
+            background-color: #424242;
         }
 
         .menu-line {
@@ -268,7 +318,7 @@
         <a class="active-1" href="References.html">
             <small>Project<br>References</small>
         </a>
-       <a class="active-1" href="Blog.html">
+        <a class="active-1" href="Blog.html">
             <small>CSE<br>Blog</small>
         </a>
         <!--  <a class="active-1" href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL?usp=sharing"
@@ -337,60 +387,88 @@
     <!-- ----------------------------------------------------------------------- -->
 
 
-    <div class="container-5" align=center>
+    <div class="container-5" align=center style="max-width:500px;">
         <table class="resources-table-5" align=center style="width:90%;">
             <tr>
                 <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">Blog collection
                 </p>
             </tr>
+            <tr>
+                <td style="background-color: #00000000;min-width: 280px;">
+                    <div class="container-6" style="max-width: 500px;background-color: #00000000;" align="center">
+                        <div class="menu-button" id="menuButton1" align="center"
+                            style="color: rgba(240, 248, 255, 0.85);height:70%;width:100%;">
+                            <p class="cell-link" align="center"
+                                style="color: rgba(255, 255, 255, 0.649);margin:auto;background-color: #00000000;">
+                                UITS blog
+                            </p>
 
-            <tr><!-- First container with menu button -->
-                <td class="menu-button" id="menuButton1" align="center" style="color: rgba(240, 248, 255, 0.85);">
-                    <!-- <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div> -->
-                    <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">UITS blog
+                        </div>
+                        <div class="menu-button" id="menuButton2" align="center"
+                            style="color: rgba(240, 248, 255, 0.85);height:70%;width:100%;">
+                            <p class="cell-link" align="center"
+                                style="color: rgba(255, 255, 255, 0.649);margin:auto;=background-color: #00000000;">
+                                Programmer's blog
+                            </p>
+
+                        </div>
+                        <div class="menu-button" id="menuButton3" align="center"
+                            style="color: rgba(240, 248, 255, 0.85);height:70%;width:100%;">
+                            <p class="cell-link" align="center"
+                                style="color: rgba(255, 255, 255, 0.649);margin:auto;=background-color: #00000000;">
+                                Online blog
+                            </p>
+
+                        </div>
+            </tr>
+            <!-- First container with menu button -->
+            <!-- <tr>
+                
+                <td class="menu-button" id="menuButton1" align="center"
+                    style="color: rgba(240, 248, 255, 0.85);margin: auto;">
+                    <p class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);">UITS blog
                     </p>
                 </td>
-            </tr>
-            <tr><!-- Second container with different menu button -->
-                <td class="menu-button" id="menuButton2" align="center" style="color: rgba(240, 248, 255, 0.85);">
-                    <!-- <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div> -->
-                    <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">Programmer's blog
+            </tr> -->
+            <!-- Second container with different menu button -->
+            <!-- <tr>
+                <td class="menu-button" id="menuButton2" align="center"
+                    style="color: rgba(240, 248, 255, 0.85);margin: auto;">
+                    <p class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);">Programmer's blog
                     </p>
                 </td>
-            </tr>
-            <tr><!-- 3rd container with different menu button -->
-                <td class="menu-button" id="menuButton3" align="center" style="color: rgba(240, 248, 255, 0.85);">
-                    <!-- <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div> -->
-                    <p class="#" align="center" style="color: rgba(240, 248, 255, 0.649);">Online blog
+            </tr> -->
+
+            <!-- 3rd container with different menu button -->
+            <!-- <tr>
+                <td class="menu-button" id="menuButton3" align="center"
+                    style="color: rgba(240, 248, 255, 0.85);margin: auto;">
+                    <p class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);">Online blog
                     </p>
                 </td>
-            </tr>
+            </tr> -->
         </table>
     </div>
-    <div class="container-5" align=center>
+    <div class="container-5" align=center style="max-width:500px;">
         <table class="resources-table-5" align=center style="width:90%;">
             <tr>
                 <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">personal blog
                 </p>
             </tr>
             <tr>
-                <td>
-                    <p><a href="https://b1tranger-coding.blogspot.com/" target="_blank">
-                            <i>b1tranger</i>'s @blogspot
-                        </a></p>
+                <td style="color: rgba(240, 248, 255, 0.85);margin: auto;">
+                    <!-- <p> -->
+                    <a class="cell-link" href="https://b1tranger-coding.blogspot.com/" target="_blank">
+                        <i>b1tranger</i>'s @blogspot
+                    </a>
+                    <!-- </p> -->
                 </td>
             </tr>
 
         </table>
     </div>
     <!-- First popup menu -->
-    <div class="popup-menu" id="popupMenu1">
+    <div class="popup-menu" id="popupMenu1" style="max-width:400px;">
         <div class="popup-close popup-close-btn"></div>
         <!-- <div class="popup-menu-title">Content Creators</div> -->
         <div class="popup-menu-categories">
@@ -413,7 +491,7 @@
     </div>
 
     <!-- Second popup menu with different content -->
-    <div class="popup-menu" id="popupMenu2">
+    <div class="popup-menu" id="popupMenu2" style="max-width:400px;">
         <div class="popup-close popup-close-btn"></div>
         <!-- <div class="popup-menu-title">Resources & Tools</div> -->
         <div class="popup-menu-categories">
@@ -438,7 +516,7 @@
 
 
     <!-- 3rd popup menu with different content -->
-    <div class="popup-menu" id="popupMenu3">
+    <div class="popup-menu" id="popupMenu3" style="max-width:400px;">
         <div class="popup-close popup-close-btn"></div>
         <!-- <div class="popup-menu-title">Resources & Tools</div> -->
         <div class="popup-menu-categories">
