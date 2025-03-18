@@ -209,6 +209,15 @@
             transition: color 0.3s ease;
         }
 
+        .popup-menu-category .link-item:link,
+        .popup-menu-category .link-item:visited,
+        .popup-menu-category .link-item:active,
+        .popup-menu-category .link-item:focus {
+            color: #ffffffba;
+            /* Keep the same color for all states */
+            outline: none;
+        }
+
         .link-item a:hover {
             color: #ffffff;
         }
@@ -459,19 +468,23 @@
     </div>
 
     <!-- 2nd popup menu -->
-    <div class="popup-menu" id="popupMenu2" style="max-width: 250px;background-color: #424242;border-radius:  50px 50px 50px 50px;">
+    <div class="popup-menu" id="popupMenu2"
+        style="max-width: 250px;background-color: #424242;border-radius:  50px 50px 50px 50px;">
         <div class="popup-close popup-close-btn"></div>
         <!-- <div class="popup-menu-title">Content Creators</div> -->
         <div class="popup-menu-categories">
             <div class="popup-menu-category" align="center">
-<br>
-                <div class="link-item" style="background-color: #ffffff;border-radius: 50px 50px 50px 50px;width: 200px;box-shadow: 1px 2px 10px #000000;">
-                    <a href="https://forms.gle/uFq1vBSUbRhY5CZk6" target="_blank" style="color: #424242;padding-top:15%">
+                <br>
+                <div class="link-item"
+                    style="background-color: #ffffff;border-radius: 50px 50px 50px 50px;width: 200px;box-shadow: 1px 2px 10px #000000;">
+                    <a href="https://forms.gle/uFq1vBSUbRhY5CZk6" target="_blank"
+                        style="color: #424242;padding-top:15%">
                         <strong>Upload Questions</strong><br>
                         <i style="font-size: x-small;">(Single Upload)</i>
                     </a>
                 </div>
-                <div class="link-item" style="background-color: #ffffff;border-radius: 50px 50px 50px 50px;width: 200px;box-shadow: 1px 2px 10px #000000;">
+                <div class="link-item"
+                    style="background-color: #ffffff;border-radius: 50px 50px 50px 50px;width: 200px;box-shadow: 1px 2px 10px #000000;">
                     <a class="cell-link"
                         href="https://drive.google.com/drive/folders/1i0UUsgy68Nypc2ylPsaB-Teljkf0NSUD?usp=drive_link"
                         target="_blank" style="color: #424242;">
