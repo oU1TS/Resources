@@ -65,6 +65,11 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
             z-index: 50;
             transition: background-color 0.3s ease;
+
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
         }
 
         .menu-button:hover {
@@ -209,22 +214,7 @@
             transition: color 0.3s ease;
         }
 
-        /* .popup-menu-category .link-item:link,
-        .popup-menu-category .link-item:visited,
-        .popup-menu-category .link-item:active,
-        .popup-menu-category .link-item:focus {
-            color: #ffffffba;
-            outline: none;
-        } */
 
-        .link-item:link,
-        .link-item:visited,
-        .link-item:active,
-        .link-item:focus {
-            color: #ffffffba;
-            /* Keep the same color for all states */
-            outline: none;
-        }
 
         .link-item a:hover {
             color: #ffffff;
