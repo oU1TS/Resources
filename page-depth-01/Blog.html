@@ -18,22 +18,23 @@
         /* CONTAINER FOR GRID  */
         .container-6 {
             display: grid;
-            grid-template-columns: auto;
+            grid-template-columns: auto auto;
             /* background-color: dodgerblue; */
             /* padding: 10px; */
             border-radius: 15px;
             padding: 25px;
-            /* margin-top:auto; */
-            /* margin-bottom: 50px; */
-            /* width: 79%; */
-            /* max-width: 800px; */
+            margin: 20px auto;
+            width: 79%;
+            max-width: 800px;
             /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); */
             /*the button visibility*/
             position: relative;
             /* background-color: #000000c5; */
-            /* column-gap: 2%; */
-            row-gap: 5%;
-            /* justify-content: center; */
+            column-gap: 7%;
+            row-gap: 10%;
+            place-content: center;
+            align-items: center;
+
         }
 
         /* .container-6>div {
@@ -52,6 +53,7 @@
             text-align: center;
             /* color: #f2f2f200; */
             /* width: 100%; */
+            
 
         }
 
@@ -76,6 +78,7 @@
             /*the button visibility*/
             position: relative;
             background-color: #000000c5;
+            
 
         }
 
@@ -94,23 +97,23 @@
         }
 
         .menu-button {
-            /* background-color: #00000000; */
             background-color: #00000044;
             border-radius: 8px;
             padding: 12px;
             position: relative;
             cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            /* display: flex; */
+            /* flex-direction: column; */
+            /* justify-content: center; */
+            place-content: center;
             align-items: center;
             gap: 5px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
             z-index: 50;
             transition: background-color 0.3s ease;
 
-             /* DISABLES LINK CLICK EFFECT */
-             -webkit-tap-highlight-color: transparent;
+            /* DISABLES LINK CLICK EFFECT */
+            -webkit-tap-highlight-color: transparent;
             -webkit-touch-callout: none;
             -webkit-user-select: none;
             user-select: none;
@@ -396,22 +399,22 @@
     <div class="container-5" align=center style="max-width:500px;">
         <table class="resources-table-5" align=center style="width:90%;">
             <tr>
-                <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">Blog collection
+                <p class="highlights" style="color: rgba(240, 248, 255, 0.649);margin-bottom: -30px;">Blog collection
                 </p>
             </tr>
             <tr>
-                <td style="background-color: #00000000;min-width: 280px;">
-                    <div class="container-6" style="max-width: 500px;background-color: #00000000;" align="center">
-                        <div class="menu-button" id="menuButton1" align="center"
-                            style="color: rgba(240, 248, 255, 0.85);height:70%;width:100%;">
-                            <p class="cell-link" align="center"
-                                style="color: rgba(255, 255, 255, 0.649);margin:auto;background-color: #00000000;">
+                <td style="background-color: #00000000;margin: auto;min-width: 280px;" align=center>
+                    <div class="container-6" style="max-width: 500px;background-color: #00000000;" align=center>
+                        <div class="menu-button" id="menuButton1" 
+                        style="color: rgba(240, 248, 255, 0.85);height:50px;width:150px;"  align=center>
+                            <p class="cell-link"
+                                style="color: rgba(255, 255, 255, 0.649);margin:auto;background-color: #00000000;" >
                                 UITS blog
                             </p>
 
                         </div>
                         <div class="menu-button" id="menuButton2" align="center"
-                            style="color: rgba(240, 248, 255, 0.85);height:70%;width:100%;">
+                        style="color: rgba(240, 248, 255, 0.85);height:50px;width:150px;">
                             <p class="cell-link" align="center"
                                 style="color: rgba(255, 255, 255, 0.649);margin:auto;background-color: #00000000;">
                                 Programmer's blog
@@ -419,13 +422,15 @@
 
                         </div>
                         <div class="menu-button" id="menuButton3" align="center"
-                            style="color: rgba(240, 248, 255, 0.85);height:70%;width:100%;">
+                            style="color: rgba(240, 248, 255, 0.85);height:50px;width:150px;">
                             <p class="cell-link" align="center"
                                 style="color: rgba(255, 255, 255, 0.649);margin:auto;background-color: #00000000;">
                                 Online blog
                             </p>
 
                         </div>
+                    </div>
+                </td>
             </tr>
             <!-- First container with menu button -->
             <!-- <tr>
