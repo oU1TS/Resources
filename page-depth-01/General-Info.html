@@ -13,6 +13,55 @@
             text-align: center;
         }
     </style>
+
+    <!-- GRID Style -->
+    <style>
+        .container-6 {
+            display: grid;
+            grid-template-columns: auto auto;
+            /* background-color: dodgerblue; */
+            /* padding: 10px; */
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px auto;
+            width: 79%;
+            max-width: 800px;
+            /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); */
+            /*the button visibility*/
+            position: relative;
+            /* background-color: #000000c5; */
+            column-gap: 2%;
+            row-gap: 15%;
+
+        }
+
+        .container-5>div>div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+            /* color: #f2f2f200; */
+            /* width: 100%; */
+
+        }
+
+
+
+        .container-5 {
+
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px auto;
+            width: 79%;
+            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            /*the button visibility*/
+            position: relative;
+            background-color: #000000c5;
+
+        }
+    </style>
     <style>
         /* body {
             font-family: Arial, sans-serif;
@@ -66,8 +115,8 @@
             z-index: 50;
             transition: background-color 0.3s ease;
 
-             /* DISABLES LINK CLICK EFFECT */
-             -webkit-tap-highlight-color: transparent;
+            /* DISABLES LINK CLICK EFFECT */
+            -webkit-tap-highlight-color: transparent;
             -webkit-touch-callout: none;
             -webkit-user-select: none;
             user-select: none;
@@ -349,40 +398,72 @@
     </div>
     <!-- ----------------------------------------------------------------------- -->
 
+    <!-- GRID FOR INFO -->
 
-
-
-    <!-- HIGHLIGHTS OF DRIVE -->
-
-    <div class="container-5" align=center>
+    <div class="container-5" style="max-width: 500px;min-width: 300px;" align=center>
         <table class="resources-table-5" align=center style="width:90%;">
             <tr>
-                <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">Find your info here</p>
+                <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">Find your info
+                    here</p>
             </tr>
-            <tr>
-                <td class="menu-button" id="menuButton1" align="center" style="color: rgba(240, 248, 255, 0.85);margin-left: auto;
-    margin-right: auto;">
-                    <p class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);padding: 5%;">Notice
-                    </p>
+            <tr style="margin-top: 0px;">
+                <td style="background-color: #00000000;margin: auto;min-width: 280px;" colspan="2">
+                    <hr style="border: 5px solid rgba(255, 255, 255, 0.619);
+                      border-radius: 5px;margin-bottom: -20px;min-width: 200px;width:100%">
+                    <div class="container-6" style="max-width: 500px;background-color: #00000000;" align="center">
+
+                        <div class="menu-button" id="menuButton1" align="center"
+                            style="background-color: rgba(0, 0, 0, 0.247);height:70%;width:70%;">
+                            <p class="cell-link" align="center"
+                                style="color: rgb(255, 255, 255);margin:auto;padding:10px">
+                                Notice</b>
+                            </p>
+                        </div>
+                        <div class="menu-button" id="menuButton3" align="center"
+                            style="background-color: rgba(0, 0, 0, 0.247);height:70%;width:70%;">
+                            <p class="cell-link" align="center"
+                                style="color: rgb(255, 255, 255);margin:auto;padding:10px;background-color: #00000000;">
+                                Class Routine
+                            </p>
+                        </div>
+
+                    </div>
+                    <hr style="border: 5px solid rgba(255, 255, 255, 0.619);
+                      border-radius: 5px;margin-bottom: 20px;min-width: 200px;width:100%">
                 </td>
 
+            </tr>
+
+            <!-- <tr>
+
+                <td class="menu-button" id="menuButton1" align="center" style="color: rgba(240, 248, 255, 0.85);margin-left: auto;
+    margin-right: auto;">
+                            <p class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);padding: 5%;">
+                                Notice
+                            </p>
+                        </td>
+                <td class="menu-button" id="menuButton3" align="center" style="color: rgba(240, 248, 255, 0.85);margin-left: auto;
+                margin-right: auto;">
+                            <p class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);padding: 5%;">
+                                Class Routine
+                            </p>
+                        </td>
+
+            </tr> -->
+            <tr>
+                <!-- class="menu-button" id="menuButton2" align="center" style="color: rgba(240, 248, 255, 0.85);margin-left: auto; margin-right: auto;" -->
                 <td style="margin-left: auto;
     margin-right: auto;">
-                    <!-- <p  class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);padding: 5%;"> -->
-                    <a class="cell-link" href="https://drive.google.com/drive/folders/1sl_cPO2lI276il35NZyIN7vr6Pc6HuSg"
+                    <a class="cell-link"
+                        href="https://drive.google.com/drive/folders/1i0UUsgy68Nypc2ylPsaB-Teljkf0NSUD?usp=drive_link"
                         target="_blank">
-                        Departments info
-                    </a>
-                    <!-- </p> -->
-                </td>
-            </tr>
-            <tr>
-                <td class="menu-button" id="menuButton2" align="center" style="color: rgba(240, 248, 255, 0.85);margin-left: auto;
-    margin-right: auto;">
-                    <p class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);padding: 5%;">
                         University Questions
-                    </p>
+                    </a>
+                    <!-- <p class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);padding: 5%;">
+                        University Questions
+                    </p> -->
                 </td>
+
                 <td style="margin-left: auto;
     margin-right: auto;">
                     <!-- <p> -->
@@ -406,18 +487,19 @@
 
                     <!-- </p> -->
                 </td>
-
                 <td style="margin-left: auto;
-    margin-right: auto;">
-                    <!-- <p> -->
-                    <a class="cell-link" href="https://drive.google.com/drive/folders/1HKkXWBglI1Ffb22k7z7qLFqQqWlEcaI1"
-                        target="_blank">
-                        Class Routine format
-                    </a>
-                    <!-- </p> -->
-                </td>
+                margin-right: auto;">
+                                <!-- <p  class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);padding: 5%;"> -->
+                                <a class="cell-link" href="https://drive.google.com/drive/folders/1sl_cPO2lI276il35NZyIN7vr6Pc6HuSg"
+                                    target="_blank">
+                                    Departments info
+                                </a>
+                                <!-- </p> -->
+                            </td>
+
             </tr>
             <tr>
+                
                 <td style="margin-left: auto;
     margin-right: auto;">
                     <!-- <p> -->
@@ -429,7 +511,6 @@
                 </td>
 
             </tr>
-
 
         </table>
     </div>
@@ -467,10 +548,9 @@
     </div>
 
     <!-- 2nd popup menu -->
-    <div class="popup-menu" id="popupMenu2"
+    <!-- <div class="popup-menu" id="popupMenu2"
         style="max-width: 250px;background-color: #424242;border-radius:  50px 50px 50px 50px;">
         <div class="popup-close popup-close-btn"></div>
-        <!-- <div class="popup-menu-title">Content Creators</div> -->
         <div class="popup-menu-categories">
             <div class="popup-menu-category" align="center">
                 <br>
@@ -490,10 +570,35 @@
                         <strong>See All Questions<br>in Google Drive</strong>
                     </a>
                 </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- 3rd popup menu -->
+    <div class="popup-menu" id="popupMenu3" style="max-width: 400px; width: 60%;">
+        <div class="popup-close popup-close-btn"></div>
+        <!-- <div class="popup-menu-title">Content Creators</div> -->
+        <div class="popup-menu-categories">
+            <div class="popup-menu-category" align="center">
+                <br>
+                <div class="link-item">
+                    <a class="cell-link" href="https://drive.google.com/drive/folders/1HKkXWBglI1Ffb22k7z7qLFqQqWlEcaI1"
+                        target="_blank">
+                        Class Routine format
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a class="cell-link"
+                        href="https://drive.google.com/drive/folders/1NMg91di-2WhGahidZT2JpDhno-M6f2as?usp=drive_link"
+                        target="_blank">
+                        See CSE Class Routine
+                    </a>
+                </div>
                 <!-- More links here -->
             </div>
         </div>
     </div>
+
 
     <div class="popup-backdrop" id="popupBackdrop"></div>
     <script>
@@ -501,8 +606,8 @@
             // Button and popup pairs
             const menuPairs = [
                 { button: 'menuButton1', popup: 'popupMenu1' },
-                { button: 'menuButton2', popup: 'popupMenu2' }
-                // { button: 'menuButton3', popup: 'popupMenu3' }
+                // { button: 'menuButton2', popup: 'popupMenu2' },
+                { button: 'menuButton3', popup: 'popupMenu3' }
                 // Add more pairs as needed
             ];
 
