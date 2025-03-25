@@ -111,95 +111,7 @@
     </div>
     <!-- ------------------------------------------------------- -->
 
-    <div style="width: 90%;margin: auto;" class=".resources-table-5" >
-        <!-- <h2>Select Your Department and Semester</h2> -->
-          
-          <label for="department"></label>
-          <select id="department" onchange="updateSemesters()" style="padding: 5%;max-width: 250px;border-radius: 20px;min-height: 60px;margin-left: 5%;">
-              <option value="">List Semesters For?</option>
-              <option value="cs">Computer Science</option>
-              <option value="ee">Electrical Engineering</option>
-              <option value="me">Mechanical Engineering</option>
-          </select>
-      
-          <div id="semesterList"></div>
-      
-          <p id="driveLink"></p>
-      
-          <script>
-              // Object mapping departments to semester Google Drive folder links
-              const driveLinks = {
-                  cs: {
-                      1: "page-depth-02/S01.html",
-                      2: "https://drive.google.com/folder_cs_sem2",
-                      3: "https://drive.google.com/folder_cs_sem3",
-                      4: "https://drive.google.com/folder_cs_sem4",
-                      5: "https://drive.google.com/folder_cs_sem5",
-                      6: "https://drive.google.com/folder_cs_sem6",
-                      7: "https://drive.google.com/folder_cs_sem7",
-                      8: "https://drive.google.com/folder_cs_sem8",
-                  },
-                  ee: {
-                      1: "https://drive.google.com/folder_ee_sem1",
-                      2: "https://drive.google.com/folder_ee_sem2",
-                      3: "https://drive.google.com/folder_ee_sem3",
-                      4: "https://drive.google.com/folder_ee_sem4",
-                      5: "https://drive.google.com/folder_ee_sem5",
-                      6: "https://drive.google.com/folder_ee_sem6",
-                      7: "https://drive.google.com/folder_ee_sem7",
-                      8: "https://drive.google.com/folder_ee_sem8",
-                  },
-                  me: {
-                      1: "https://drive.google.com/folder_me_sem1",
-                      2: "https://drive.google.com/folder_me_sem2",
-                      3: "https://drive.google.com/folder_me_sem3",
-                      4: "https://drive.google.com/folder_me_sem4",
-                      5: "https://drive.google.com/folder_me_sem5",
-                      6: "https://drive.google.com/folder_me_sem6",
-                      7: "https://drive.google.com/folder_me_sem7",
-                      8: "https://drive.google.com/folder_me_sem8",
-                  }
-              };
-      
-              function updateSemesters() {
-                  let department = document.getElementById("department").value;
-                  let semesterList = document.getElementById("semesterList");
-                  let driveLink = document.getElementById("driveLink");
-      
-                  // Clear previous semesters and drive link
-                  semesterList.innerHTML = "";
-                  driveLink.innerHTML = "";
-      
-                  if (department) {
-                      // Create semester buttons
-                      for (let i = 1; i <= 8; i++) {
-                          let semesterButton = document.createElement("button");
-                          semesterButton.textContent = `Semester ${i}`;
-                          semesterButton.classList.add('semester-button');
-                          semesterButton.setAttribute('data-semester', i);
-                          semesterButton.onclick = function() {
-                              // Remove active class from all buttons
-                              document.querySelectorAll('.semester-button').forEach(btn => {
-                                  btn.classList.remove('active');
-                              });
-                              
-                              // Add active class to clicked button
-                              this.classList.add('active');
-                              
-                              // Open drive folder
-                              openDriveFolder(department, i);
-                          };
-                          semesterList.appendChild(semesterButton);
-                      }
-                  }
-              }
-      
-              function openDriveFolder(department, semester) {
-                  let driveLink = document.getElementById("driveLink");
-                  window.open(driveLinks[department][semester], '_blank');
-              }
-          </script>
-      </div>
+   
 
 
 
@@ -207,74 +119,150 @@
     <!-- ------------------------------------------------------- -->
     <div class="container-5" align=center>
         <p align="center" style="color: rgba(240, 248, 255, 0.649);">Select your semester<br><br></p>
-        <table class="resources-table-5" align=center style="width:90%;">
-            <tr>
+
+        <div style="width: 90%;margin: auto;margin-top: -15px;" class=".resources-table-5" >
+            <!-- <h2>Select Your Department and Semester</h2> -->
+              
+              <label for="department"></label>
+              <select id="department" onchange="updateSemesters()" style="padding: 5%;max-width: 250px;border-radius: 20px;min-height: 60px;margin-left: 5%;">
+                  <option value="">List Semesters For?</option>
+                  <option value="cs">CSE</option>
+                  <option value="ee">CE</option>
+                  <!-- <option value="me">Mechanical Engineering</option> -->
+              </select>
+          
+              <div id="semesterList"></div>
+          
+              <p id="driveLink"></p>
+          
+              <script>
+                  // Object mapping departments to semester Google Drive folder links
+                  const driveLinks = {
+                      cse: {
+                          1: "page-depth-02/S01.html",
+                          2: "page-depth-02/S02.html",
+                          3: "page-depth-02/S03.html",
+                          4: "page-depth-02/S04.html",
+                          5: "page-depth-02/S05.html",
+                          6: "page-depth-02/S06.html",
+                          7: "page-depth-02/S07.html",
+                          8: "page-depth-02/S08.html",
+                      },
+                      ce: {
+                          1: "https://drive.google.com/drive/folders/1Q4-tnRaIoLjZenzEZTRs-35OgqV54l9W?usp=drive_link",
+                          2: "https://drive.google.com/drive/folders/1gAajNJtRo3up6dpnP-R3cTx0trNikJVP?usp=drive_link",
+                          3: "https://drive.google.com/drive/folders/1XecebUV1rScSMpO0TUbnVoPUWKS8bJAH?usp=drive_link",
+                          4: "https://drive.google.com/drive/folders/1R3AkpHgDgB2FiHS-gXxPTV7eljZJRknm?usp=drive_link",
+                        //   5: "https://drive.google.com/folder_ee_sem5",
+                        //   6: "https://drive.google.com/folder_ee_sem6",
+                        //   7: "https://drive.google.com/folder_ee_sem7",
+                        //   8: "https://drive.google.com/folder_ee_sem8",
+                      }
+                    //   ,
+                    //   me: {
+                    //       1: "https://drive.google.com/folder_me_sem1",
+                    //       2: "https://drive.google.com/folder_me_sem2",
+                    //       3: "https://drive.google.com/folder_me_sem3",
+                    //       4: "https://drive.google.com/folder_me_sem4",
+                    //       5: "https://drive.google.com/folder_me_sem5",
+                    //       6: "https://drive.google.com/folder_me_sem6",
+                    //       7: "https://drive.google.com/folder_me_sem7",
+                    //       8: "https://drive.google.com/folder_me_sem8",
+                    //   }
+                  };
+          
+                  function updateSemesters() {
+                      let department = document.getElementById("department").value;
+                      let semesterList = document.getElementById("semesterList");
+                      let driveLink = document.getElementById("driveLink");
+          
+                      // Clear previous semesters and drive link
+                      semesterList.innerHTML = "";
+                      driveLink.innerHTML = "";
+          
+                      if (department) {
+                          // Create semester buttons
+                          for (let i = 1; i <= 8; i++) {
+                              let semesterButton = document.createElement("button");
+                              semesterButton.textContent = `Semester ${i}`;
+                              semesterButton.classList.add('semester-button');
+                              semesterButton.setAttribute('data-semester', i);
+                              semesterButton.onclick = function() {
+                                  // Remove active class from all buttons
+                                  document.querySelectorAll('.semester-button').forEach(btn => {
+                                      btn.classList.remove('active');
+                                  });
+                                  
+                                  // Add active class to clicked button
+                                  this.classList.add('active');
+                                  
+                                  // Open drive folder
+                                  openDriveFolder(department, i);
+                              };
+                              semesterList.appendChild(semesterButton);
+                          }
+                      }
+                  }
+          
+                  function openDriveFolder(department, semester) {
+                      let driveLink = document.getElementById("driveLink");
+                      window.open(driveLinks[department][semester], '_blank');
+                  }
+              </script>
+          </div>
+
+        <table class="resources-table-5" align=center style="width:90%;margin-top: -15px;">
+             <!--<tr>
                 <td>
-                    <!-- <p>  -->
                         <a href="page-depth-02/S01.html" class="cell-link">
                             1st Semester
                         </a>
-                    <!-- </p> -->
                 </td>
                 <td>
-                    <!-- <p>  -->
                         <a href="page-depth-02/S02.html" class="cell-link">
                             2nd Semester
                         </a>
-                    <!-- </p> -->
                 </td>
             </tr>
             <tr>
                 <td>
-                    <!-- <p> -->
                          <a href="page-depth-02/S03.html" class="cell-link">
                             3rd Semester
                         </a>
-                    <!-- </p> -->
                 </td>
 
                 <td>
-                    <!-- <p>  -->
                         <a href="page-depth-02/S04.html" class="cell-link">
                             4th Semester
                         </a>
-                    <!-- </p> -->
                 </td>
             </tr>
             <tr>
                 <td>
-                    <!-- <p>  -->
                         <a href="page-depth-02/S05.html" class="cell-link">
                             5th Semester
                         </a>
-                    <!-- </p> -->
                 </td>
 
 
                 <td>
-                    <!-- <p>  -->
                         <a href="page-depth-02/S06.html" class="cell-link">
                             6th Semester
                         </a>
-                    <!-- </p> -->
                 </td>
             </tr>
             <tr>
                 <td>
-                    <!-- <p>  -->
                         <a href="page-depth-02/S07.html" class="cell-link">
                             7th Semester
                         </a>
-                    <!-- </p> -->
                 </td>
 
                 <td>
-                    <!-- <p>  -->
                         <a href="page-depth-02/S08.html" class="cell-link">
                             8th Semester
                         </a>
-                    <!-- </p> -->
-                </td>
+                </td>-->
 
             <tr>
                 <td colspan=2 style="background-color: rgba(240, 248, 255, 0);">
@@ -284,7 +272,7 @@
                                 Link to the Google Drive instead? )</b></small></a>
                 </td>
             </tr>
-        </table>
+        </table> 
     </div>
 
 

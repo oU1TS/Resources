@@ -25,7 +25,7 @@ label {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    background-color: #1e1e1e;
+    background-color: #1e1e1e99;
     color: #e0e0e0;
     border: 1px solid #333;
     border-radius: 4px;
@@ -40,7 +40,7 @@ label {
 
 .semester-button {
     background-color: #2c2c2c;
-    color: #e0e0e0;
+    color: #ffffffba;
     border: none;
     padding: 12px;
     border-radius: 8px;
@@ -73,6 +73,21 @@ label {
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+
+    /* Disable mobile tap highlight */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    outline: none;
+}
+
+#driveLink5 a:link,
+#driveLink a:visited,
+#driveLink a:active,
+#driveLink a:focus {
+  color: #ffffffba;
+  outline: none;
 }
 
 #driveLink a:hover {
