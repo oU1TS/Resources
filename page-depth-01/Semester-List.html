@@ -126,8 +126,8 @@
               <label for="department"></label>
               <select id="department" onchange="updateSemesters()" style="padding: 5%;max-width: 250px;border-radius: 20px;min-height: 60px;margin-left: 5%;">
                   <option value="">List Semesters For?</option>
-                  <option value="cs">CSE</option>
-                  <option value="ee">CE</option>
+                  <option value="cse">CSE</option>
+                  <option value="ce">CE</option>
                   <!-- <option value="me">Mechanical Engineering</option> -->
               </select>
           
@@ -153,22 +153,21 @@
                           2: "https://drive.google.com/drive/folders/1gAajNJtRo3up6dpnP-R3cTx0trNikJVP?usp=drive_link",
                           3: "https://drive.google.com/drive/folders/1XecebUV1rScSMpO0TUbnVoPUWKS8bJAH?usp=drive_link",
                           4: "https://drive.google.com/drive/folders/1R3AkpHgDgB2FiHS-gXxPTV7eljZJRknm?usp=drive_link",
-                        //   5: "https://drive.google.com/folder_ee_sem5",
-                        //   6: "https://drive.google.com/folder_ee_sem6",
-                        //   7: "https://drive.google.com/folder_ee_sem7",
-                        //   8: "https://drive.google.com/folder_ee_sem8",
+                          5: "#",
+                          6: "#",
+                          7: "#",
+                          8: "#",
+                      },
+                      me: {
+                          1: "https://drive.google.com/folder_me_sem1",
+                          2: "https://drive.google.com/folder_me_sem2",
+                          3: "https://drive.google.com/folder_me_sem3",
+                          4: "https://drive.google.com/folder_me_sem4",
+                          5: "https://drive.google.com/folder_me_sem5",
+                          6: "https://drive.google.com/folder_me_sem6",
+                          7: "https://drive.google.com/folder_me_sem7",
+                          8: "https://drive.google.com/folder_me_sem8",
                       }
-                    //   ,
-                    //   me: {
-                    //       1: "https://drive.google.com/folder_me_sem1",
-                    //       2: "https://drive.google.com/folder_me_sem2",
-                    //       3: "https://drive.google.com/folder_me_sem3",
-                    //       4: "https://drive.google.com/folder_me_sem4",
-                    //       5: "https://drive.google.com/folder_me_sem5",
-                    //       6: "https://drive.google.com/folder_me_sem6",
-                    //       7: "https://drive.google.com/folder_me_sem7",
-                    //       8: "https://drive.google.com/folder_me_sem8",
-                    //   }
                   };
           
                   function updateSemesters() {
