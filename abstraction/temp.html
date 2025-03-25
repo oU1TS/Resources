@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Resources</title>
+</head>
+<body>
+
+    <h2>Select Your Department and Semester</h2>
+    
+    <label for="department">Department:</label>
+    <select id="department" onchange="updateSemesters()">
+        <option value="">--Select Department--</option>
+        <option value="cs">Computer Science</option>
+        <option value="ee">Electrical Engineering</option>
+        <option value="me">Mechanical Engineering</option>
+    </select>
+
+    <label for="semester">Semester:</label>
+    <select id="semester" onchange="openDriveFolder()">
+        <option value="">--Select Semester--</option>
+    </select>
+
+    <p id="driveLink"></p>
+
+    <script>
+        // Object mapping departments to semester Google Drive folder links
+        const driveLinks = {
+            cs: {
+                1: "https://drive.google.com/folder_cs_sem1",
+                2: "https://drive.google.com/folder_cs_sem2",
+                3: "https://drive.google.com/folder_cs_sem3",
+                4: "https://drive.google.com/folder_cs_sem4",
+                5: "https://drive.google.com/folder_cs_sem5",
+                6: "https://drive.google.com/folder_cs_sem6",
+                7: "https://drive.google.com/folder_cs_sem7",
+                8: "https://drive.google.com/folder_cs_sem8",
+            },
+            ee: {
+                1: "https://drive.google.com/folder_ee_sem1",
+                2: "https://drive.google.com/folder_ee_sem2",
+                3: "https://drive.google.com/folder_ee_sem3",
+                4: "https://drive.google.com/folder_ee_sem4",
+                5: "https://drive.google.com/folder_ee_sem5",
+                6: "https://drive.google.com/folder_ee_sem6",
+                7: "https://drive.google.com/folder_ee_sem7",
+                8: "https://drive.google.com/folder_ee_sem8",
+            },
+            me: {
+                1: "https://drive.google.com/folder_me_sem1",
+                2: "https://drive.google.com/folder_me_sem2",
+                3: "https://drive.google.com/folder_me_sem3",
+                4: "https://drive.google.com/folder_me_sem4",
+                5: "https://drive.google.com/folder_me_sem5",
+                6: "https://drive.google.com/folder_me_sem6",
+                7: "https://drive.google.com/folder_me_sem7",
+                8: "https://drive.google.com/folder_me_sem8",
+            }
+        };
+
+        function updateSemesters() {
+            let department = document.getElementById("department").value;
+            let semesterDropdown = document.getElementById("semester");
+            let driveLink = document.getElementById("driveLink");
+
+            // Clear previous options
+            semesterDropdown.innerHTML = '<option value="">--Select Semester--</option>';
+            driveLink.innerHTML = "";
+
+            if (department) {
+                // Add semester options dynamically
+                for (let i = 1; i <= 8; i++) {
+                    let option = document.createElement("option");
+                    option.value = i;
+                    option.textContent = `Semester ${i}`;
+                    semesterDropdown.appendChild(option);
+                }
+            }
+        }
+
+        function openDriveFolder() {
+            let department = document.getElementById("department").value;
+            let semester = document.getElementById("semester").value;
+            let driveLink = document.getElementById("driveLink");
+
+            if (department && semester) {
+                driveLink.innerHTML = `<a href="${driveLinks[department][semester]}" target="_blank">Open Folder</a>`;
+            } else {
+                driveLink.innerHTML = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
