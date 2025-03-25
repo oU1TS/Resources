@@ -172,10 +172,32 @@
                     //   }
                 };
 
+                // Use sessionStorage to maintain state
+                window.addEventListener('load', () => {
+                    // Restore department selection
+                    const savedDepartment = sessionStorage.getItem('selectedDepartment');
+                    if (savedDepartment) {
+                        document.getElementById('department').value = savedDepartment;
+                        updateSemesters();
+
+                        // Restore active semester if exists
+                        const savedSemester = sessionStorage.getItem('selectedSemester');
+                        if (savedSemester) {
+                            const semesterButton = document.querySelector(`.semester-button[data-semester="${savedSemester}"]`);
+                            if (semesterButton) {
+                                semesterButton.classList.add('active');
+                            }
+                        }
+                    }
+                });
+
                 function updateSemesters() {
                     let department = document.getElementById("department").value;
                     let semesterList = document.getElementById("semesterList");
                     let driveLink = document.getElementById("driveLink");
+
+                    // Save selected department to sessionStorage
+                    sessionStorage.setItem('selectedDepartment', department);
 
                     // Clear previous semesters and drive link
                     semesterList.innerHTML = "";
@@ -197,6 +219,9 @@
                                 // Add active class to clicked button
                                 this.classList.add('active');
 
+                                // Save selected semester to sessionStorage
+                                sessionStorage.setItem('selectedSemester', i);
+
                                 // Open drive folder
                                 openDriveFolder(department, i);
                             };
@@ -205,21 +230,10 @@
                     }
                 }
 
-                //   function openDriveFolder(department, semester) {
-                //       let driveLink = document.getElementById("driveLink");
-                //       window.open(driveLinks[department][semester], '_blank');
-                //   }
-
                 function openDriveFolder(department, semester) {
                     let driveLink = document.getElementById("driveLink");
                     window.location.href = driveLinks[department][semester];
                 }
-
-
-                // function openDriveFolder(department, semester) {
-                //     let driveLink = document.getElementById("driveLink");
-                //     driveLink.innerHTML = `<iframe src="${driveLinks[department][semester]}" width="100%" height="600px"></iframe>`;
-                // }
             </script>
         </div>
 
