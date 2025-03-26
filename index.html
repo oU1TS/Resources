@@ -174,17 +174,22 @@
       <label for="department">Click Below to Browse Semesters</label>
       <select id="department" class="custom-select" onchange="updateSemesters()"
         style="padding: 5%;max-width: 245px;border-radius: 20px;min-height: 60px;margin-left: 5%;margin-right: 5%;">
-        <option value="list-description" align="center">( Click Here )</option> <!-- Department List -->
+        <option value="list-description" align="center">( Click Here )</option>
         <option value="cse" align="center">CSE</option>
         <option value="ce" align="center">CE</option>
-        <!-- <option value="me">Mechanical Engineering</option> -->
       </select>
+      <br>
+      <button id="resetButton" style="border-radius: 15px;margin-top: 5px;background-color: #ffffff00;color: #ffffff;"><small><b>Clear?</b></small></button>
 
       <div id="semesterList"></div>
-
       <p id="driveLink"></p>
 
       <script>
+        const selectElement = document.getElementById('department');
+        const resetButton = document.getElementById('resetButton');
+        const semesterList = document.getElementById('semesterList');
+        const driveLink = document.getElementById('driveLink');
+
         // Object mapping departments to semester Google Drive folder links
         const driveLinks = {
           cse: {
@@ -207,28 +212,15 @@
             7: "#",
             8: "#",
           }
-          //   ,
-          //   me: {
-          //       1: "https://drive.google.com/folder_me_sem1",
-          //       2: "https://drive.google.com/folder_me_sem2",
-          //       3: "https://drive.google.com/folder_me_sem3",
-          //       4: "https://drive.google.com/folder_me_sem4",
-          //       5: "https://drive.google.com/folder_me_sem5",
-          //       6: "https://drive.google.com/folder_me_sem6",
-          //       7: "https://drive.google.com/folder_me_sem7",
-          //       8: "https://drive.google.com/folder_me_sem8",
-          //   }
         };
 
-        // Use sessionStorage to maintain state
-        window.addEventListener('load', () => {
-          // Restore department selection
+        // Load previous selection from sessionStorage on page load
+        document.addEventListener('DOMContentLoaded', () => {
           const savedDepartment = sessionStorage.getItem('selectedDepartment');
           if (savedDepartment) {
-            document.getElementById('department').value = savedDepartment;
+            selectElement.value = savedDepartment;
             updateSemesters();
 
-            // Restore active semester if exists
             const savedSemester = sessionStorage.getItem('selectedSemester');
             if (savedSemester) {
               const semesterButton = document.querySelector(`.semester-button[data-semester="${savedSemester}"]`);
@@ -239,19 +231,35 @@
           }
         });
 
-        function updateSemesters() {
-          let department = document.getElementById("department").value;
-          let semesterList = document.getElementById("semesterList");
-          let driveLink = document.getElementById("driveLink");
+        // Save selection to sessionStorage when changed
+        selectElement.addEventListener('change', (event) => {
+          sessionStorage.setItem('selectedDepartment', event.target.value);
+        });
 
-          // Save selected department to sessionStorage
-          sessionStorage.setItem('selectedDepartment', department);
+        // Reset functionality
+        resetButton.addEventListener('click', () => {
+          // Reset select to the first hidden option
+          selectElement.selectedIndex = 0;
+
+          // Clear semester list
+          semesterList.innerHTML = "";
+
+          // Clear drive link
+          driveLink.innerHTML = "";
+
+          // Remove from sessionStorage
+          sessionStorage.removeItem('selectedDepartment');
+          sessionStorage.removeItem('selectedSemester');
+        });
+
+        function updateSemesters() {
+          let department = selectElement.value;
 
           // Clear previous semesters and drive link
           semesterList.innerHTML = "";
           driveLink.innerHTML = "";
 
-          if (department) {
+          if (department && department !== "list-description") {
             // Create semester buttons
             for (let i = 1; i <= 8; i++) {
               let semesterButton = document.createElement("button");
@@ -279,7 +287,6 @@
         }
 
         function openDriveFolder(department, semester) {
-          let driveLink = document.getElementById("driveLink");
           window.location.href = driveLinks[department][semester];
         }
       </script>
@@ -296,20 +303,21 @@
     <p style="text-align: center;color: #000000cd;">Feeling generous?</p>
 
     <div class="container-6">
-        <a class="cell-link" href="https://forms.gle/uFq1vBSUbRhY5CZk6" target="_blank"
-          style="color: #424242;padding-top:15%;background-color: #ffffff;border-radius: 50px 50px 50px 50px;width: 100px;box-shadow: 1px 2px 10px #000000;text-align: center;padding: 8%;">
-          <strong>Upload<br>Questions</strong><br>
-          <i style="font-size: x-small;">(.pdf Upload)</i>
-        </a>
-        <a class="cell-link" href="https://forms.gle/ovz4p5VAEsB6G7fp7" target="_blank"
-          style="color: #ffffff;padding-top:15%;background-color: #3776f6ec;border-radius: 50px 50px 50px 50px;width: 100px;box-shadow: 1px 2px 10px #000000;text-align: center;padding: 8%;">
-          <strong>Upload<br>Notes</strong><br>
-          <i style="font-size: x-small;">(.zip Upload)</i>
-        </a>
-    
+      <a class="cell-link" href="https://forms.gle/uFq1vBSUbRhY5CZk6" target="_blank"
+        style="color: #424242;padding-top:15%;background-color: #ffffff;border-radius: 50px 50px 50px 50px;width: 100px;box-shadow: 1px 2px 10px #000000;text-align: center;padding: 8%;">
+        <strong>Upload<br>Questions</strong><br>
+        <i style="font-size: x-small;">(.pdf Upload)</i>
+      </a>
+      <a class="cell-link" href="https://forms.gle/ovz4p5VAEsB6G7fp7" target="_blank"
+        style="color: #ffffff;padding-top:15%;background-color: #3776f6ec;border-radius: 50px 50px 50px 50px;width: 100px;box-shadow: 1px 2px 10px #000000;text-align: center;padding: 8%;">
+        <strong>Upload<br>Notes</strong><br>
+        <i style="font-size: x-small;">(.zip Upload)</i>
+      </a>
+
     </div>
 
-    <p align="center" style="font-size: small;margin: -5px;color: #00000076;">( to be listed in the semester folders )</p>
+    <p align="center" style="font-size: small;margin: -5px;color: #00000076;">( to be listed in the semester folders )
+    </p>
 
   </div>
 

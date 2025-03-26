@@ -22,10 +22,17 @@ label {
     font-size: x-small;
 }
 
+#resetButton {
+    padding: 0.5rem 1rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
 .custom-select {
     position: relative;
     font-family: Arial;
-
+    text-align: center;
 
 
 }
@@ -34,6 +41,7 @@ label {
     display: none;
     /*hide original SELECT element:*/
 }
+
 
 select {
     /* background: url() no-repeat 95%; */
