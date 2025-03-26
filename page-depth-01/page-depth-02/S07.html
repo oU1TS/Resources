@@ -14,72 +14,71 @@
   <!-- TOP BAR -->
 
   <div class="topnav-1">
-        <!-- APK LINK -->
-        <!-- <div class="navigation1"
+    <!-- APK LINK -->
+    <!-- <div class="navigation1"
             style="display: flex;justify-content: flex-end;background-color: #333;min-height: 50px;width: 100%;"></div>
         <script src="../../apk-link.js"></script> -->
 
     <a class="active-1" href="../Tutorials.html">
-        <small>Resources<br>Tutorials</small>
+      <small>Resources<br>Tutorials</small>
     </a>
     <a class="active-1" href="../References.html">
-        <small>Project<br>References</small>
+      <small>Project<br>References</small>
     </a>
-     <a class="active-1" href="Blog.html">
-            <small>CSE<br>Blog</small>
-        </a>
-        <!--a class="active-1" href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL?usp=sharing"
+    <a class="active-1" href="Blog.html">
+      <small>CSE<br>Blog</small>
+    </a>
+    <!--a class="active-1" href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL?usp=sharing"
             target="_blank">
             <small>oUITS<br>G-Drive</small>
         </a> -->
-        <div class="dropdown">
-          <button class="dropbtn" onclick="toggleDropdown(this)">More<br>Projects</button>
-          <!-- <button class="dropbtn">Quick<br>Links</button> -->
-          <div class="dropdown-content">
-              <!-- APK LINK -->
-              <div class="navigation1" style="background-color: #0000009b;"></div>
-              <script src="../../apk-link.js"></script>
-              <a style="color: black;" class="active-1" href="https://ouits-schedule.netlify.app/" target="blank">
-                  <small>oUITS<br>Scheduler</small>
-              </a>
-              <a style="color: black;" class="active-1"
-                  href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL?usp=sharing"
-                  target="_blank">
-                  <small>oUITS<br>G-Drive</small>
-              </a>
-          </div>
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown(this)">More<br>Projects</button>
+      <!-- <button class="dropbtn">Quick<br>Links</button> -->
+      <div class="dropdown-content">
+        <!-- APK LINK -->
+        <div class="navigation1" style="background-color: #0000009b;"></div>
+        <script src="../../apk-link.js"></script>
+        <a style="color: black;" class="active-1" href="https://ouits-schedule.netlify.app/" target="blank">
+          <small>oUITS<br>Scheduler</small>
+        </a>
+        <a style="color: black;" class="active-1"
+          href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL?usp=sharing" target="_blank">
+          <small>oUITS<br>G-Drive</small>
+        </a>
       </div>
+    </div>
   </div>
   <script>
-      // Improved dropdown toggle function
-      function toggleDropdown(button) {
-          // Get the dropdown content element
-          var dropdownContent = button.nextElementSibling;
+    // Improved dropdown toggle function
+    function toggleDropdown(button) {
+      // Get the dropdown content element
+      var dropdownContent = button.nextElementSibling;
 
-          // Toggle the current dropdown
-          dropdownContent.classList.toggle("show");
+      // Toggle the current dropdown
+      dropdownContent.classList.toggle("show");
 
-          // Close all other dropdowns
-          document.querySelectorAll(".dropdown-content.show").forEach(function (openDropdown) {
-              if (openDropdown !== dropdownContent) {
-                  openDropdown.classList.remove("show");
-              }
-          });
-      }
-
-      // Add a global click event to close dropdowns when clicking outside
-      document.addEventListener("click", function (event) {
-          if (!event.target.matches('.dropbtn')) {
-              document.querySelectorAll(".dropdown-content.show").forEach(function (dropdown) {
-                  dropdown.classList.remove("show");
-              });
-          } else {
-              // Stop event from reaching the document listener when clicking a button
-              event.stopPropagation();
-          }
+      // Close all other dropdowns
+      document.querySelectorAll(".dropdown-content.show").forEach(function (openDropdown) {
+        if (openDropdown !== dropdownContent) {
+          openDropdown.classList.remove("show");
+        }
       });
+    }
+
+    // Add a global click event to close dropdowns when clicking outside
+    document.addEventListener("click", function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        document.querySelectorAll(".dropdown-content.show").forEach(function (dropdown) {
+          dropdown.classList.remove("show");
+        });
+      } else {
+        // Stop event from reaching the document listener when clicking a button
+        event.stopPropagation();
+      }
+    });
   </script>
-  
+
 
 
 
@@ -96,58 +95,67 @@
   <!-- ----------------------------------------------------------------------- -->
 
   <br>
-  
-  <div class="container-5" align=center  style="width:76%;max-width: 600px;">
+
+  <div class="container-5" align=center style="width:76%;max-width: 600px;">
     <table class="resources-table-5" align=center style="width:90%;">
       <tr>
-        <a href="#"
-          target="_blank" class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">7th Semester
+        <a href="#" target="_blank" class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">7th
+          Semester
           Courses</a>
       </tr>
       <tr>
-        <td>
-            <div class="container">
+        <td colspan="2">
+          <div class="container">
 
-                <div class="img-container" style="max-height: 100px;padding: 2%;border-radius: 5px;">
-                    <img src="S07 Course List.webp" alt="Codeforces Streams Page">
-                    <!-- <div class="scroll-indicator">Scroll down to see more</div> -->
-                </div>
+            <div class="img-container" style="max-height: 100px;padding: 2%;border-radius: 5px;">
+              <img src="S07 Course List.webp" alt="Codeforces Streams Page">
+              <!-- <div class="scroll-indicator">Scroll down to see more</div> -->
             </div>
-        </td>
-    </tr>
-      <tr>
-        <td>
-          <!-- <p>  -->
-            <a href="https://drive.google.com/drive/folders/1aL6ZiJJBs8zLlgZ8qcSIg7z_FB88jSqa?usp=drive_link" target="_blank" class="cell-link">S07
-            Books</a>
-          <!-- </p> -->
+          </div>
         </td>
       </tr>
       <tr>
         <td>
-          <!-- <p>  -->
-            <a href="https://drive.google.com/drive/folders/1adHL_WuuOhrKF4fEUbu2Fsnmz-GaCX-L?usp=drive_link" target="_blank" class="cell-link">S07
-            Outlines</a>
-          <!-- </p> -->
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <!-- <p>  -->
-            <a href="https://drive.google.com/drive/folders/1fbhlci6rP_jFwwl9k2oMaOxqOlojjmae?usp=drive_link" target="_blank" class="cell-link">S07
-            Questions</a>
-          <!-- </p> -->
+          <a href="https://drive.google.com/drive/folders/1WVfboSGhSvmWjYBU23s2Bk79JX7SyoI2?usp=drive_link"
+            target="_blank" class="cell-link">
+            CVFALT
+            <br><small> MAT265</small>
+          </a>
         </td>
 
+        <td>
+          <a href="https://drive.google.com/drive/folders/1achIW_ZkLk7SUTcCBIamg7CHvvl2yeSb?usp=drive_link"
+            target="_blank" class="cell-link">
+            Accounting
+            <br><small> GED113</small>
+          </a>
+        </td>
       </tr>
-      
+      <tr>
+        <td>
+          <a href="https://drive.google.com/drive/folders/1WVfboSGhSvmWjYBU23s2Bk79JX7SyoI2?usp=drive_link"
+            target="_blank" class="cell-link">
+            CVFALT
+            <br><small> MAT265</small>
+          </a>
+        </td>
+
+        <td>
+          <a href="https://drive.google.com/drive/folders/1achIW_ZkLk7SUTcCBIamg7CHvvl2yeSb?usp=drive_link"
+            target="_blank" class="cell-link">
+            Accounting
+            <br><small> GED113</small>
+          </a>
+        </td>
+      </tr>
+
     </table>
   </div>
 
   <!-- <div align=center>
     <p id=" bottom" align=center><a style="color: #8c8c8c;" href="../CSE-Files.html">Go back to CSE-Files</a>
   </div> -->
-  
+
   <br><br><br><br><br>
 
   <!-- HOME BUTTON -->
