@@ -33,13 +33,14 @@ label {
     position: relative;
     font-family: Arial;
     text-align: center;
-
+    
 
 }
 
 .custom-select select {
     display: none;
     /*hide original SELECT element:*/
+    
 }
 
 
@@ -48,12 +49,25 @@ select {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    padding: 4px 20px
+    padding: 4px 20px;
+    
 }
 
 select option[value="list-description"] {
     display: none;
+    color: #ffffff;
 }
+
+/* select option:not([value="list-description"]) {
+    color: rgba(0, 0, 0, 0.095);
+    font-style: normal;
+} */
+
+/* select option:checked {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+} */
 
 #department {
     width: 100%;
