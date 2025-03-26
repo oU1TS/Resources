@@ -17,8 +17,34 @@ h2 {
 
 label {
     display: block;
-    margin-top: 15px;
-    color: #03dac6;
+    margin-top: 30px;
+    color: #ffffffe0;
+    font-size: x-small;
+}
+
+.custom-select {
+    position: relative;
+    font-family: Arial;
+
+
+
+}
+
+.custom-select select {
+    display: none;
+    /*hide original SELECT element:*/
+}
+
+select {
+    /* background: url() no-repeat 95%; */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 4px 20px
+}
+
+select option[value="list-description"] {
+    display: none;
 }
 
 #department {
@@ -86,8 +112,8 @@ label {
 #driveLink a:visited,
 #driveLink a:active,
 #driveLink a:focus {
-  color: #ffffffba;
-  outline: none;
+    color: #ffffffba;
+    outline: none;
 }
 
 #driveLink a:hover {

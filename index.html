@@ -140,24 +140,24 @@
     </font>
 
   </div>
-  <h1 align="center">oUITS-Resources</h1>
+  <!-- <h1 align="center">oUITS-Resources</h1> -->
+
+  <p class="highlights-5" align="center" style="color: rgba(0, 0, 0, 0.649);margin-bottom: -5px;margin-top: 15px;">
+    <small><i>Browse resources for UITS Students</i></small><br><small><i style="font-size: xx-small;">(more
+        relevant to CSE)</i></small>
+  </p>
+
   <!-- <p align="center" style="margin-bottom: -10px;"><small><i>Resources for UITS Students</i></small><br><small><i
         style="font-size: xx-small;">(more relevant to CSE)</i></small></p> -->
 
+  <!-- -------------------------------------------------------------------- -->
   <!-- -------------------------------------------------------------------- -->
   <!-- -------------------------------------------------------------------- -->
 
   <div class="container-5" style="width:76%;max-width: 600px;">
     <table class="resources-table-5" align="center" style="width:90%; margin: auto;">
       <tr>
-        <td colspan="2" style="background-color: #00000000;">
-          <p class="highlights-5" align="center" style="color: rgba(240, 248, 255, 0.649);margin-bottom: -2px;">
-            <small><i>Browse resources for UITS Students</i></small><br><small><i style="font-size: xx-small;">(more
-                relevant to CSE)</i></small></p>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2" style="max-width: 300px;display: block;margin: auto;">
+        <td colspan="2" style="max-width: 300px;display: block;margin: auto;border-radius: 20px;">
           <a href="page-depth-01/General-Info.html" class="cell-link"
             style="max-height: 80px;text-align: center;text-align: center;justify-content: center;padding: 5%;">
             General Information<br><small><i style="font-size: xx-small;">(Notice,Questions,Outlines,...)</i></small>
@@ -168,13 +168,13 @@
 
     <!-- -------------------------------------------------------------------- -->
 
-    <div style="width: 85%;padding-right: 15px;margin: auto;margin-top: -10px;margin-bottom: -15px;"
+    <div style="width: 85%;padding-right: 15px;margin: auto;margin-top: -10px;margin-bottom: -30px;"
       class=".resources-table-5" align="center">
 
-      <label for="department"></label>
-      <select id="department" onchange="updateSemesters()"
-        style="padding: 5%;max-width: 245px;border-radius: 20px;min-height: 60px;margin-left: 5%;">
-        <option value="" align="center">Department List</option>
+      <label for="department">Click Below to Browse Semesters</label>
+      <select id="department" class="custom-select" onchange="updateSemesters()"
+        style="padding: 5%;max-width: 245px;border-radius: 20px;min-height: 60px;margin-left: 5%;margin-right: 5%;">
+        <option value="list-description" align="center">( Click Here )</option> <!-- Department List -->
         <option value="cse" align="center">CSE</option>
         <option value="ce" align="center">CE</option>
         <!-- <option value="me">Mechanical Engineering</option> -->
@@ -285,39 +285,68 @@
       </script>
     </div>
 
-    <!-- -------------------------------------------------------------------- -->
+  </div>
 
+  <!-- -------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------- -->
+  <div class="container-5" style="width:76%;max-width: 600px;border-radius: 30px 0 30px 0;background-color: #a9cc75b3;">
+
+
+    <p style="text-align: center;color: #000000cd;">Feeling generous?</p>
+
+    <div class="container-6">
+        <a class="cell-link" href="https://forms.gle/uFq1vBSUbRhY5CZk6" target="_blank"
+          style="color: #424242;padding-top:15%;background-color: #ffffff;border-radius: 50px 50px 50px 50px;width: 100px;box-shadow: 1px 2px 10px #000000;text-align: center;padding: 8%;">
+          <strong>Upload<br>Questions</strong><br>
+          <i style="font-size: x-small;">(.pdf Upload)</i>
+        </a>
+        <a class="cell-link" href="https://forms.gle/ovz4p5VAEsB6G7fp7" target="_blank"
+          style="color: #ffffff;padding-top:15%;background-color: #3776f6ec;border-radius: 50px 50px 50px 50px;width: 100px;box-shadow: 1px 2px 10px #000000;text-align: center;padding: 8%;">
+          <strong>Upload<br>Notes</strong><br>
+          <i style="font-size: x-small;">(.zip Upload)</i>
+        </a>
+    
+    </div>
+
+    <p align="center" style="font-size: small;margin: -5px;color: #00000076;">( to be listed in the semester folders )</p>
+
+  </div>
+
+  <p align=center style="font-size: x-small;color: #00000086;margin-top: -10px;">This Section was inspired by <a
+      href="https://notebot.netlify.app/" target="_blank" style="color: #0244f99d;">https://notebot.netlify.app/</a></p>
+
+  <!-- -------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------- -->
+
+  <br><br>
+
+  <!-- -------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------- -->
+
+  <p class="highlights-5" align="center" style="color: rgba(0, 0, 0, 0.649);margin-bottom: -5px;margin-top: 15px;">
+    <small><i>Portal for Extracurriculars</i></small>
+  </p>
+
+  <div style="width:76%;max-width: 600px;" class="container-5" align="center">
     <table class="resources-table-5" align="center" style="width:90%; margin: auto;">
 
-      <!-- <tr>
-        <td>
-          <a href="page-depth-01\Semester-List.html" class="cell-link">
-            Departments<br><small><i style="font-size: xx-small;">(CSE,CE,EEE,...)</i></small>
-          </a> -->
-      <!-- <a href="https://drive.google.com/drive/folders/1n29sfMaCF_S4ffbjudBBSGBd6Q7l3Sqp?usp=drive_link" target="_blank" class="cell-link">
-            Departments<br><small><i style="font-size: xx-small;">(CSE,CE,EEE,...)</i></small>
-          </a> -->
-      </td>
+      <tr>
+        <td style="max-width: 300px;margin: auto;border-radius: 20px;">
+          <a href="page-depth-01\CP-aux.html" class="cell-link">
+            Programming
+        </td>
 
-      <td  style="max-width: 300px;margin: auto;">
-        <!-- <p> -->
-        <a href="page-depth-01\CP-aux.html" class="cell-link" >
-          Programming
-          <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-          <!-- </p> -->
-      </td>
-
-
-      <td  style="max-width: 300px;margin: auto;margin-top: 10px;">
-        <!-- <p> -->
-        <a href="page-depth-01\Curated-Resources.html" class="cell-link">
-          Resources Dump
-          <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-        </a>
-        <!-- </p> -->
-      </td>
+        <td style="max-width: 300px;margin: auto;margin-top: 10px;border-radius: 20px;">
+          <a href="page-depth-01\Curated-Resources.html" class="cell-link">
+            Resources Dump
+          </a>
+        </td>
       </tr>
     </table>
+
   </div>
 
   <div style="justify-content: center;display:flex;">
@@ -325,32 +354,11 @@
   border-radius: 5px;margin-left: 150px;margin-right: 150px;margin-bottom: 20px;min-width: 200px;width:50%">
   </div>
 
-  <div class="container-5" style="width:76%;max-width: 600px;border-radius: 30px 0 30px 0;background-color: #a9cc75b3;">
 
-
-    <p style="text-align: center;color: #000000cd;text-shadow: 1px 1px 5px #bcf444c2;">Feeling Generous?</p>
-
-    <div class="container-6">
-      <a class="cell-link" href="https://forms.gle/uFq1vBSUbRhY5CZk6" target="_blank"
-        style="color: #424242;padding-top:15%;background-color: #ffffff;border-radius: 50px 50px 50px 50px;width: 100px;box-shadow: 1px 2px 10px #000000;text-align: center;padding: 8%;">
-        <strong>Upload<br>Questions</strong><br>
-        <i style="font-size: x-small;">(.pdf Upload)</i>
-      </a>
-      <a class="cell-link" href="https://forms.gle/ovz4p5VAEsB6G7fp7" target="_blank"
-        style="color: #ffffff;padding-top:15%;background-color: #3776f6ec;border-radius: 50px 50px 50px 50px;width: 100px;box-shadow: 1px 2px 10px #000000;text-align: center;padding: 8%;">
-        <strong>Upload<br>Notes</strong><br>
-        <i style="font-size: x-small;">(.zip Upload)</i>
-      </a>
-    </div>
-
-  </div>
-
-  <br>
-  <p align=center style="font-size: x-small;color: #00000086;">This Section was inspired by <a
-      href="https://notebot.netlify.app/" target="_blank" style="color: #0244f99d;">https://notebot.netlify.app/</a></p>
 
   <div style="justify-content: center;display:flex;">
-    <hr style="border: 5px solid rgba(0, 0, 0, 0.619);
+    <hr
+      style="border: 5px solid rgba(0, 0, 0, 0.619);
       border-radius: 5px;margin-left: 150px;margin-right: 150px;margin-bottom: 50px;min-width: 200px;width:50%;max-width: 500px;;">
   </div>
 
