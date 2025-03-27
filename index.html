@@ -7,6 +7,62 @@
   <!-- viewport meta tag for proper mobile scaling -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="selector.css">
+
+  <style>
+    .custom-dropdown {
+      position: relative;
+      width: 220px;
+      font-family: Arial, sans-serif;
+    }
+
+    .selected {
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .selected:hover {
+      background-color: #0056b3;
+    }
+
+    .options {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      width: 100%;
+      background: white;
+      border: 1px solid #ccc;
+      border-top: none;
+      border-radius: 5px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      display: none;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+    }
+
+    .option {
+      padding: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .option:hover {
+      background: #007bff;
+      color: white;
+    }
+
+    .show {
+      display: block;
+      max-height: 150px;
+    }
+  </style>
+
   <style>
     table,
     th,
@@ -158,135 +214,137 @@
     </table>
 
     <!-- -------------------------------------------------------------------- -->
-
-    <div style="width: 85%;padding-right: 15px;margin: auto;margin-top: -10px;margin-bottom: -30px;"
-      class=".resources-table-5" align="center">
-
-      <label for="department" style="margin-bottom: 5px;">Click Below to Browse Semesters</label>
-      <select id="department" class="custom-select" onchange="updateSemesters()"
-        style="padding: 5%;max-width: 245px;border-radius: 20px;min-height: 60px;margin-left: 5%;margin-right: 5%;">
-        <option value="list-description" align="center" style="color:#000000 ;">( Click Here )</option>
-        <option value="cse" align="center">CSE</option>
-        <option value="ce" align="center">CE</option>
+    <!-- <br> -->
+    <!-- class="semester-selector-container"  -->
+    <div class=".resources-table-5"
+      style="width: 85%;padding-right: 15px;margin: auto;margin-top: -10px;margin-bottom: -30px;" align="center">
+      <label for="department" style="color: rgba(255, 255, 255, 0.68);font-size: small;"></label>
+      <!-- Click Below to Browse Semesters -->
+      <br>
+      <select id="department" class="custom-select" onchange="updateSemesters()" style="margin-top: 5px;">
+        <option value="list-description" align="center" style="color:#00000020 ;">( Browse Semesters )</option>
+        <option value="cse"  align="center">Computer Science and Engineering</option>
+        <option value="ce"  align="center">Civil Engineering</option>
       </select>
       <br>
-      <button id="resetButton"
-        style="border-radius: 15px;margin-top: 5px;background-color: #ffffff00;color: #ffffff;"><small><b>Clear?</b></small></button>
+      <button id="resetButton"><small><b>Clear?</b></small></button>
 
-      <div id="semesterList"></div>
+      <div id="semesterList" class="semester-list"></div>
       <p id="driveLink"></p>
-
-      <script>
-        const selectElement = document.getElementById('department');
-        const resetButton = document.getElementById('resetButton');
-        const semesterList = document.getElementById('semesterList');
-        const driveLink = document.getElementById('driveLink');
-
-        // Object mapping departments to semester Google Drive folder links
-        const driveLinks = {
-          cse: {
-            1: "page-depth-01/page-depth-02/S01.html",
-            2: "page-depth-01/page-depth-02/S02.html",
-            3: "page-depth-01/page-depth-02/S03.html",
-            4: "page-depth-01/page-depth-02/S04.html",
-            5: "page-depth-01/page-depth-02/S05.html",
-            6: "page-depth-01/page-depth-02/S06.html",
-            7: "page-depth-01/page-depth-02/S07.html",
-            8: "page-depth-01/page-depth-02/S08.html",
-          },
-          ce: {
-            1: "https://drive.google.com/drive/folders/1Q4-tnRaIoLjZenzEZTRs-35OgqV54l9W?usp=drive_link",
-            2: "https://drive.google.com/drive/folders/1gAajNJtRo3up6dpnP-R3cTx0trNikJVP?usp=drive_link",
-            3: "https://drive.google.com/drive/folders/1XecebUV1rScSMpO0TUbnVoPUWKS8bJAH?usp=drive_link",
-            4: "https://drive.google.com/drive/folders/1R3AkpHgDgB2FiHS-gXxPTV7eljZJRknm?usp=drive_link",
-            5: "#",
-            6: "#",
-            7: "#",
-            8: "#",
-          }
-        };
-
-        // Load previous selection from sessionStorage on page load
-        document.addEventListener('DOMContentLoaded', () => {
-          const savedDepartment = sessionStorage.getItem('selectedDepartment');
-          if (savedDepartment) {
-            selectElement.value = savedDepartment;
-            updateSemesters();
-
-            const savedSemester = sessionStorage.getItem('selectedSemester');
-            if (savedSemester) {
-              const semesterButton = document.querySelector(`.semester-button[data-semester="${savedSemester}"]`);
-              if (semesterButton) {
-                semesterButton.classList.add('active');
-              }
-            }
-          }
-        });
-
-        // Save selection to sessionStorage when changed
-        selectElement.addEventListener('change', (event) => {
-          sessionStorage.setItem('selectedDepartment', event.target.value);
-        });
-
-        // Reset functionality
-        resetButton.addEventListener('click', () => {
-          // Reset select to the first hidden option
-          selectElement.selectedIndex = 0;
-
-          // Clear semester list
-          semesterList.innerHTML = "";
-
-          // Clear drive link
-          driveLink.innerHTML = "";
-
-          // Remove from sessionStorage
-          sessionStorage.removeItem('selectedDepartment');
-          sessionStorage.removeItem('selectedSemester');
-        });
-
-        function updateSemesters() {
-          let department = selectElement.value;
-
-          // Clear previous semesters and drive link
-          semesterList.innerHTML = "";
-          driveLink.innerHTML = "";
-
-          if (department && department !== "list-description") {
-            // Create semester buttons
-            for (let i = 1; i <= 8; i++) {
-              let semesterButton = document.createElement("button");
-              semesterButton.textContent = `Semester ${i}`;
-              semesterButton.classList.add('semester-button');
-              semesterButton.setAttribute('data-semester', i);
-              semesterButton.onclick = function () {
-                // Remove active class from all buttons
-                document.querySelectorAll('.semester-button').forEach(btn => {
-                  btn.classList.remove('active');
-                });
-
-                // Add active class to clicked button
-                this.classList.add('active');
-
-                // Save selected semester to sessionStorage
-                sessionStorage.setItem('selectedSemester', i);
-
-                // Open drive folder
-                openDriveFolder(department, i);
-              };
-              semesterList.appendChild(semesterButton);
-            }
-          }
-        }
-
-        function openDriveFolder(department, semester) {
-          window.location.href = driveLinks[department][semester];
-        }
-      </script>
     </div>
+
 
   </div>
 
   <!-- -------------------------------------------------------------------- -->
+
+  <script>
+    const selectElement = document.getElementById('department');
+    const resetButton = document.getElementById('resetButton');
+    const semesterList = document.getElementById('semesterList');
+    const driveLink = document.getElementById('driveLink');
+
+    // Object mapping departments to semester Google Drive folder links
+    const driveLinks = {
+      cse: {
+        1: "page-depth-01/page-depth-02/S01.html",
+        2: "page-depth-01/page-depth-02/S02.html",
+        3: "page-depth-01/page-depth-02/S03.html",
+        4: "page-depth-01/page-depth-02/S04.html",
+        5: "page-depth-01/page-depth-02/S05.html",
+        6: "page-depth-01/page-depth-02/S06.html",
+        7: "page-depth-01/page-depth-02/S07.html",
+        8: "page-depth-01/page-depth-02/S08.html",
+      },
+      ce: {
+        1: "https://drive.google.com/drive/folders/1Q4-tnRaIoLjZenzEZTRs-35OgqV54l9W?usp=drive_link",
+        2: "https://drive.google.com/drive/folders/1gAajNJtRo3up6dpnP-R3cTx0trNikJVP?usp=drive_link",
+        3: "https://drive.google.com/drive/folders/1XecebUV1rScSMpO0TUbnVoPUWKS8bJAH?usp=drive_link",
+        4: "https://drive.google.com/drive/folders/1R3AkpHgDgB2FiHS-gXxPTV7eljZJRknm?usp=drive_link",
+        5: "#",
+        6: "#",
+        7: "#",
+        8: "#",
+      }
+    };
+
+    // Load previous selection from sessionStorage on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedDepartment = sessionStorage.getItem('selectedDepartment');
+      if (savedDepartment) {
+        selectElement.value = savedDepartment;
+        updateSemesters();
+
+        const savedSemester = sessionStorage.getItem('selectedSemester');
+        if (savedSemester) {
+          const semesterButton = document.querySelector(`.semester-button[data-semester="${savedSemester}"]`);
+          if (semesterButton) {
+            semesterButton.classList.add('active');
+          }
+        }
+      }
+    });
+
+    // Save selection to sessionStorage when changed
+    selectElement.addEventListener('change', (event) => {
+      sessionStorage.setItem('selectedDepartment', event.target.value);
+    });
+
+    // Reset functionality
+    resetButton.addEventListener('click', () => {
+      // Reset select to the first hidden option
+      selectElement.selectedIndex = 0;
+
+      // Clear semester list
+      semesterList.innerHTML = "";
+
+      // Clear drive link
+      driveLink.innerHTML = "";
+
+      // Remove from sessionStorage
+      sessionStorage.removeItem('selectedDepartment');
+      sessionStorage.removeItem('selectedSemester');
+    });
+
+    function updateSemesters() {
+      let department = selectElement.value;
+
+      // Clear previous semesters and drive link
+      semesterList.innerHTML = "";
+      driveLink.innerHTML = "";
+
+      if (department && department !== "list-description") {
+        // Create semester buttons
+        for (let i = 1; i <= 8; i++) {
+          let semesterButton = document.createElement("button");
+          semesterButton.textContent = `Semester ${i}`;
+          semesterButton.classList.add('semester-button');
+          semesterButton.setAttribute('data-semester', i);
+          semesterButton.onclick = function () {
+            // Remove active class from all buttons
+            document.querySelectorAll('.semester-button').forEach(btn => {
+              btn.classList.remove('active');
+            });
+
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            // Save selected semester to sessionStorage
+            sessionStorage.setItem('selectedSemester', i);
+
+            // Open drive folder
+            openDriveFolder(department, i);
+          };
+          semesterList.appendChild(semesterButton);
+        }
+      }
+    }
+
+    function openDriveFolder(department, semester) {
+      window.location.href = driveLinks[department][semester];
+    }
+  </script>
+
   <!-- -------------------------------------------------------------------- -->
   <!-- -------------------------------------------------------------------- -->
   <div class="container-5" style="width:76%;max-width: 600px;border-radius: 30px 0 30px 0;background-color: #a9cc75b3;">
