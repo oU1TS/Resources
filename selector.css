@@ -20,6 +20,22 @@
 
  /* --------------------------------------------------------------------- */
 
+/* DISABLING TAB HIGHLIGHT */
+ .dropdown-header,
+ .dropdown-item,
+ .semester-button,
+ #resetButton {
+     -webkit-tap-highlight-color: transparent;
+     -webkit-touch-callout: none;
+     -webkit-user-select: none;
+     -khtml-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+ }
+
+
+ /* --------------------------------------------------------------------- */
 
  .semester-selector-container {
      width: 85%;
@@ -34,10 +50,10 @@
      max-width: 245px;
      width: 100%;
 
-     -webkit-tap-highlight-color: transparent;
+     /* -webkit-tap-highlight-color: transparent;
      -webkit-touch-callout: none;
      -webkit-user-select: none;
-     user-select: none;
+     user-select: none; */
  }
 
 
@@ -115,11 +131,11 @@
      padding: 10px 15px;
      cursor: pointer;
      transition: all 0.3s ease;
-
+     /* 
      -webkit-tap-highlight-color: transparent;
      -webkit-touch-callout: none;
      -webkit-user-select: none;
-     user-select: none;
+     user-select: none; */
  }
 
  .semester-button:hover {
@@ -142,10 +158,10 @@
      transition: all 0.3s ease;
      color: white;
 
-     -webkit-tap-highlight-color: transparent;
+     /* -webkit-tap-highlight-color: transparent;
      -webkit-touch-callout: none;
      -webkit-user-select: none;
-     user-select: none;
+     user-select: none; */
  }
 
  #resetButton:hover {
