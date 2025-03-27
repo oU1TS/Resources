@@ -476,7 +476,7 @@ now Browse Curated Resources*/
 
 
 .container-5 {
-  background-color: #000000c5;
+  background-color: #1B262C;
   border-radius: 15px;
   padding: 25px;
   margin: 20px auto;
@@ -535,7 +535,7 @@ now Browse Curated Resources*/
 }
 
 .resources-table-5 td:hover {
-  background-color: #424242;
+  background-color: rgba(42, 81, 181, 0.694);
 }
 
 /* FOR CLICKABLE BUTTON DIV */
