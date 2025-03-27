@@ -8,60 +8,6 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="selector.css">
 
-  <style>
-    .custom-dropdown {
-      position: relative;
-      width: 220px;
-      font-family: Arial, sans-serif;
-    }
-
-    .selected {
-      background-color: #007bff;
-      color: white;
-      padding: 12px;
-      border-radius: 5px;
-      cursor: pointer;
-      text-align: center;
-      transition: background 0.3s;
-    }
-
-    .selected:hover {
-      background-color: #0056b3;
-    }
-
-    .options {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      position: absolute;
-      width: 100%;
-      background: white;
-      border: 1px solid #ccc;
-      border-top: none;
-      border-radius: 5px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      display: none;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-in-out;
-    }
-
-    .option {
-      padding: 12px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .option:hover {
-      background: #007bff;
-      color: white;
-    }
-
-    .show {
-      display: block;
-      max-height: 150px;
-    }
-  </style>
 
   <style>
     table,
@@ -214,32 +160,32 @@
     </table>
 
     <!-- -------------------------------------------------------------------- -->
-    <!-- <br> -->
-    <!-- class="semester-selector-container"  -->
-    <div class=".resources-table-5"
-      style="width: 85%;padding-right: 15px;margin: auto;margin-left: 7.5%;margin-top: -5px;" align="center">
-      <label for="department" style="color: rgba(255, 255, 255, 0.68);font-size: small;"></label>
-      <!-- Click Below to Browse Semesters -->
-      <br>
-      <select id="department" class="custom-select" onchange="updateSemesters()" style="margin-top: 5px;">
-        <option value="list-description" align="center" style="color:#00000020 ;">( Browse Semesters )</option>
-        <option value="cse"  align="center">Computer Science and Engineering</option>
-        <option value="ce"  align="center">Civil Engineering</option>
-      </select>
-      <br>
+    <div class="semester-selector-container" style="margin-bottom: -30px;">
+      <label style="color: rgba(255, 255, 255, 0.68);font-size: small;">Click Below to Browse Semesters</label>
+
+      <div class="custom-dropdown" id="departmentDropdown">
+        <div class="dropdown-header" id="dropdownHeader">( Click Here )</div>
+
+        <div class="dropdown-list" id="dropdownList">
+          <div class="dropdown-item" data-value="cse">Computer Science and Engineering</div>
+          <div class="dropdown-item" data-value="ce">Civil Engineering</div>
+        </div>
+      </div>
+
       <button id="resetButton"><small><b>Clear?</b></small></button>
 
       <div id="semesterList" class="semester-list"></div>
       <p id="driveLink"></p>
     </div>
 
-
   </div>
 
   <!-- -------------------------------------------------------------------- -->
 
   <script>
-    const selectElement = document.getElementById('department');
+    const departmentDropdown = document.getElementById('departmentDropdown');
+    const dropdownHeader = document.getElementById('dropdownHeader');
+    const dropdownList = document.getElementById('dropdownList');
     const resetButton = document.getElementById('resetButton');
     const semesterList = document.getElementById('semesterList');
     const driveLink = document.getElementById('driveLink');
@@ -268,32 +214,57 @@
       }
     };
 
+    // Dropdown toggle functionality
+    dropdownHeader.addEventListener('click', () => {
+      dropdownList.classList.toggle('open');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (event) => {
+      if (!departmentDropdown.contains(event.target)) {
+        dropdownList.classList.remove('open');
+      }
+    });
+
+    // Dropdown item selection
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+      item.addEventListener('click', function () {
+        const department = this.getAttribute('data-value');
+        dropdownHeader.textContent = this.textContent;
+        dropdownList.classList.remove('open');
+
+        // Save to session storage
+        sessionStorage.setItem('selectedDepartment', department);
+
+        // Update semesters
+        updateSemesters(department);
+      });
+    });
+
     // Load previous selection from sessionStorage on page load
     document.addEventListener('DOMContentLoaded', () => {
       const savedDepartment = sessionStorage.getItem('selectedDepartment');
       if (savedDepartment) {
-        selectElement.value = savedDepartment;
-        updateSemesters();
+        const departmentItem = document.querySelector(`.dropdown-item[data-value="${savedDepartment}"]`);
+        if (departmentItem) {
+          dropdownHeader.textContent = departmentItem.textContent;
+          updateSemesters(savedDepartment);
 
-        const savedSemester = sessionStorage.getItem('selectedSemester');
-        if (savedSemester) {
-          const semesterButton = document.querySelector(`.semester-button[data-semester="${savedSemester}"]`);
-          if (semesterButton) {
-            semesterButton.classList.add('active');
+          const savedSemester = sessionStorage.getItem('selectedSemester');
+          if (savedSemester) {
+            const semesterButton = document.querySelector(`.semester-button[data-semester="${savedSemester}"]`);
+            if (semesterButton) {
+              semesterButton.classList.add('active');
+            }
           }
         }
       }
     });
 
-    // Save selection to sessionStorage when changed
-    selectElement.addEventListener('change', (event) => {
-      sessionStorage.setItem('selectedDepartment', event.target.value);
-    });
-
     // Reset functionality
     resetButton.addEventListener('click', () => {
-      // Reset select to the first hidden option
-      selectElement.selectedIndex = 0;
+      // Reset dropdown header
+      dropdownHeader.textContent = '( Click Here )';
 
       // Clear semester list
       semesterList.innerHTML = "";
@@ -306,14 +277,12 @@
       sessionStorage.removeItem('selectedSemester');
     });
 
-    function updateSemesters() {
-      let department = selectElement.value;
-
+    function updateSemesters(department) {
       // Clear previous semesters and drive link
       semesterList.innerHTML = "";
       driveLink.innerHTML = "";
 
-      if (department && department !== "list-description") {
+      if (department) {
         // Create semester buttons
         for (let i = 1; i <= 8; i++) {
           let semesterButton = document.createElement("button");
