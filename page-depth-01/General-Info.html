@@ -124,7 +124,17 @@
         }
 
         .menu-button:hover {
-            background-color: rgba(100, 100, 150, 0.9);
+            transform: scale(1.05);
+            /* Slightly enlarge the button */
+            background-color: rgba(42, 81, 181, 0.694) !important;
+            /* Lighten background on hover */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Add a subtle shadow */
+        }
+
+        .menu-button:hover .cell-link {
+            color: rgba(255, 255, 255, 0.8);
+            /* Slightly change text color on hover */
         }
 
         .menu-line {
@@ -413,7 +423,8 @@
 
                 <hr style="border: 5px solid rgba(255, 255, 255, 0.619);
                       border-radius: 5px;min-width: 200px;width:70%">
-                <div class="container-6" style="background-color: #00000000;margin: auto;justify-content: center;column-gap: 10%;">
+                <div class="container-6"
+                    style="background-color: #00000000;margin: auto;justify-content: center;column-gap: 10%;">
 
                     <div class="menu-button" id="menuButton1" align="center"
                         style="background-color: rgba(0, 0, 0, 0.247);height:60px;width:100px;font-size:medium;max-width: 300px;">
