@@ -30,8 +30,8 @@
             /*the button visibility*/
             position: relative;
             /* background-color: #000000c5; */
-            column-gap: 7%;
-            row-gap: 10%;
+            column-gap: 5%;
+            row-gap: 9%;
             place-content: center;
             align-items: center;
 
@@ -53,7 +53,7 @@
             text-align: center;
             /* color: #f2f2f200; */
             /* width: 100%; */
-            
+
 
         }
 
@@ -78,7 +78,7 @@
             /*the button visibility*/
             position: relative;
             background-color: #000000c5;
-            
+
 
         }
 
@@ -97,15 +97,15 @@
         }
 
         .menu-button {
-            background-color: #00000044;
+            background-color: #00000000;
             border-radius: 8px;
             padding: 12px;
             position: relative;
+
             cursor: pointer;
-            /* display: flex; */
-            /* flex-direction: column; */
-            /* justify-content: center; */
-            place-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
             gap: 5px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -120,7 +120,17 @@
         }
 
         .menu-button:hover {
-            background-color: #424242;
+            transform: scale(1.05);
+            /* Slightly enlarge the button */
+            background-color: rgba(42, 81, 181, 0.694) !important;
+            /* Lighten background on hover */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Add a subtle shadow */
+        }
+
+        .menu-button:hover .cell-link {
+            color: rgba(255, 255, 255, 0.8);
+            /* Slightly change text color on hover */
         }
 
         .menu-line {
@@ -396,74 +406,75 @@
     <!-- ----------------------------------------------------------------------- -->
 
 
-    <div class="container-5" align=center style="max-width:500px;">
+    <div class="container-5" align=center style="max-width:500px;width:75%;background-color: #1B262C;">
         <table class="resources-table-5" align=center style="width:90%;">
             <tr>
-                <p class="highlights" style="color: rgba(240, 248, 255, 0.649);margin-bottom: -30px;">Blog collection
+                <p class="highlights" style="color: rgba(240, 248, 255, 0.649);">Blog collection
                 </p>
             </tr>
             <tr>
-                <td style="background-color: #00000000;margin: auto;min-width: 280px;" align=center>
-                    <div class="container-6" style="max-width: 500px;background-color: #00000000;" align=center>
-                        <div class="menu-button" id="menuButton1" 
-                        style="color: rgba(240, 248, 255, 0.85);height:50px;width:110px;"  align=center>
-                            <p class="cell-link"
-                                style="color: rgba(255, 255, 255, 0.649);margin:auto;background-color: #00000000;" >
-                                UITS blog
-                            </p>
+                <!-- <td style="background-color: #00000000;margin: auto;min-width: 150px;" align=center> -->
+                <div class="container-6"
+                    style="background-color: #00000000;margin: auto;justify-content: center;column-gap: 10%;">
 
-                        </div>
-                        <div class="menu-button" id="menuButton2" align="center"
-                        style="color: rgba(240, 248, 255, 0.85);height:50px;width:110px;">
-                            <p class="cell-link" align="center"
-                                style="color: rgba(255, 255, 255, 0.649);margin:auto;background-color: #00000000;">
-                                Programmer's blog
-                            </p>
+                    <div class="menu-button" id="menuButton1" align="center"
+                        style="background-color: rgba(0, 0, 0, 0.247);height:60px;width:100px;font-size:medium;max-width: 300px;">
+                        <p class="cell-link" align="center" style="color: rgb(255, 255, 255);">
+                            UITS blog
+                        </p>
 
-                        </div>
-                        <div class="menu-button" id="menuButton3" align="center"
-                            style="color: rgba(240, 248, 255, 0.85);height:50px;width:110px;">
-                            <p class="cell-link" align="center"
-                                style="color: rgba(255, 255, 255, 0.649);margin:auto;background-color: #00000000;">
-                                Online blog
-                            </p>
-
-                        </div>
                     </div>
-                </td>
+                    <div class="menu-button" id="menuButton2" align="center"
+                        style="background-color: rgba(0, 0, 0, 0.247);height:60px;width:100px;font-size:medium;max-width: 300px;">
+                        <p class="cell-link" align="center" style="color: rgb(255, 255, 255);">
+                            Coder's blog
+                        </p>
+
+                    </div>
+                    <div class="menu-button" id="menuButton3" align="center"
+                        style="background-color: rgba(0, 0, 0, 0.247);height:60px;width:100px;font-size:medium;max-width: 300px;">
+                        <p class="cell-link" align="center" style="color: rgb(255, 255, 255);">
+                            Online blog
+                        </p>
+
+                    </div>
+                    
+                </div>
+                <!-- </td> -->
             </tr>
-           
+
         </table>
     </div>
-    
 
-<!-- BLOGGER IFRAME -->
 
-<table border="10" align=center style="width:90%; max-width:700px;border-color: #00000000;">
-    <tr>
-      <th>
+    <!-- BLOGGER IFRAME -->
 
-        <!-- "topnav3" -->
+    <table border="10" align=center style="width:90%; max-width:700px; min-width:300px;border-color: #00000000;">
+        <tr>
+            <th>
 
-        <div class="topnav-3">
-          <h3>
-            <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>b1tranger</i>'s blog</p>
-          </h3>
-        </div>
+                <!-- "topnav3" -->
 
-        <!-- "top-bar2" -->
+                <div class="topnav-3">
+                    <h3>
+                        <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>b1tranger</i>'s blog</p>
+                    </h3>
+                </div>
 
-        <div class="top-bar-2">
-          <div class="iframe-container-2">
-            <iframe class="scroll-text" src="https://b1tranger-coding.blogspot.com/" title="Blog Preview"></iframe>
-          </div>
-        </div>
+                <!-- "top-bar2" -->
 
-        <div class="overlay-2"></div>
-        <a href="https://b1tranger-coding.blogspot.com/" class="view-more-link-2" target="_blank">View More</a>
-      </th>
-    </tr>
-  </table>
+                <div class="top-bar-2">
+                    <div class="iframe-container-2">
+                        <iframe class="scroll-text" src="https://b1tranger-coding.blogspot.com/"
+                            title="Blog Preview"></iframe>
+                    </div>
+                </div>
+
+                <div class="overlay-2"></div>
+                <a href="https://b1tranger-coding.blogspot.com/" class="view-more-link-2" target="_blank">View More</a>
+            </th>
+        </tr>
+    </table>
 
     <!-- First popup menu -->
     <div class="popup-menu" id="popupMenu1" style="max-width:400px; width: 60%;">

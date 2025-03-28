@@ -51,8 +51,7 @@
             border-radius: 8px;
             padding: 12px;
             position: relative;
-            /* border-collapse: collapse; */
-            /* border-spacing: ; */
+
             cursor: pointer;
             display: flex;
             flex-direction: column;
@@ -62,10 +61,26 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
             z-index: 50;
             transition: background-color 0.3s ease;
+
+            /* DISABLES LINK CLICK EFFECT */
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
         }
 
         .menu-button:hover {
-            background-color: rgba(100, 100, 150, 0.9);
+            transform: scale(1.05);
+            /* Slightly enlarge the button */
+            background-color: rgba(42, 81, 181, 0.694) !important;
+            /* Lighten background on hover */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Add a subtle shadow */
+        }
+
+        .menu-button:hover .cell-link {
+            color: rgba(255, 255, 255, 0.8);
+            /* Slightly change text color on hover */
         }
 
         .menu-line {
@@ -337,7 +352,7 @@
 
     </div>
     <!-- ----------------------------------------------------------------------- -->
-    <div class="container-5" align=center style="max-width:500px;">
+    <div class="container-5" align=center style="max-width:500px;background-color: #1B262C;">
         <table class="resources-table-5" align=center>
             <tr>
                 <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">other tutorials
