@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../selector.css">
     <style>
         .university-resources {
             margin: 2rem auto;
@@ -125,6 +126,127 @@
                 flex-direction: column;
             }
         }
+
+        /* -------------------------------------------------------------- */
+
+        /* DROP DOWN FOR LIST */
+
+        /* * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        } */
+
+        /* body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        } */
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .dropdown-container {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-header {
+            background-color: #4a89dc;
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .dropdown-header:hover {
+            background-color: #3b7dd8;
+        }
+
+        .dropdown-header::after {
+            content: "▼";
+            font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown-header.active::after {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-content-1 {
+            max-height: 0;
+            overflow: hidden;
+            background-color: white;
+            transition: max-height 0.3s ease;
+        }
+
+        .dropdown-content-1.show {
+            max-height: 500px;
+            /* Adjust as needed */
+        }
+
+        .dropdown-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eaeaea;
+            display: block;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f7f7f7;
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-item .description {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* Different colors for each category */
+        .resources .dropdown-header {
+            background-color: #4a89dc;
+        }
+
+        .resources .dropdown-header:hover {
+            background-color: #3b7dd8;
+        }
+
+        .courses .dropdown-header {
+            background-color: #3fc380;
+        }
+
+        .courses .dropdown-header:hover {
+            background-color: #36b173;
+        }
+
+        .tools .dropdown-header {
+            background-color: #e9573f;
+        }
+
+        .tools .dropdown-header:hover {
+            background-color: #d9422f;
+        }
+
+        .community .dropdown-header {
+            background-color: #967adc;
+        }
+
+        .community .dropdown-header:hover {
+            background-color: #8567d7;
+        }
     </style>
     <title>
         References for oUITS
@@ -211,19 +333,12 @@
             </font>
 
         </div>
+
+
+
+
         <!-- ----------------------------------------------------------------------- -->
-        <!-- <div align=center>
-        <p id=" bottom"><a style="color: #8c8c8c;" href="../index.html">Go back to index</a>
-    </div> 
-        <p id="top" align="right"><small><a href="#bottom" style="color:rgba(0, 0, 0, 0.24);">go to bottom</a></small>
-        </p>-->
-
-
-        <div class="university-resources" align="center">
-            <font size="5">
-                <p align="center">UITS-Projects Collection</p>
-            </font>
-
+        <div class="container" style="width: 90%;">
             <!-- ----------------------------------------------------------------------- -->
             <div class="section"
                 data-faq="Projects by UITS Students. Let me know if you're working on something and are okay with sharing it, I'll happily list them here.|: )">
@@ -231,6 +346,182 @@
                 <div class="faq-box"></div>
             </div>
             <!-- ----------------------------------------------------------------------- -->
+            <!-- <h1>UITS-Projects Collection</h1> -->
+            <font size="5">
+                <p align="center">UITS-Projects Collection</p>
+            </font>
+
+            <!-- Dropdown-1 -->
+            <div class="dropdown-container resources" style="border-radius: 20px;">
+                <div class="dropdown-header" style="background-color: #1B262C;">Resource Projects</div>
+                <div class="dropdown-content-1">
+                    <a href=" http://akibreza.github.io/uitsBOT" target="_blank" class="dropdown-item">UITS Utility App
+                        "uitsBOT"
+
+                        <div class="description">for Notes, Utilities <br>by Akib Reza
+                            (0432220005101061)</div>
+                    </a>
+                    <!-- <a href="https://example.com/videos" class="dropdown-item">
+                        Video Tutorials
+                        <div class="description">Curated educational videos for all courses</div>
+                    </a>
+                    <a href="https://example.com/practice" class="dropdown-item">
+                        Practice Problems
+                        <div class="description">Problem sets with solutions for self-study</div>
+                    </a>
+                    <a href="https://example.com/journals" class="dropdown-item">
+                        Academic Journals
+                        <div class="description">Access to research publications</div>
+                    </a> -->
+                </div>
+            </div>
+
+            <!-- Dropdown-2 -->
+            <div class="dropdown-container courses" style="border-radius: 20px;">
+                <div class="dropdown-header" style="background-color: #1B262C;">Other Projects</div>
+                <div class="dropdown-content-1">
+                    <a href="https://github.com/tahmidnasiftamal/DataMiningProject" target="_blank"
+                        class="dropdown-item">Search Engine for Data Mining "DataMiningProject"
+                        <div class="description">"It is a very simple and basic search engine""<br>by Tahmid Nasif Tamal
+                            (92114951008)</div>
+                    </a>
+
+                    <a href="https://github.com/safridbhueyan/Scout_APP" class="dropdown-item">
+                        Event management app "Scout App"
+                        <div class="description">by Md. Safrid Bhuiyan
+                            (432310005101080)</div>
+                    </a>
+                    <!-- <a href="https://example.com/ee-courses" class="dropdown-item">
+                        Electrical Engineering
+                        <div class="description">Circuits, power systems, and electronics</div>
+                    </a>
+                    <a href="https://example.com/me-courses" class="dropdown-item">
+                        Mechanical Engineering
+                        <div class="description">Thermal systems, dynamics, and manufacturing</div>
+                    </a> -->
+                    <div style="text-align: center;" class="feature-list">
+                        <p style="margin-bottom: 5px; color:rgba(60, 60, 82, 0.733);"  >WAD projects of Batch 54
+                            <br>(highlights)
+                        
+                        <ul
+                            style="color:rgba(60, 60, 82, 0.733); list-style-position: inside; padding-left: 0;">
+                            <li><a style="color:rgba(60, 60, 82, 0.733);"
+                                    href="https://shoytanbaba99.github.io/Just-Another-Typing-Test/"
+                                    target="_blank" class="dropdown-item">Md. Masud Rahman (432320005101064)</a></li>
+                            <li><a style="color:rgba(60, 60, 82, 0.733);"
+                                    href="https://github.com/UnknownRifah/EventPlanner" target="_blank" class="dropdown-item">Rifah
+                                    Nanjiba Borno (432320005101083)</a></li>
+                            <li><a style="color:rgba(60, 60, 82, 0.733);"
+                                    href="https://fahimhossain1085.github.io/web-application-design-project/"
+                                    target="_blank" class="dropdown-item">Md. Fahim Hossain (432320005101085)</a></li>
+                        </ul>
+                    </p>
+                </div>
+                </div>
+            </div>
+
+            <!-- Tools Section -->
+            <!-- <div class="dropdown-container tools"  style="border-radius: 20px;">
+                <div class="dropdown-header" style="background-color: #1B262C;">Online Tools</div>
+                <div class="dropdown-content-1">
+                    <a href="https://example.com/calculator" class="dropdown-item">
+                        Engineering Calculator
+                        <div class="description">Specialized calculators for various engineering disciplines</div>
+                    </a>
+                    <a href="https://example.com/simulator" class="dropdown-item">
+                        Simulation Software
+                        <div class="description">Online physics and circuit simulators</div>
+                    </a>
+                    <a href="https://example.com/code-editor" class="dropdown-item">
+                        Online Code Editor
+                        <div class="description">Code, compile, and test in your browser</div>
+                    </a>
+                    <a href="https://example.com/lab-tools" class="dropdown-item">
+                        Virtual Lab Equipment
+                        <div class="description">Remote access to laboratory resources</div>
+                    </a>
+                </div>
+            </div> -->
+
+            <!-- Community Section -->
+            <!-- <div class="dropdown-container community"  style="border-radius: 20px;">
+                <div class="dropdown-header" style="background-color: #1B262C;">Community & Support</div>
+                <div class="dropdown-content-1">
+                    <a href="https://example.com/forums" class="dropdown-item">
+                        Student Forums
+                        <div class="description">Connect with peers and discuss courses</div>
+                    </a>
+                    <a href="https://example.com/mentoring" class="dropdown-item">
+                        Mentoring Program
+                        <div class="description">Get paired with industry professionals</div>
+                    </a>
+                    <a href="https://example.com/career" class="dropdown-item">
+                        Career Resources
+                        <div class="description">Job boards, resume help, and interview prep</div>
+                    </a>
+                    <a href="https://example.com/alumni" class="dropdown-item">
+                        Alumni Network
+                        <div class="description">Connect with graduates in your field</div>
+                    </a>
+                </div>
+            </div> -->
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const dropdownHeaders = document.querySelectorAll('.dropdown-header');
+
+                // Function to close all dropdowns
+                function closeAllDropdowns() {
+                    dropdownHeaders.forEach(header => {
+                        header.classList.remove('active');
+                        header.nextElementSibling.classList.remove('show');
+                    });
+                }
+
+                // Add click event to each dropdown header
+                dropdownHeaders.forEach(header => {
+                    header.addEventListener('click', function (event) {
+                        event.stopPropagation(); // Prevent clicking from bubbling to document
+
+                        // Get the content element that follows this header
+                        const content = this.nextElementSibling;
+
+                        // If this dropdown is already open, close it
+                        if (this.classList.contains('active')) {
+                            this.classList.remove('active');
+                            content.classList.remove('show');
+                        } else {
+                            // Otherwise, close all dropdowns and open this one
+                            closeAllDropdowns();
+                            this.classList.add('active');
+                            content.classList.add('show');
+                        }
+                    });
+                });
+
+                // Close dropdowns when clicking outside
+                document.addEventListener('click', function () {
+                    closeAllDropdowns();
+                });
+
+                // Prevent clicks inside dropdown content from closing the dropdown
+                const dropdownContents = document.querySelectorAll('.dropdown-content-1');
+                dropdownContents.forEach(content => {
+                    content.addEventListener('click', function (event) {
+                        event.stopPropagation();
+                    });
+                });
+            });
+        </script>
+        <!-- ----------------------------------------------------------------------- -->
+
+        <!-- <div class="university-resources" align="center">
+            <font size="5">
+                <p align="center">UITS-Projects Collection</p>
+            </font>
+
+            
 
             <div class="table-container">
 
@@ -300,14 +591,18 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+        </div> -->
 
 
 
-        <br><br>
+        <!-- <br><br> -->
 
 
-
+        <div style="justify-content: center;display:flex;">
+            <hr
+              style="border: 5px solid rgba(0, 0, 0, 0.619);
+              border-radius: 5px;margin-left: 150px;margin-right: 150px;margin-top: 30px;min-width: 200px;width:50%;max-width: 500px;;">
+          </div>
 
         <div class="university-resources" align="center">
             <font size="5">
@@ -321,7 +616,7 @@
                 <div class="faq-box"></div>
             </div>
             <!-- ----------------------------------------------------------------------- -->
-            
+
             <table>
                 <thead>
                     <tr>
