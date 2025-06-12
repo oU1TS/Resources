@@ -1,9 +1,9 @@
 // Create a file called shared-elements.js
 document.addEventListener('DOMContentLoaded', function () {
   const navHTML = `
-      <a href="https://drive.google.com/drive/u/2/folders/1Cdyu6RMn0N52g_whxvL1sluLCZ_YvS4X"
+      <a href="hhttps://drive.google.com/drive/folders/1ikxxwqtI0l90ouTQfe9vcg4vg2Ldfskv"
                         target="_blank">
-                        G-Drive Archive
+                        G-Drive Archives
                     </a>
       <!-- Add other navigation links here -->
     `;
