@@ -9,27 +9,114 @@
         li {
             padding: 20px;
         }
-        body{
+
+        body {
             font-size: large;
+        }
+    </style>
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid rgba(31, 106, 168, 0);
+            border-radius: 10px;
+        }
+
+        td {
+            min-width: 200px;
+        }
+
+        .parent-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 16px;
+            margin: auto;
+            width: 95%;
+            max-width: 500px;
+        }
+
+        .link-logo:hover {
+            transform: translateY(-5px);
+            transition: transform 1s
+        }
+
+        .container-6 {
+            display: grid;
+            place-items: center;
+            grid-template-columns: auto auto;
+            border-radius: 15px;
+            padding: 10px;
+            margin: 20px auto;
+            width: 79%;
+            max-width: 350px;
+            /*the button visibility*/
+            position: relative;
+            column-gap: 30px;
+            row-gap: 12%;
+
+        }
+
+        .container-6 a:hover {
+            transform: translateY(-5px);
+            transition: transform 1s
+        }
+
+        /* .container-6>div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+        }  */
+
+        .container-6>div>div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+            /* margin-top: 50px; */
+
         }
     </style>
 </head>
 
-<body>
+<body style="background-color: #333;">
+    <div
+        style="background-color: 	#FAF9F6; margin: 20px;border-radius: 20px;margin-bottom: 50px;box-shadow: 0.5px 0.5px 10px black;">
 
-    <br><br><br>
-    <div style="margin-bottom: 500px;">
-        <hr style="border: 5px solid rgba(90, 85, 85, 0.619);
+        <br><br><br>
+        <div style="margin-bottom: 100px;">
+            <hr style="border: 5px solid rgba(90, 85, 85, 0.619);
                       border-radius: 5px;min-width: 200px;width:70%;">
-        <ul>
-            <li><a href="index.html">index.html</a></li>
-            <!-- <li><a href="Extracurriculars.html">Extracurriculars.html</a></li> -->
-            <!-- <li><a href="References.html">References.html</a></li> -->
-        </ul>
+            <ul>
+                <li><a href="index.html">index.html</a></li>
+                <!-- <li><a href="Extracurriculars.html">Extracurriculars.html</a></li> -->
+                <!-- <li><a href="References.html">References.html</a></li> -->
+            </ul>
+        </div>
+
+        <div class="parent-wrap"
+            style="background-color: #201f1fe4;padding:15px;border-radius:  30px 0 30px 0;width:80%;max-width: 600px;box-shadow: 0.5px 0.5px 10px black;padding-top: 20px;">
+
+            <div style="background-color: rgba(0, 0, 0, 0);border-radius: 5px;">
+                <div class="link-logo"><a href="page-depth-01\References.html"><img
+                            src="images\Section-Logo\logo (5).webp" height="100px" width="100px"
+                            style="box-shadow: 0.5px 0.5px 10px rgb(0, 0, 0);border-radius: 100%;"></a>
+                </div>
+                <p style="text-align: center;margin-top: -2px;font-size: medium;color: rgba(255, 255, 255, 0.696);">
+                    References
+                </p>
+            </div>
+        </div>
+
+        <p align=center style="font-size: x-small;color: #00000086;margin-top: 10px;">This Section was inspired by <a
+                href="https://notebot.netlify.app/" target="_blank"
+                style="color: #0244f99d;">https://notebot.netlify.app/</a>
+        </p>
+        <br><br><br> <br><br><br>
     </div>
-
-
-
 </body>
 
 </html>
