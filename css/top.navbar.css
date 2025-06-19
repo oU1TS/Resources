@@ -40,20 +40,27 @@
   .nav-links li a {
       display: block;
       color: rgb(0, 0, 0);
-      background-color: #91c2f04f;
+      background-color: #d6e9fa;
       text-decoration: none;
       padding: 20px 25px;
       text-align: center;
       transition: background-color 0.3s ease;
+      border-radius: 5px;
       
   }
 
   .nav-links li a:hover {
-      background-color: #555;
+      background-color: #a2d2fc;
   }
 
   .nav-links li a.active {
-      background-color: #4CAF50;
+      background-color: #7e70fd;
+      color: white;
+  }
+
+  .nav-links li a.active:hover {
+      background-color: #6a5afd;
+      color: white;
   }
 
   /* Page content container */
