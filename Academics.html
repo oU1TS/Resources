@@ -8,10 +8,11 @@
 
 
     <link rel="stylesheet" href="css/top.navbar.css">
-    <link rel="stylesheet" href="css/menubtn.academics.css">
+    <link rel="stylesheet" href="css/academics.menubtn.css">
+    <link rel="stylesheet" href="css/academics.selector.css">
     <style>
         li {
-            padding: 20px;
+            padding: 5px;
         }
 
         body {
@@ -97,7 +98,8 @@
     <!-- <div  style="background-color: #333;"> -->
     <div
         style="background-color: 	#FAF9F6; margin: 20px;border-radius: 20px;margin-bottom: 50px;box-shadow: 0.5px 0.5px 10px black;">
-        <nav class="navbar">
+
+        <nav class="navbar" style="margin-bottom: 50px;">
             <div class="nav-container">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -110,8 +112,13 @@
             </div>
         </nav>
 
-<br><br><br><br><br>
-<div class="container-5"
+        <ul>
+            <li><a href="page-depth-01/General-Info.html">link-1</a></li>
+            <li><a href="page-depth-01/Semesters.html">link-2</a></li>
+        </ul>
+
+
+        <div class="container-5"
             style="width:76%;max-width: 600px;border-radius: 30px 0 30px 0;background-color: #1B262C;margin-top: 25px;margin: auto;">
 
 
@@ -147,35 +154,8 @@
         </div>
         <br><br><br><br>
 
-        <div class="parent-wrap"
-            style="background-color: #201f1fe4;padding:15px;border-radius:  30px 0 30px 0;width:80%;max-width: 600px;box-shadow: 0.5px 0.5px 10px black;padding-top: 20px;">
-            <div style="background-color: rgba(0, 0, 0, 0);border-radius: 5px;">
-                <div class="link-logo">
-                    <a href="page-depth-01/General-Info.html">
-                        <img src="images\Section-Logo\logo (1).webp" height="100px" width="100px"
-                            style="box-shadow: 0.5px 0.5px 10px rgb(0, 0, 0);border-radius: 100%;"></a>
-                </div>
-                <p style="text-align: center;margin-top: -2px;font-size: medium;color: rgba(255, 255, 255, 0.696);">
-                    General
-                    <br>Information<br>
-                </p>
-            </div>
-            <div style="background-color: rgba(0, 0, 0, 0);border-radius: 5px;">
-                <div class="link-logo">
-                    <a href="page-depth-01/Semesters.html"><img src="images\Section-Logo\logo (2).webp" height="100px"
-                            width="100px" style="box-shadow: 0.5px 0.5px 10px rgb(0, 0, 0);border-radius: 100%;"></a>
-                </div>
-                <p style="text-align: center;margin-top: -2px;font-size: medium;color: rgba(255, 255, 255, 0.696);">
-                    Course<br>Materials</p>
-            </div>
 
-        </div>
 
-        <p align=center style="font-size: x-small;color: #00000086;margin-top: 10px;">This Section was inspired by <a
-                href="https://notebot.netlify.app/" target="_blank"
-                style="color: #0244f99d;">https://notebot.netlify.app/</a>
-        </p>
-       
 
         <!-- ----------------------------------------------------------------------- -->
 
@@ -259,6 +239,66 @@
             </table>
         </div>
 
+
+        <!-- ---------------------------------------------------------- -->
+
+        <div class="section" style="margin-top: 25px;margin-bottom: 20px;"
+            data-faq="This section contains two Course Selectors (by semester/by course) to find course materials for your specific semesters.">
+            <div class="faq-icon">?</div>
+            <div class="faq-box"></div>
+        </div>
+
+        <div class="container-5" style="width:76%;max-width: 600px;margin-top: 50px; background-color: #1B262C;">
+            <!-- <table class="resources-table-5" align="center" style="width:90%; margin: auto;">
+          <tr>
+            <td colspan="2" style="max-width: 300px;display: block;margin: auto;border-radius: 20px;">
+              <a href="page-depth-01/General-Info.html" class="cell-link"
+                style="max-height: 80px;text-align: center;text-align: center;justify-content: center;padding: 5%;">
+                General Information<br><small><i style="font-size: xx-small;">(Notice,Questions,Outlines,...)</i></small>
+              </a>
+    
+            </td>
+    
+          </tr>
+        </table> -->
+
+
+            <!-- -------------------------------------------------------------------- -->
+            <div class="semester-selector-container" style="margin-bottom: -30px;">
+                <label style="color: rgba(255, 255, 255, 0.68);">Semester Browser</label>
+
+                <div class="custom-dropdown" id="departmentDropdown" style="margin-top: 20px;width: 100%;
+    max-width: 600px;">
+                    <div class="dropdown-header" id="dropdownHeader">Select you Department...</div>
+
+                    <div class="dropdown-list" id="dropdownList">
+                        <div class="dropdown-item" data-value="cse">Computer Science and Engineering</div>
+                        <div class="dropdown-item" data-value="ce">Civil Engineering</div>
+                    </div>
+                </div>
+
+                <button id="resetButton"><small><b>Clear?</b></small></button>
+
+
+                <div id="semesterList" class="semester-list"></div>
+                <p id="driveLink"></p>
+                <!-- -------------------------------------------------------------------- -->
+                <script src="js/selector.js"></script>
+            </div>
+            <hr style="margin-top: 10px;width: 70%;">
+            <div class="semester-selector-container">
+                <label style="color: rgba(255, 255, 255, 0.68);">University Course Search</label>
+                <div class="search-container" style="margin-top: 20px;">
+                    <input id="course-search" type="text" class="search-input" placeholder="Search for courses..."
+                        autocomplete="off">
+                    <div class="search-results"></div>
+                </div>
+
+
+                <!-- -------------------------------------------------------------------- -->
+                <script src="js/search-courses.js"></script>
+            </div>
+        </div>
 
         <!-- -------------------------------------------------------------- -->
 
