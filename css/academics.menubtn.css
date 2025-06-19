@@ -100,7 +100,7 @@
             align-items: center;
             gap: 5px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            z-index: 50;
+            z-index: 0;
             transition: background-color 0.3s ease;
 
             /* DISABLES LINK CLICK EFFECT */
