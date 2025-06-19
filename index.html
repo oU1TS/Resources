@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="css/drop-down.css">
   <link rel="stylesheet" href="css/preloader.css">
   <link rel="stylesheet" href="css/top.navbar.css">
-  <link rel="stylesheet" href="css/faq.css">
+  <link rel="stylesheet" href="css/faq.dropdown.css">
+  <link rel="stylesheet" href="css/faq.tooltip.css">
 
   <!-- OFFLINE SUPPORT (WEB APP) -->
 
@@ -36,8 +37,8 @@
   <!-- WEBSITE PREVIEW -->
   <style>
     li {
-            padding: 5px;
-        }
+      padding: 5px;
+    }
 
 
     /* HIDE SCROLLBAR */
@@ -147,31 +148,6 @@
 
 
 
-    <!-- <div class="navigation2"></div>
-  <script src="backup\test-all-link-together.js"></script> -->
-    <div class="topnav-2">
-      <div class="dropdown">
-        <button class="dropbtn" onclick="toggleDropdown(this)"
-          style="background-color: #1dcd9efe;color: #ffffff;border-radius: 0px 20px 0px 20px ;box-shadow: 0.5px 0.5px 10px black;">More<br>Projects</button>
-        <!-- <button class="dropbtn">Quick<br>Links</button> -->
-        <div class="dropdown-content">
-          <div class="navigation1"></div>
-          <script src="js\Links\drop-link-01.js"></script>
-
-          <div class="navigation2"></div>
-          <script src="js\Links\drop-link-02.js"></script>
-
-          <div class="navigation3"></div>
-          <script src="js\Links\drop-link-03.js"></script>
-
-          <div class="navigation4"></div>
-          <script src="js\Links\drop-link-04.js"></script>
-
-          <div class="navigation5"></div>
-          <script src="js\Links\drop-link-99.js"></script>
-        </div>
-      </div>
-    </div>
 
 
     <script src="js/navbar-drop-down.js"></script>
@@ -202,15 +178,11 @@
     <!-- -------------------------------------------------------------------- -->
     <!-- -------------------------------------------------------------------- -->
 
-    <!-- <div class="section"
-    data-faq="This section contains common resources like Notice, course list, outlines etc. and a Semester Selector [Browse Semesters] to find course materials for your specific semesters.">
-    <div class="faq-icon">?</div>
-    <div class="faq-box"></div>
-  </div> -->
-   
 
 
     <br>
+
+
     <div class="section"
       data-faq="If you feel like the resources are lacking, and you can solve that, don't be shy and share your resources!">
       <div class="faq-icon">?</div>
@@ -303,7 +275,7 @@
           </p>
           <hr>
 
-          
+
 
 
         </div>
@@ -311,74 +283,34 @@
       <!-- ------------------------------------------------------------------------- -->
 
       <br>
-      <div class="dropdown-container resources" style="border-radius: 20px;">
-        <div class="dropdown-header2" style="background-color: #1B262C;">
-          <p></p>FAQ
-        </div>
-        <div class="dropdown-content-1">
-          <p class="dropdown-item2" style="text-align: left;margin-top: -2px;color: #000000bb;font-size: medium;">
-            #General Information<br>
-          <div class="description" style="margin: 15px;color: #00000082;font-size: small;">
-            This section contains common resources like Notice, course list, outlines etc.
 
+
+      <div class="topnav-2">
+        <div class="dropdown">
+          <button class="dropbtn" onclick="toggleDropdown(this)"
+            style="background-color: #1dcd9efe;color: #ffffff;border-radius: 0px 20px 0px 20px ;box-shadow: 0.5px 0.5px 10px black;">More<br>Projects</button>
+          <div class="dropdown-content">
+            <div class="navigation1"></div>
+            <script src="js\Links\drop-link-01.js"></script>
+
+            <div class="navigation2"></div>
+            <script src="js\Links\drop-link-02.js"></script>
+
+            <div class="navigation3"></div>
+            <script src="js\Links\drop-link-03.js"></script>
+
+            <div class="navigation4"></div>
+            <script src="js\Links\drop-link-04.js"></script>
+
+            <div class="navigation5"></div>
+            <script src="js\Links\drop-link-99.js"></script>
           </div>
-          </p>
-          <hr>
-
-          <p class="dropdown-item2" style="text-align: left;margin-top: -2px;color: #000000bb;font-size: medium;">
-            #Course materials (formerly, "Browse Semesters")<br>
-          <div class="description" style="margin: 15px;color: #00000082;font-size: small;">
-            This section contains a Semester Selector to find course materials for your specific semesters. I have also
-            included a Search Bar to search for the exact courses you are looking for. (The results list is a bit bugged
-            on mobile, so try hiding the keyboard first before trying to scroll.)
-
-          </div>
-          </p>
-          <hr>
-
-          <p class="dropdown-item2" style="text-align: left;margin-top: -2px;color: #000000bb;font-size: medium;">
-            #Extracurriculars<br>
-          <div class="description" style="margin: 15px;color: #00000082;font-size: small;">
-            Academics are all about CGPA, but Job Market asks more from you. Are you willing to put the effort?
-
-          </div>
-          </p>
-          <hr>
-
         </div>
       </div>
 
-      <!-- ------------------------------------------------------------------------- -->
 
-      <script src="js/drop-down.js">
-      </script>
 
-      <!-- -------------------------------------------------------- -->
-      <br>
-      <!-- <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br> -->
+
 
 
       <div style="justify-content: center;display:flex;">
@@ -389,7 +321,10 @@
 
       <!-- TABLE FOR SOCIALS AND END CREDIT -->
 
-
+      <br>
+      <br><br>
+      <br><br>
+      <br>
       <!-- END CREDIT  -->
       <div align="center">
         <div>
@@ -440,35 +375,17 @@
           </script>
         </div>
       </div>
-      <!-- <div style="justify-content: center;display:flex;">
-    <hr style="border: 5px solid rgba(0, 0, 0, 0.127);
-  border-radius: 5px;margin-bottom: 0px;margin-top: -5px;width:150px">
-  </div> -->
 
 
-
-      <!-- GO TOP RELATIVE LINK -->
-
-      <!-- <p id="bottom" align="right"><small><a href="#top" style="color:rgba(0, 0, 0, 0.24);">go to top</a></small></p> -->
 
       <br>
       <br>
 
-      <!-- BOTTOM BAR "navbar" -->
 
 
 
-      <!-- -------------------------------------------------------------------- -->
-      <!-- FAQ Section -->
-      <!-- 
-  <div class="section" data-faq="What is HTML?|How do I use CSS?">
-    <div class="faq-icon">?</div>
-    <div class="faq-box"></div>
-  </div> 
-  <script src="faq.js"></script>
-  -->
-
-      <script src="js/faq.js"></script>
+      <script src="js/faq.dropdown.js"></script>
+      <script src="js/faq.tooltip.js"></script>
 
 
       <!-- -------------------------------------------------------------------- -->
