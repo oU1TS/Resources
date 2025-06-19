@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/top.navbar.css">
     <link rel="stylesheet" href="css/academics.menubtn.css">
     <link rel="stylesheet" href="css/academics.selector.css">
@@ -106,9 +106,9 @@
             <div class="nav-container">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#" class="active">Academics.html</a></li>
-                    <li><a href="Extracurriculars.html">Extracurriculars.html</a></li>
-                    <li><a href="References.html">References.html</a></li>
+                    <li><a href="#" class="active">Academics</a></li>
+                    <li><a href="Extracurriculars.html">Extracurriculars</a></li>
+                    <li><a href="References.html">References</a></li>
                     <!-- <li><a href="https://ouits-res.netlify.app/" target="_blank">Resources</a></li> -->
                     <!-- <li><a href="contact.html">Contact</a></li> -->
                 </ul>
@@ -116,12 +116,12 @@
         </nav>
 
         <ul>
-            <li><a href="page-depth-01/General-Info.html">link-1</a></li>
-            <li><a href="page-depth-01/Semesters.html">link-2</a></li>
+            <li><a href="page-depth-01/General-Info.html">General-Info.html</a></li>
+            <li><a href="page-depth-01/Semesters.html">Semesters.html</a></li>
         </ul>
 
 
-        <div class="container-5"
+        <div id="upload-section" class="container-5"
             style="width:76%;max-width: 600px;border-radius: 30px 0 30px 0;background-color: #1B262C;margin-top: 25px;margin: auto;">
 
 
@@ -155,7 +155,7 @@
             </p>
 
         </div>
-        <br><br><br><br>
+        <br><br>
 
 
 
@@ -286,7 +286,7 @@
                 <div id="semesterList" class="semester-list"></div>
                 <p id="driveLink"></p>
                 <!-- -------------------------------------------------------------------- -->
-                <script src="js/selector.js"></script>
+                <script src="js/academics.semester.selector.js"></script>
             </div>
             <hr style="margin-top: 10px;width: 70%;">
             <div class="semester-selector-container">
@@ -483,14 +483,6 @@
                             <i style="font-size: x-small;">(Single Upload)</i>
                         </a>
                     </div>
-
-
-                    <div class="link-item"
-                        style="background-color: #ffffff;border-radius: 50px 50px 50px 50px;width: 200px;box-shadow: 1px 2px 10px #000000;">
-                        <a class="cell-link" href="Semesters.html" style="color: #424242;">
-                            <strong>Browse Questions By Course</strong>
-                        </a>
-                    </div>
                     <div class="link-item"
                         style="background-color: #ffffff;border-radius: 50px 50px 50px 50px;width: 200px;box-shadow: 1px 2px 10px #000000;">
                         <a class="cell-link"
@@ -498,6 +490,13 @@
                             target="_blank" style="color: #424242;">
                             <strong>All University Questions</strong>
                         </a>
+                    </div>
+                    <div class="link-item"
+                        style="background-color: #ffffff;border-radius: 50px 50px 50px 50px;width: 200px;box-shadow: 1px 2px 10px #000000;">
+                        <p class="cell-link" style="color: #424242;padding-top:15%">
+                            <strong>Browse Questions<br>By Course</strong><br><i style="font-size: x-small;">(Use
+                                semester browser)</i>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -510,11 +509,7 @@
             <div class="popup-menu-categories">
                 <div class="popup-menu-category" align="center">
                     <!-- <div class="category-title">People I Follow</div> -->
-                    <div class="link-item">
-                        <a class="cell-link" href="Semesters.html" style="padding: 10%;">
-                            Browse Cources By Course
-                        </a>
-                    </div>
+
                     <div class="link-item">
                         <a class="cell-link"
                             href="https://drive.google.com/drive/folders/1_pK1GknO6Gr8iLQtNPZ8zHB9RWauC-Z2?usp=drive_link"
@@ -534,6 +529,11 @@
                             Archived Courses
                         </a>
                     </div>
+                    <div class="link-item">
+                        <p class="cell-link" style="color: rgba(255, 255, 255, 0.842);padding-top:10%">
+                            Browse Courses<br><i style="font-size: x-small;">(Use semester browser)</i>
+                        </p>
+                    </div>
                     <!-- More links here -->
                 </div>
             </div>
@@ -551,6 +551,8 @@
                             Link to the Google Drive instead? )</b></small></a></p>
             <br>
         </div>
+
+
         <div class="container" style="width: 90%;max-width: 500px;">
             <div class="dropdown-container resources" style="border-radius: 20px;">
                 <div class="dropdown-header2" style="background-color: #1B262C;">
