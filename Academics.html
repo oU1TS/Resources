@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
 
-  <link rel="stylesheet" href="css/top.navbar.css">
+
+    <link rel="stylesheet" href="css/top.navbar.css">
+    <link rel="stylesheet" href="css/menubtn.academics.css">
     <style>
         li {
             padding: 20px;
@@ -16,7 +17,12 @@
         body {
             font-size: large;
         }
-        
+
+
+        /* HIDE SCROLLBAR */
+        ::-webkit-scrollbar {
+            display: none;
+        }
     </style>
 
     <style>
@@ -91,48 +97,21 @@
     <!-- <div  style="background-color: #333;"> -->
     <div
         style="background-color: 	#FAF9F6; margin: 20px;border-radius: 20px;margin-bottom: 50px;box-shadow: 0.5px 0.5px 10px black;">
-
-        <br><br><br>
-        <div style="margin-bottom: 100px;">
-            <hr style="border: 5px solid rgba(90, 85, 85, 0.619);
-                      border-radius: 5px;min-width: 200px;width:70%;">
-            <ul>
-                <li><a href="index.html">index.html</a></li>
-                <!-- <li><a href="Extracurriculars.html">Extracurriculars.html</a></li> -->
-                <!-- <li><a href="References.html">References.html</a></li> -->
-            </ul>
-        </div>
-
-        <div class="parent-wrap"
-            style="background-color: #201f1fe4;padding:15px;border-radius:  30px 0 30px 0;width:80%;max-width: 600px;box-shadow: 0.5px 0.5px 10px black;padding-top: 20px;">
-            <div style="background-color: rgba(0, 0, 0, 0);border-radius: 5px;">
-                <div class="link-logo">
-                    <a href="page-depth-01/General-Info.html">
-                        <img src="images\Section-Logo\logo (1).webp" height="100px" width="100px"
-                            style="box-shadow: 0.5px 0.5px 10px rgb(0, 0, 0);border-radius: 100%;"></a>
-                </div>
-                <p style="text-align: center;margin-top: -2px;font-size: medium;color: rgba(255, 255, 255, 0.696);">
-                    General
-                    <br>Information<br>
-                </p>
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" class="active">Academics.html</a></li>
+                    <li><a href="Extracurriculars.html">Extracurriculars.html</a></li>
+                    <li><a href="References.html">References.html</a></li>
+                    <!-- <li><a href="https://ouits-res.netlify.app/" target="_blank">Resources</a></li> -->
+                    <!-- <li><a href="contact.html">Contact</a></li> -->
+                </ul>
             </div>
-            <div style="background-color: rgba(0, 0, 0, 0);border-radius: 5px;">
-                <div class="link-logo">
-                    <a href="page-depth-01/Semesters.html"><img src="images\Section-Logo\logo (2).webp" height="100px"
-                            width="100px" style="box-shadow: 0.5px 0.5px 10px rgb(0, 0, 0);border-radius: 100%;"></a>
-                </div>
-                <p style="text-align: center;margin-top: -2px;font-size: medium;color: rgba(255, 255, 255, 0.696);">
-                    Course<br>Materials</p>
-            </div>
+        </nav>
 
-        </div>
-
-        <p align=center style="font-size: x-small;color: #00000086;margin-top: 10px;">This Section was inspired by <a
-                href="https://notebot.netlify.app/" target="_blank"
-                style="color: #0244f99d;">https://notebot.netlify.app/</a>
-        </p>
-        <br><br><br>
-        <div class="container-5"
+<br><br><br><br><br>
+<div class="container-5"
             style="width:76%;max-width: 600px;border-radius: 30px 0 30px 0;background-color: #1B262C;margin-top: 25px;margin: auto;">
 
 
@@ -166,7 +145,374 @@
             </p>
 
         </div>
-        <br><br><br><br><br>
+        <br><br><br><br>
+
+        <div class="parent-wrap"
+            style="background-color: #201f1fe4;padding:15px;border-radius:  30px 0 30px 0;width:80%;max-width: 600px;box-shadow: 0.5px 0.5px 10px black;padding-top: 20px;">
+            <div style="background-color: rgba(0, 0, 0, 0);border-radius: 5px;">
+                <div class="link-logo">
+                    <a href="page-depth-01/General-Info.html">
+                        <img src="images\Section-Logo\logo (1).webp" height="100px" width="100px"
+                            style="box-shadow: 0.5px 0.5px 10px rgb(0, 0, 0);border-radius: 100%;"></a>
+                </div>
+                <p style="text-align: center;margin-top: -2px;font-size: medium;color: rgba(255, 255, 255, 0.696);">
+                    General
+                    <br>Information<br>
+                </p>
+            </div>
+            <div style="background-color: rgba(0, 0, 0, 0);border-radius: 5px;">
+                <div class="link-logo">
+                    <a href="page-depth-01/Semesters.html"><img src="images\Section-Logo\logo (2).webp" height="100px"
+                            width="100px" style="box-shadow: 0.5px 0.5px 10px rgb(0, 0, 0);border-radius: 100%;"></a>
+                </div>
+                <p style="text-align: center;margin-top: -2px;font-size: medium;color: rgba(255, 255, 255, 0.696);">
+                    Course<br>Materials</p>
+            </div>
+
+        </div>
+
+        <p align=center style="font-size: x-small;color: #00000086;margin-top: 10px;">This Section was inspired by <a
+                href="https://notebot.netlify.app/" target="_blank"
+                style="color: #0244f99d;">https://notebot.netlify.app/</a>
+        </p>
+       
+
+        <!-- ----------------------------------------------------------------------- -->
+
+        <!-- GRID FOR INFO -->
+
+        <div class="section" style="margin-top: 25px;margin-bottom: 20px;"
+            data-faq="This section contains common resources like Notice, course list, outlines etc.">
+            <div class="faq-icon">?</div>
+            <div class="faq-box"></div>
+        </div>
+
+
+        <div class="container-5" style="max-width: 500px;min-width: 300px;background-color: #1B262C;margin-top: 50px;"
+            align=center>
+            <table class="resources-table-5" align=center
+                style="width:90%;align-items: center;justify-content: center;">
+                <tr>
+                    <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">Find your info
+                        here</p>
+                </tr>
+                <tr style="margin-top: 0px;margin-bottom: 5px;">
+
+                    <hr style="border: 5px solid rgba(255, 255, 255, 0.619);
+                      border-radius: 5px;min-width: 200px;width:70%;">
+                    <div class="container-6"
+                        style="background-color: #00000000;margin: auto;justify-content: center;column-gap: 10%;">
+
+                        <div class="menu-button" id="menuButton1" align="center"
+                            style="background-color: rgba(0, 0, 0, 0.247);height:60px;width:100px;font-size:medium;max-width: 300px;">
+                            <p class="cell-link" align="center" style="color: rgb(255, 255, 255);padding:10px">
+                                Notice</b>
+                            </p>
+                        </div>
+                        <div class="menu-button" id="menuButton2" align="center"
+                            style="background-color: rgba(0, 0, 0, 0.247);height:60px;width:100px;font-size:medium;max-width: 300px;">
+                            <p class="cell-link" align="center"
+                                style="color: rgb(255, 255, 255);margin:auto;padding:10px;background-color: #00000000;">
+                                Class Routine
+                            </p>
+                        </div>
+                        <div class="menu-button" id="menuButton3" align="center"
+                            style="background-color: rgba(0, 0, 0, 0.247);height:60px;width:100px;font-size:medium;max-width: 300px;">
+                            <p class="cell-link" align="center"
+                                style="color: rgb(255, 255, 255);margin:auto;padding:10px;background-color: #00000000;">
+                                Drive by Dept.
+                            </p>
+                        </div>
+                        <div class="menu-button" id="menuButton4" align="center"
+                            style="background-color: rgba(0, 0, 0, 0.247);height:60px;width:100px;font-size:medium;max-width: 300px;">
+                            <p class="cell-link" align="center"
+                                style="color: rgb(255, 255, 255);margin:auto;padding:10px;background-color: #00000000;">
+                                Questions
+                            </p>
+                        </div>
+                        <div class="menu-button" id="menuButton5" align="center"
+                            style="background-color: rgba(0, 0, 0, 0.247);height:60px;width:100px;font-size:medium;max-width: 300px;">
+                            <p class="cell-link" align="center"
+                                style="color: rgb(255, 255, 255);margin:auto;padding:10px;background-color: #00000000;">
+                                Courses
+                            </p>
+                        </div>
+                        <div class="menu-button" align="center"
+                            style="background-color: rgba(0, 0, 0, 0.247);height:60px;width:100px;font-size:medium;max-width: 300px;">
+                            <a class="cell-link"
+                                href="https://drive.google.com/drive/folders/1BKYmB_nSw7y0zN7eKkDg6Sgudy66MSwU"
+                                target="_blank"
+                                style="color: rgb(255, 255, 255);margin:auto;padding:10px;background-color: #00000000;">
+                                Task Materials
+                            </a>
+
+                        </div>
+                    </div>
+                    <hr style="border: 5px solid rgba(255, 255, 255, 0.619);
+                      border-radius: 5px;margin-bottom: 20px;min-width: 200px;width:70%;margin-top: 80px;">
+
+
+                </tr>
+
+
+
+            </table>
+        </div>
+
+
+        <!-- -------------------------------------------------------------- -->
+
+        <!-- NOTICE POPUP -->
+
+        <!-- First popup menu -->
+        <div class="popup-menu" id="popupMenu1" style="max-width: 400px; width: 60%;">
+            <div class="popup-close popup-close-btn"></div>
+            <!-- <div class="popup-menu-title">Content Creators</div> -->
+            <div class="popup-menu-categories">
+                <div class="popup-menu-category" align="center">
+                    <!-- <div class="category-title">People I Follow</div> -->
+                    <div class="link-item">
+                        <a href="https://uits.edu.bd/notice/" target="_blank">
+                            UITS-Notice
+                        </a>
+                    </div>
+                    <!-- <div class="link-item">
+                    <a href="http://ucam.uits.edu.bd/StudentManagement/Profile/StudentProfile.aspx?" target="_blank">
+                        UCAM-Notice
+                    </a>
+                </div> -->
+                    <div class="link-item">
+                        <a href="https://drive.google.com/drive/folders/1qSwFhUFgpWiNJAeJ_smbl99hlSPYYK7-"
+                            target="_blank">
+                            Notice Archives
+                        </a>
+                    </div>
+                    <!-- More links here -->
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 2nd popup menu -->
+        <div class="popup-menu" id="popupMenu2" style="max-width: 400px; width: 60%;">
+            <div class="popup-close popup-close-btn"></div>
+            <div class="popup-menu-title">
+                <a href="https://drive.google.com/drive/folders/1NMg91di-2WhGahidZT2JpDhno-M6f2as?usp=drive_link"
+                    target="_blank" style="color:white;">
+                    Browse Routines Drive<br><small>(click here)</small>
+                </a>
+            </div>
+            <div class="popup-menu-categories">
+                <div class="popup-menu-category" align="center">
+                    <br>
+                    <!-- <div class="link-item">
+                    <a class="cell-link"
+                        href="https://drive.google.com/drive/folders/1qW2d5epe3XeFy0hbFuQoGd7rfRZsvkFr?usp=drive_link"
+                        target="_blank">
+                        Routine by Section
+                    </a>
+                </div> -->
+                    <div class="link-item">
+                        <a href="Routine -Spring 2025(CSE) updated.pdf" download>
+                            CSE Class Routine<br><small>(Download)</small>
+                        </a>
+                    </div>
+
+                    <div class="link-item">
+                        <a class="cell-link"
+                            href="https://drive.google.com/drive/folders/1HKkXWBglI1Ffb22k7z7qLFqQqWlEcaI1"
+                            target="_blank">
+                            Class Routine format
+                        </a>
+                    </div>
+                    <!-- More links here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 3rd popup menu -->
+        <div class="popup-menu" id="popupMenu3" style="max-width: 400px; width: 60%;">
+            <div class="popup-close popup-close-btn"></div>
+            <div class="popup-menu-title">
+                <a href="https://drive.google.com/drive/folders/1n29sfMaCF_S4ffbjudBBSGBd6Q7l3Sqp?usp=drive_link"
+                    target="_blank" style="color:white;">
+                    Browse All Departments<br><small>(click here)</small>
+                </a>
+            </div>
+            <div class="popup-menu-categories">
+                <!-- <p>Or Select yours</p> -->
+                <div class="popup-menu-category" align="center">
+                    <br>
+                    <div class="link-item">
+                        <a class="cell-link"
+                            href="https://drive.google.com/drive/folders/1qcIcahFEsJ1K7WyVLHmOd2mlEV6Mp4x4?usp=drive_link"
+                            target="_blank">
+                            CSE
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a href="https://drive.google.com/drive/folders/1qvZVmexbXFNxPOXQKxmU76Q78u5FCopk?usp=drive_link"
+                            target="_blank">
+                            CE
+                        </a>
+                    </div>
+
+                    <div class="link-item">
+                        <a class="cell-link"
+                            href="https://drive.google.com/drive/folders/1qXPjm6AXVSdzEO-nop087pTduYOxcbqA?usp=drive_link"
+                            target="_blank">
+                            IT
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a class="cell-link"
+                            href="https://drive.google.com/drive/folders/1qw3B55_boUaEZccB6I0BL_UJtFx3CV0G?usp=drive_link"
+                            target="_blank">
+                            EEE
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a class="cell-link"
+                            href="https://drive.google.com/drive/folders/1qa99IPRgK9uvawq7HBi06kFF73RpK-lU?usp=drive_link"
+                            target="_blank">
+                            BBA
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a class="cell-link"
+                            href="https://drive.google.com/drive/folders/1qXUv2p20aCqAqdV6gjQDDd-ozNRt_QmO?usp=drive_link"
+                            target="_blank">
+                            English
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a class="cell-link"
+                            href="https://drive.google.com/drive/folders/1qZhO00mgfEhA1PbSemKZQyuOXZdOAMgM?usp=drive_link"
+                            target="_blank">
+                            Social Work
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a class="cell-link"
+                            href="https://drive.google.com/drive/folders/1qj7cGdZRTcXnE-OUrMPaky1Q7g1KrUZ0?usp=drive_link"
+                            target="_blank">
+                            Pharmacy
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a class="cell-link"
+                            href="https://drive.google.com/drive/folders/1qcI6ZQsCjZVxFy_i-qYHF-V3c5nFG0xH?usp=drive_link"
+                            target="_blank">
+                            ECE
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a class="cell-link"
+                            href="https://drive.google.com/drive/folders/1qbGeZGHzadbF6e5DBBs4J13PDr1JbmkE?usp=drive_link"
+                            target="_blank">
+                            Law
+                        </a>
+                    </div>
+                    <!-- <div class="link-item">
+                    <a class="cell-link" href="#"
+                        target="_blank">
+                        
+                    </a>
+                </div> -->
+                    <!-- More links here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 4th popup menu -->
+        <div class="popup-menu" id="popupMenu4"
+            style="max-width: 250px;background-color: #424242;border-radius:  50px 50px 50px 50px;">
+            <div class="popup-close popup-close-btn"></div>
+            <div class="popup-menu-categories">
+                <div class="popup-menu-category" align="center">
+                    <br>
+                    <div class="link-item"
+                        style="background-color: #ffffff;border-radius: 50px 50px 50px 50px;width: 200px;box-shadow: 1px 2px 10px #000000;">
+                        <a href="https://forms.gle/uFq1vBSUbRhY5CZk6" target="_blank"
+                            style="color: #424242;padding-top:15%">
+                            <strong>Upload Questions</strong><br>
+                            <i style="font-size: x-small;">(Single Upload)</i>
+                        </a>
+                    </div>
+
+
+                    <div class="link-item"
+                        style="background-color: #ffffff;border-radius: 50px 50px 50px 50px;width: 200px;box-shadow: 1px 2px 10px #000000;">
+                        <a class="cell-link" href="Semesters.html" style="color: #424242;">
+                            <strong>Browse Questions By Course</strong>
+                        </a>
+                    </div>
+                    <div class="link-item"
+                        style="background-color: #ffffff;border-radius: 50px 50px 50px 50px;width: 200px;box-shadow: 1px 2px 10px #000000;">
+                        <a class="cell-link"
+                            href="https://drive.google.com/drive/folders/1i0UUsgy68Nypc2ylPsaB-Teljkf0NSUD?usp=drive_link"
+                            target="_blank" style="color: #424242;">
+                            <strong>All University Questions</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5th popup menu -->
+        <div class="popup-menu" id="popupMenu5" style="max-width: 400px; width: 60%;">
+            <div class="popup-close popup-close-btn"></div>
+            <!-- <div class="popup-menu-title">Content Creators</div> -->
+            <div class="popup-menu-categories">
+                <div class="popup-menu-category" align="center">
+                    <!-- <div class="category-title">People I Follow</div> -->
+                    <div class="link-item">
+                        <a class="cell-link" href="Semesters.html" style="padding: 10%;">
+                            Browse Cources By Course
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a class="cell-link"
+                            href="https://drive.google.com/drive/folders/1_pK1GknO6Gr8iLQtNPZ8zHB9RWauC-Z2?usp=drive_link"
+                            target="_blank" style="padding: 10%;">
+                            Elective Courses
+                        </a>
+                    </div>
+                    <!-- <div class="link-item">
+                    <a href="http://ucam.uits.edu.bd/StudentManagement/Profile/StudentProfile.aspx?" target="_blank">
+                        UCAM-Notice
+                    </a>
+                </div> -->
+                    <div class="link-item">
+                        <a class="cell-link"
+                            href="https://drive.google.com/drive/u/7/folders/1o3Wwzq8YWwqV-GUtHB0LAWHud9vg__S9"
+                            target="_blank" style="padding: 10%;">
+                            Archived Courses
+                        </a>
+                    </div>
+                    <!-- More links here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="popup-backdrop" id="popupBackdrop"></div>
+        <script src="js/menubtn.academics.js"></script>
+        <!-- -------------------------------------------------------------- -->
+
+        <div align=center>
+
+            <p align=center><a style="color:rgba(60, 60, 82, 0.733);"
+                    href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL"
+                    target="_blank"><small><b>(
+                            Link to the Google Drive instead? )</b></small></a></p>
+            <br>
+        </div>
+
+
+
+
+        <br><br><br>
     </div>
 </body>
 
