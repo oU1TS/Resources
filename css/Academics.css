@@ -55,8 +55,10 @@
 
  .container-6 {
      display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
+     /* flex-wrap: wrap;
+     justify-content: center; */
+     display: grid;
+           grid-template-columns:repeat(auto-fill,minmax(100px,3fr));
      border-radius: 15px;
      padding: 1.2rem;
      margin: 20px auto;

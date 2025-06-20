@@ -93,13 +93,9 @@
            /* width: 100px !important; */
            width: -webkit-fill-available !important;
 
-           display: grid;
-           grid-template-columns:repeat();
-            /* cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: center; */
+           /* display: grid;
+           grid-template-columns:repeat(auto-fill,minmax(100px,2fr)); */
+            
             align-items: center;
             gap: 5px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
