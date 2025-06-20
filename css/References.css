@@ -24,9 +24,6 @@ td {
     border-radius: 10px;
 }
 
-td {
-    min-width: 200px;
-}
 
 .parent-wrap {
     display: flex;

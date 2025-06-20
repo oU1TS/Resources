@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/top.navbar.css">
     <link rel="stylesheet" href="css/academics.menubtn.css">
@@ -18,12 +18,17 @@
 </head>
 
 <body style="background-color: #333;">
-    <!-- <div  style="background-color: #333;"> -->
-    <div
-        style="background-color: 	#FAF9F6; margin: 20px;border-radius: 20px;margin-bottom: 50px;box-shadow: 0.5px 0.5px 10px black;">
 
-        <nav class="navbar" style="margin-bottom: 50px;">
-            <div class="nav-container">
+    <!-- <div style="background-color: #333;">
+<hr>
+    </div> -->
+    <div
+        style="background-color: #FAF9F6; margin: 20px;border-radius: 20px;margin-bottom: 50px;box-shadow: 0.5px 0.5px 10px black;z-index: 99999;">
+
+        <nav class="navbar">
+            <div id="nav-container" class="">
+               
+            <!-- <div class="nav-container"> -->
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#" class="active">Academics</a></li>
@@ -34,12 +39,24 @@
                 </ul>
             </div>
         </nav>
+         <script>
+            window.addEventListener('scroll',function(){
+                const navHide = document.getElementById('nav-container');
+                if(window.scrollY > 0){
+                    nav.classList.add('scrolled');
+                }
+                else{
+                    nav.classList.remove('scrolled');
+                }
+            });
+
+         </script>
 
         <!-- <ul>
             <li><a href="page-depth-01/General-Info.html">General-Info.html</a></li>
             <li><a href="page-depth-01/Semesters.html">Semesters.html</a></li>
         </ul> -->
-
+<br><br><br><br><br><br>
 
         <div id="upload-section" class="container-5"
             style="border-radius: 15px;background-color: #1B262C;margin-top: 25px;margin: auto;">
@@ -106,13 +123,13 @@
                     <div class="container-6"
                         style="background-color: #00000000;margin: auto;justify-content: center;column-gap: 10%;">
 
-                        <div class="menu-button" id="menuButton1" 
+                        <div class="menu-button" id="menuButton1"
                             style="background-color: rgba(0, 0, 0, 0.247);height:60px;width:100px;max-width: 300px;">
-                            <p class="cell-link"  style="color: rgb(255, 255, 255);margin:auto;">
+                            <p class="cell-link" style="color: rgb(255, 255, 255);margin:auto;">
                                 Notice</b>
                             </p>
                         </div>
-                        
+
                         <div class="menu-button" id="menuButton2" align="center"
                             style="background-color: rgba(0, 0, 0, 0.247);height:60px;width:100px;max-width: 300px;">
                             <p class="cell-link" align="center"
