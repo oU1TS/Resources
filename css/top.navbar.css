@@ -30,7 +30,7 @@
   }
 
   .nav-container {
-    /* margin-top: 20px; */
+      /* margin-top: 20px; */
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
@@ -38,7 +38,8 @@
       align-items: center;
       padding: 0;
   }
-/* 
+
+  /* 
   #nav-container {
       margin-top: 20px;
       max-width: 1200px;
@@ -165,11 +166,16 @@
 
       }
 
-
+      
 
       .nav-container {
           flex-direction: column;
           font-size: medium;
+
+      }
+      .nav-container ul,.nav-container li {
+          border-radius: 20px 20px 0 0;
+          padding: 0 !important;
 
       }
 
