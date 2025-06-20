@@ -12,13 +12,13 @@
   /* Navigation bar styles */
   .navbar {
       /* background-color: #03030300; */
-      background-color: #ffffff00;
+      background-color: #ffffff;
       color: black;
       width: -webkit-fill-available;
       /* width: 100%; */
       border-radius: 20px 20px 0 0;
       position: fixed;
-      /* margin-top: 20px; */
+      margin-top: 20px;
       margin-left: 20px;
       margin-right: 20px;
       /* padding-top: 10px; */
@@ -29,18 +29,18 @@
       /* padding: 5%; */
   }
 
-  /* .nav-container {
-    margin-top: 20px;
+  .nav-container {
+    /* margin-top: 20px; */
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 0;
-  } */
-
+  }
+/* 
   #nav-container {
-      /* margin-top: 20px; */
+      margin-top: 20px;
       max-width: 1200px;
       
       margin: 0 auto;
@@ -53,10 +53,10 @@
 
   #nav-container.scrolled {
      position: fixed;
-     /* top: -200px !important; */
+     top: -200px !important;
      margin-top: 0 !important;
      background-color: red !important;
-  }
+  } */
 
 
 
