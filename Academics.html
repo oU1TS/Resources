@@ -38,7 +38,7 @@
                 </ul>
             </div>
         </nav>
-        <script>
+        <!-- <script>
             window.addEventListener('scroll', function () {
                 const navHide = document.getElementById('nav-container');
                 if (window.scrollY > 0) {
@@ -49,13 +49,17 @@
                 }
             });
 
-        </script>
+        </script> -->
+
+
+
 
         <!-- <ul>
             <li><a href="page-depth-01/General-Info.html">General-Info.html</a></li>
             <li><a href="page-depth-01/Semesters.html">Semesters.html</a></li>
         </ul> -->
         <br><br><br><br><br><br>
+        <br><br>
 
         <div id="upload-section" class="container-5"
             style="border-radius: 15px;background-color: #1B262C;margin-top: 25px;margin: auto;">
@@ -190,18 +194,6 @@
         </div>
 
         <div class="container-5" style="width:76%;max-width: 600px;margin-top: 50px; background-color: #1B262C;">
-            <!-- <table class="resources-table-5" align="center" style="width:90%; margin: auto;">
-          <tr>
-            <td colspan="2" style="max-width: 300px;display: block;margin: auto;border-radius: 20px;">
-              <a href="page-depth-01/General-Info.html" class="cell-link"
-                style="max-height: 80px;text-align: center;text-align: center;justify-content: center;padding: 5%;">
-                General Information<br><small><i style="font-size: xx-small;">(Notice,Questions,Outlines,...)</i></small>
-              </a>
-    
-            </td>
-    
-          </tr>
-        </table> -->
 
 
             <!-- -------------------------------------------------------------------- -->
@@ -210,7 +202,8 @@
 
                 <div class="custom-dropdown" id="departmentDropdown" style="margin-top: 20px;width: 100%;
     max-width: 600px;">
-                    <div class="dropdown-header" id="dropdownHeader">Select you Department...</div>
+                    <div class="dropdown-header" id="dropdownHeader" style="font-size: 1rem;">Select your Department...
+                    </div>
 
                     <div class="dropdown-list" id="dropdownList">
                         <div class="dropdown-item" data-value="cse">Computer Science and Engineering</div>
@@ -221,12 +214,13 @@
                 <button id="resetButton"><small><b>Clear?</b></small></button>
 
 
-                <div id="semesterList" class="semester-list"></div>
+                <div id="semesterList" class="semester-list"
+                    style="background-color: transparent;border-color: transparent;"></div>
                 <p id="driveLink"></p>
-                <!-- -------------------------------------------------------------------- -->
+
                 <script src="js/academics.semester.selector.js"></script>
             </div>
-            <hr style="margin-top: 10px;width: 70%;">
+            <hr style="margin-top: 10px;width: 70%;margin: auto;">
             <div class="semester-selector-container">
                 <label style="color: rgba(255, 255, 255, 0.68);">University Course Search</label>
                 <div class="search-container" style="margin-top: 20px;">

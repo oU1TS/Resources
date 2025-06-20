@@ -2,11 +2,13 @@
  
  .search-container {
     position: relative;
-    margin: 0 auto;
-    width: 100%;
+    /* margin: 0 auto; */
+    width: -webkit-fill-available;
+    /* width: 100%; */
     max-width: 600px;
     margin: auto;
-    right: 15px;
+    /* right: 15px; */
+    background-color: transparent !important;
 }
 /* 
 .search-container input::placeholder {
@@ -72,6 +74,7 @@
 .search-results {
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+    font-size: 1rem !important;
 }
 
 .result-item {
@@ -163,6 +166,7 @@
      margin: auto;
      padding: 20px;
      text-align: center;
+     background-color: #1b262c;
  }
 
  .custom-dropdown {
@@ -170,6 +174,9 @@
      margin: 0 auto;
      max-width: 245px;
      width: 100%;
+     background-color: transparent !important;
+     border-color: transparent !important;
+
 
      /* -webkit-tap-highlight-color: transparent;
      -webkit-touch-callout: none;
@@ -190,6 +197,7 @@
      transition: all 0.3s ease;
      color: #000000;
      font-size: smaller;
+     
  }
 
  .dropdown-header:hover {
@@ -297,64 +305,3 @@
  #resetButton:hover {
      background-color: #0000009d;
  }
-
-
-
- /* --------------------------------------------------------------------- */
-
- /* OLD code */
- .custom-dropdown {
-     position: relative;
-     width: 220px;
-     font-family: Arial, sans-serif;
- }
-
- .selected {
-     background-color: #007bff;
-     color: white;
-     padding: 12px;
-     border-radius: 5px;
-     cursor: pointer;
-     text-align: center;
-     transition: background 0.3s;
- }
-
- .selected:hover {
-     background-color: #0056b3;
- }
-
- .options {
-     list-style: none;
-     padding: 0;
-     margin: 0;
-     position: absolute;
-     width: 100%;
-     background: white;
-     border: 1px solid #ccc;
-     border-top: none;
-     border-radius: 5px;
-     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-     display: none;
-     max-height: 0;
-     overflow: hidden;
-     transition: max-height 0.3s ease-in-out;
- }
-
- .option {
-     padding: 12px;
-     cursor: pointer;
-     transition: background 0.2s;
- }
-
- .option:hover {
-     background: #007bff;
-     color: white;
- }
-
- .show {
-     display: block;
-     max-height: 150px;
- }
-
-
- /* --------------------------------------------------------------------- */
