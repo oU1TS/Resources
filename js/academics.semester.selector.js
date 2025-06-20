@@ -79,7 +79,7 @@ const departmentDropdown = document.getElementById('departmentDropdown');
         // Reset functionality
         resetButton.addEventListener('click', () => {
           // Reset dropdown header
-          dropdownHeader.textContent = 'Select you Department...';
+          dropdownHeader.textContent = 'Select Department';
     
           // Clear semester list
           semesterList.innerHTML = "";
