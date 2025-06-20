@@ -145,7 +145,7 @@ td {
 /* TOP BAR CSS [ 1 ] */
 /* Reset margin and font */
 body {
-  background-color: #FAF9F6;
+  background-color: 	#FAF9F6;
   margin: 0;
   font-size: large;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -222,7 +222,7 @@ body {
 
 .topnav-2 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   background-color: #33333300;
   color: #000000;
   min-height: 50px;
@@ -329,17 +329,17 @@ body {
   display: none;
   position: absolute;
   right: 0;
+  /* Align to the right side of the button */
   left: auto;
+  /* Override default left alignment */
   background-color: #00000000;
   color: #000000;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* z-index: 1; */
   border-radius: 4px;
   overflow-y: scroll;
-  max-height: 0;
-  /* overflow: hidden; */
-  background-color: white;
-  transition: max-height 0.3s ease;
+
 
 }
 
@@ -448,6 +448,75 @@ body {
 /* -----------------------------------------------------------------  */
 /* -----------------------------------------------------------------  */
 
+/* IMG SCROLL */
+
+.img-container {
+  z-index: 1;
+
+  width: 100%;
+  height: 400px;
+  /* Adjust height as needed */
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #ddd;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-color: white;
+
+  /* Custom scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #445f9d #f1f1f1;
+}
+
+/* For Chrome, Edge, and Safari */
+.img-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.img-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0 4px 4px 0;
+}
+
+.img-container::-webkit-scrollbar-thumb {
+  background: #445f9d;
+  border-radius: 5px;
+}
+
+.img-container::-webkit-scrollbar-thumb:hover {
+  background: #37498a;
+}
+
+/* The image itself */
+.img-container img {
+  width: 100%;
+  display: block;
+}
+
+/* Smooth scroll effect */
+.img-container {
+  scroll-behavior: smooth;
+}
+
+/* Scroll indicator - optional */
+.scroll-indicator {
+  text-align: center;
+  padding: 10px;
+  color: #666;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #eee;
+}
+
+
+/* -----------------------------------------------------------------  */
+/* -----------------------------------------------------------------  */
+/* -----------------------------------------------------------------  */
+
 /*View More*/
 
 
@@ -495,6 +564,40 @@ body {
 /* -----------------------------------------------------------------  */
 /* -----------------------------------------------------------------  */
 
+
+
+/* HIGHLIGHTS SECTION [ 5 ] 
+now Browse Curated Resources*/
+
+
+.container-5 {
+  background-color: #1B262C;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 20px auto;
+  width: 79%;
+  max-width: 800px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  /* justify-content: center;
+  display: flex; */
+  min-width: 250px;
+}
+
+
+
+.drive-link-5 {
+  margin-bottom: 20px;
+}
+
+.drive-link-5 a {
+  color: #a8a8c7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.drive-link-5 a:hover {
+  color: #ffffff;
+}
 
 .highlights-5 {
   color: rgba(255, 255, 255, 0.7);
@@ -829,29 +932,22 @@ body {
 /*BOTTOM BAR CSS*/
 
 .navbar-5 {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333;
-  /* Example background, adjust as needed */
-  color: white;
-  text-align: center;
-  padding: 10px 0px 15px 0px;
-  /* Add some padding to prevent text from touching edges */
-  box-sizing: border-box;
-  /* Crucial for responsive sizing with padding */
-  z-index: 1000;
-  /* Ensure it stays on top of other content */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Example background, adjust as needed */
+    color: white;
+    text-align: center;
+    padding: 10px 0px 15px 0px; /* Add some padding to prevent text from touching edges */
+    box-sizing: border-box; /* Crucial for responsive sizing with padding */
+    z-index: 1000; /* Ensure it stays on top of other content */
 }
 
 .navbar-5 p {
-  margin: 0;
-  /* Remove default paragraph margin */
-  white-space: normal;
-  /* Allow text to wrap naturally */
-  word-wrap: break-word;
-  /* Ensure long words break */
+    margin: 0; /* Remove default paragraph margin */
+    white-space: normal; /* Allow text to wrap naturally */
+    word-wrap: break-word; /* Ensure long words break */
 }
 
 

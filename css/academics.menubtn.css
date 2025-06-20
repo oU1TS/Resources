@@ -90,7 +90,8 @@
         .menu-button {
             background-color: #00000000;
             border-radius: 8px;
-            padding: 12px;
+           
+            /* padding: 12px; */
             /* position: relative; */
 
             cursor: pointer;
@@ -102,6 +103,8 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
             z-index: 0;
             transition: background-color 0.3s ease;
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
 
             /* DISABLES LINK CLICK EFFECT */
             -webkit-tap-highlight-color: transparent;
@@ -122,6 +125,17 @@
         .menu-button:hover .cell-link {
             color: rgba(255, 255, 255, 0.8);
             /* Slightly change text color on hover */
+            
+        }
+
+        .cell-link {
+            /* color: rgba(255, 255, 255, 0.8);
+            
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+            margin: auto; */
+             font-size: 1rem;
+             
         }
 
         .menu-line {
