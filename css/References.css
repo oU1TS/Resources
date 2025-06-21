@@ -83,9 +83,12 @@ td {
 
 
 .university-resources {
-    margin: 2rem auto;
+    /* margin: 2rem auto; */
     max-width: 1200px;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
+    /* z-index: -1; */
+    /* overflow-x: scroll; */
+    margin: auto;
 }
 
 .table-title {
@@ -97,24 +100,38 @@ td {
 
 .table-container {
     overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    /* z-index: -1 !important; */
+    position: static;
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     /* direction:rtl !important;
+    direction: ltr !important; */
+    
+}
+
+table,th,td{
+     border: 1px solid rgba(0, 0, 0, 0.119);
+     border-radius: 10px !important;
 }
 
 table {
-    width: 80%;
+    max-width: 80%;
     border-collapse: collapse;
     margin: 0;
     padding: 0;
     background-color: white;
+    /* z-index: -1; */
 }
 
 th,
 td {
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: left;
     border-bottom: 1px solid #e2e8f0;
+    text-align: center;
 }
 
 th {

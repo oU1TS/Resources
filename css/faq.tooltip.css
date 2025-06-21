@@ -3,7 +3,7 @@
 .section {
   /* height: 300px; */
   /* border-bottom: 2px solid #ddd; */
-  position: relative;
+  position: sticky;
   /* padding: 20px; */
 }
 

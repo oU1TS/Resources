@@ -166,14 +166,16 @@
 
       }
 
-      
+
 
       .nav-container {
           flex-direction: column;
           font-size: medium;
 
       }
-      .nav-container ul,.nav-container li {
+
+      .nav-container ul,
+      .nav-container li {
           border-radius: 20px 20px 0 0;
           padding: 0 !important;
 
@@ -182,10 +184,25 @@
       .nav-links {
           flex-direction: column;
           width: 100%;
-          max-height: 150px;
+          max-height: 140px;
           overflow-y: auto;
           scrollbar-width: none;
+          box-shadow: 0.5px 0.5px 15px;
       }
+
+
+      .nav-links li a {
+          display: block;
+          color: rgb(0, 0, 0);
+          background-color: #d6e9fa;
+          text-decoration: none;
+          padding: 12px 25px;
+          text-align: center;
+          transition: background-color 0.3s ease;
+          border-radius: 5px;
+
+      }
+
 
       .nav-links::-webkit-scrollbar {
           width: 5px;
