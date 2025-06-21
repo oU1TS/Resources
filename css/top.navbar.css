@@ -184,7 +184,7 @@
       .nav-links {
           flex-direction: column;
           width: 100%;
-          max-height: 140px;
+          max-height: 145px;
           overflow-y: auto;
           scrollbar-width: none;
           box-shadow: 0.5px 0.5px 15px;
@@ -196,7 +196,7 @@
           color: rgb(0, 0, 0);
           background-color: #d6e9fa;
           text-decoration: none;
-          padding: 12px 25px;
+          padding: 20px 25px;
           text-align: center;
           transition: background-color 0.3s ease;
           border-radius: 5px;
