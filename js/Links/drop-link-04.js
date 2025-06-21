@@ -4,7 +4,7 @@
 // Create a file called shared-elements.js
 document.addEventListener('DOMContentLoaded', function() {
     const navHTML = `
-    Empty Link
+    b1tranger
       <!-- Add other navigation links here -->
     `;
     
