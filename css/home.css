@@ -75,10 +75,50 @@ td {
 
 /* -------------------------------------- */
 
+#link-1 a {
+    color: rgb(255, 255, 255);
+}
+
+#link-2 a {
+    color: rgb(255, 255, 255);
+}
+
+#link-3 a {
+    color: rgb(255, 255, 255);
+}
+
+#link-4 a {
+    color: rgb(255, 255, 255);
+}
+
+#link-5 a {
+    color: rgb(255, 255, 255);
+}
+
+#link-1 a:hover {
+    color: black;
+}
+
+#link-2 a:hover {
+    color: black;
+}
+
+#link-3 a:hover {
+    color: black;
+}
+
+#link-4 a:hover {
+    color: black;
+}
+
+#link-5 a:hover {
+    color: black;
+}
 
 #link-1 {
     width: 200px;
-    background-color: rgba(0, 0, 0, 0.201);
+    background-color: rgb(95, 87, 87);
+    color: white;
     margin: auto;
     text-align: center;
     padding: 10px;
@@ -86,9 +126,20 @@ td {
     margin-left: 50%;
 }
 
+
+#link-1:hover {
+    font-weight: bold;
+    background-color: yellow;
+    color: black;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+    border: 1px solid black;
+}
+
 #link-2 {
     width: 200px;
-    background-color: rgba(0, 0, 0, 0.201);
+    background-color: rgb(95, 87, 87);
+    color: white;
     margin: auto;
     text-align: center;
     padding: 10px;
@@ -97,9 +148,19 @@ td {
     rotate: 5deg;
 }
 
+#link-2:hover {
+    font-weight: bold;
+    background-color: yellow;
+    color: black;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+    border: 1px solid black;
+}
+
 #link-3 {
     width: 200px;
-    background-color: rgba(0, 0, 0, 0.201);
+    background-color: rgb(95, 87, 87);
+    color: white;
     margin: auto;
     text-align: center;
     padding: 10px;
@@ -108,9 +169,19 @@ td {
     rotate: 10deg;
 }
 
+#link-3:hover {
+    font-weight: bold;
+    background-color: yellow;
+    color: black;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+    border: 1px solid black;
+}
+
 #link-4 {
     width: 200px;
-    background-color: rgba(0, 0, 0, 0.201);
+    background-color: rgb(95, 87, 87);
+    color: white;
     margin: auto;
     text-align: center;
     padding: 10px;
@@ -119,15 +190,34 @@ td {
     rotate: 20deg;
 }
 
+#link-4:hover {
+    font-weight: bold;
+    background-color: yellow;
+    color: black;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+    border: 1px solid black;
+}
+
 #link-5 {
     width: 200px;
-    background-color: rgba(0, 0, 0, 0.201);
+    background-color: rgb(95, 87, 87);
+    color: white;
     margin: auto;
     text-align: center;
     padding: 10px;
     border-radius: 20px;
     margin-left: 10%;
     rotate: 30deg;
+}
+
+#link-5:hover {
+    font-weight: bold;
+    background-color: yellow;
+    color: black !important;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+    border: 1px solid black;
 }
 
 /* ------------------------------ */
