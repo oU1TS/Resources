@@ -921,7 +921,8 @@ now Browse Curated Resources*/
 
   .randomBS {
     display: block !important;
-    margin-bottom: 100px !important;
+    /* margin-bottom: 100px !important; */
+    
   }
 
   .randomBS-2{
