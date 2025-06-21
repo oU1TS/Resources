@@ -24,7 +24,7 @@
       /* padding-top: 10px; */
       top: 0;
       left: 0;
-      z-index: 1;
+      z-index: 2;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       /* padding: 5%; */
   }
