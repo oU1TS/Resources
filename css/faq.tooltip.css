@@ -5,6 +5,7 @@
   /* border-bottom: 2px solid #ddd; */
   position: sticky;
   /* padding: 20px; */
+  z-index: 1;
 }
 
 .faq-icon {
@@ -45,7 +46,7 @@
 
 .faq-box {
   /* overflow:visible; */
-  z-index: 9999;
+  /* z-index: 9999; */
   display: none;
   position: absolute;
   right: 6%;
