@@ -1,7 +1,7 @@
 // Create a file called shared-elements.js
 document.addEventListener('DOMContentLoaded', function () {
   const navHTML = `
-    <a style="color: rgb(0, 0, 0);" class="active-1" href="https://ouits-schedule.netlify.app/" target="blank">
+    <a class="active-1" href="https://ouits-schedule.netlify.app/" target="blank">
           <small>oUITS Scheduler</small>
         </a>
       

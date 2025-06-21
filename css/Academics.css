@@ -1,0 +1,106 @@
+ li {
+     padding: 5px;
+ }
+
+ body {
+     font-size: large;
+ }
+
+
+ /* HIDE SCROLLBAR */
+ ::-webkit-scrollbar {
+     display: none;
+ }
+
+
+ table,
+ th,
+ td {
+     border: 2px solid rgba(31, 106, 168, 0);
+     border-radius: 10px;
+ }
+
+ td {
+     min-width: 200px;
+ }
+
+ /* .parent-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 16px;
+            margin: auto;
+            width: 95%;
+            max-width: 500px;
+        }
+
+        .link-logo:hover {
+            transform: translateY(-5px);
+            transition: transform 1s
+        } */
+
+ /* .container-6 {
+            display: grid;
+            place-items: center;
+            grid-template-columns: auto auto auto;
+            border-radius: 15px;
+            padding: 10px;
+            margin: 20px auto;
+            width: 79%;
+            max-width: 350px;
+            position: relative;
+            column-gap: 30px;
+            row-gap: 12%;
+        } */
+
+ .container-6 {
+     display: flex;
+     /* flex-wrap: wrap;
+     justify-content: center; */
+     display: grid;
+           grid-template-columns:repeat(auto-fill,minmax(100px,3fr));
+     border-radius: 15px;
+     padding: 1.2rem;
+     margin: 20px auto;
+     width: 80%;
+     max-width: 600px;
+     /*the button visibility*/
+     position: relative;
+     column-gap: 30px;
+     /* row-gap: 12%; */
+     gap: 1rem;
+ }
+
+ .container-6 a:hover {
+     transform: translateY(-5px);
+     transition: transform 1s
+ }
+
+ /* .container-6>div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+        }  */
+
+ .container-6>div>div {
+     background-color: #f1f1f1;
+     border: 1px solid black;
+     padding: 10px;
+     font-size: 30px;
+     text-align: center;
+
+ }
+
+ /* .container-5,.my-div {
+            box-shadow:
+                -4px 0px 5px -4px rgba(0, 0, 0, 0.3),
+                4px 0px 5px -4px rgba(0, 0, 0, 0.3);
+        } */
+
+
+ /* -----------------------------------------------------------------  */
+ /* -----------------------------------------------------------------  */
+ /* -----------------------------------------------------------------  */
+

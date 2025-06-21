@@ -5,7 +5,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const navHTML = `
     <a class="active-1" href="https://github.com/orgs/oU1TS/repositories" 
-      target="_blank" style="color:rgb(0, 0, 0);"><small>All Repositories</small></a>
+      target="_blank"><small>All Repositories</small></a>
       <!-- Add other navigation links here -->
     `;
     

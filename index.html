@@ -12,12 +12,17 @@
   <link rel="stylesheet" href="css/selector.css">
   <link rel="stylesheet" href="css/drop-down.css">
   <link rel="stylesheet" href="css/preloader.css">
+  <link rel="stylesheet" href="css/top.navbar.css">
+  <link rel="stylesheet" href="css/faq.dropdown.css">
+  <link rel="stylesheet" href="css/faq.tooltip.css">
+  <link rel="stylesheet" href="css/home.css">
 
   <!-- OFFLINE SUPPORT (WEB APP) -->
 
 
   <!-- Web App Manifest -->
   <link rel="manifest" href="./manifest.json">
+
 
   <!-- ---------------------------------------------------------------------------- -->
 
@@ -32,257 +37,58 @@
 
   <!-- WEBSITE PREVIEW -->
 
-  <style>
-    table,
-    th,
-    td {
-      border: 2px solid rgba(31, 106, 168, 0);
-      border-radius: 10px;
-    }
-
-    td {
-      min-width: 200px;
-    }
-
-    .parent-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      gap: 16px;
-      margin: auto;
-      width: 95%;
-      max-width: 500px;
-    }
-
-    .link-logo:hover {
-      transform: translateY(-5px);
-      transition: transform 1s
-    }
-
-    .container-6 {
-      display: grid;
-      place-items: center;
-      grid-template-columns: auto auto;
-      border-radius: 15px;
-      padding: 10px;
-      margin: 20px auto;
-      width: 79%;
-      max-width: 350px;
-      /*the button visibility*/
-      position: relative;
-      column-gap: 30px;
-      row-gap: 12%;
-
-    }
-
-    .container-6 a:hover {
-      transform: translateY(-5px);
-      transition: transform 1s
-    }
-
-    /* .container-6>div {
-            background-color: #f1f1f1;
-            border: 1px solid black;
-            padding: 10px;
-            font-size: 30px;
-            text-align: center;
-        }  */
-
-    .container-6>div>div {
-      background-color: #f1f1f1;
-      border: 1px solid black;
-      padding: 10px;
-      font-size: 30px;
-      text-align: center;
-      /* margin-top: 50px; */
-
-    }
-  </style>
   <title>
     oUITS Resources
   </title>
 </head>
 
-<body style="background-color: #333;">
+<body style="background-color: #333;z-index: -1;">
 
-  <div id="preloader" style="margin-top: -20px;">
-    <img src="images/preloader.gif" alt="Loading..." width="200">
+  <div style="background-color: #333;display: block;width: 100%;height: 40px;position: fixed;top:0;z-index: 1;">
   </div>
-
-  <!-- <div  style="background-color: #333;"> -->
-  <div style="background-color: 	#FAF9F6; margin: 20px;border-radius: 20px;margin-bottom: 50px;box-shadow: 0.5px 0.5px 10px black;">
+  <div
+    style="background-color: white; margin: 20px;border-radius: 20px;margin-bottom: 50px;box-shadow: 0.5px 0.5px 10px black;">
+    <!-- <div class="loader"></div> -->
 
     <!-- TOP BAR -->
 
-    <!-- <div class="navigation2"></div>
-  <script src="backup\test-all-link-together.js"></script> -->
-    <div class="topnav-2">
-      <div class="dropdown">
-        <button class="dropbtn" onclick="toggleDropdown(this)"
-          style="background-color: #1dcd9efe;color: #ffffff;border-radius: 0px 20px 0px 20px ;box-shadow: 0.5px 0.5px 10px black;">More<br>Projects</button>
-        <!-- <button class="dropbtn">Quick<br>Links</button> -->
-        <div class="dropdown-content">
-          <div class="navigation1"></div>
-          <script src="js\Links\drop-link-01.js"></script>
-
-          <div class="navigation2"></div>
-          <script src="js\Links\drop-link-02.js"></script>
-
-          <div class="navigation3"></div>
-          <script src="js\Links\drop-link-03.js"></script>
-
-          <div class="navigation4"></div>
-          <script src="js\Links\drop-link-04.js"></script>
-
-          <div class="navigation5"></div>
-          <script src="js\Links\drop-link-99.js"></script>
-        </div>
+    <nav class="navbar">
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="Academics.html">Academics</a></li>
+          <li><a href="Extracurriculars.html">Extracurriculars</a></li>
+          <li><a href="References.html">References</a></li>
+          <!-- <li><a href="https://ouits-res.netlify.app/" target="_blank">Resources</a></li> -->
+          <!-- <li><a href="contact.html">Contact</a></li> -->
+        </ul>
       </div>
-    </div>
+    </nav>
 
 
-    <script src="js/navbar-drop-down.js"></script>
+    <div class="randomBS" style="display:none;"></div>
 
-    <!-- GO BOTTOM RELATIVE LINK -->
+    <embed src="images/404.gif" width="100%" style="margin-top: 55px;">
+      <br><br><br><br><br><br><br><br><br><br><br>
+    <embed src="images/more-projects.gif" width="100%;margin-top: 55px;">
+    <div style="margin-bottom: 100px;">
 
-
-
-    <!-- ------------------------------------------------------------------------------ -->
-    <!-- ------------------------------------------------------------------------------ -->
-    <!-- ------------------------------------------------------------------------------ -->
-
-
-    <!-- <h1 align="center">oUITS-Resources</h1> -->
-
-    <p class="highlights-5" align="center" style="color: rgba(0, 0, 0, 0.649);margin-top: 15px;">
-      <small><i>Browse resources for UITS Students</i></small>
+      <div class="navigation1" id="link-1"></div>
+      <script src="js\Links\drop-link-01.js"></script>
       <br>
-      <small style="font-size: x-small;">[mirror: <a href="https://ouits-res.netlify.app/"
-          style="color:rgba(4, 0, 128, 0.806);">Netlify</a> / <a href="https://b1tranger.github.io/oUITS-Resources/"
-          style="color:rgba(4, 0, 128, 0.806);">
-          GitHub</a>]</small>
-    </p>
-
-
-
-    <!-- -------------------------------------------------------------------- -->
-    <!-- -------------------------------------------------------------------- -->
-    <!-- -------------------------------------------------------------------- -->
-
-    <!-- <div class="section"
-    data-faq="This section contains common resources like Notice, course list, outlines etc. and a Semester Selector [Browse Semesters] to find course materials for your specific semesters.">
-    <div class="faq-icon">?</div>
-    <div class="faq-box"></div>
-  </div> -->
-
-
-    <div class="parent-wrap"
-      style="background-color: #201f1fe4;padding:15px;border-radius:  30px 0 30px 0;width:80%;max-width: 600px;box-shadow: 0.5px 0.5px 10px black;padding-top: 20px;">
-      <div style="background-color: rgba(0, 0, 0, 0);border-radius: 5px;">
-        <div class="link-logo">
-          <a href="page-depth-01/General-Info.html">
-            <img src="images\Section-Logo\logo (1).webp" height="100px" width="100px"
-              style="box-shadow: 0.5px 0.5px 10px rgb(0, 0, 0);border-radius: 100%;"></a>
-        </div>
-        <p style="text-align: center;margin-top: -2px;font-size: medium;color: rgba(255, 255, 255, 0.696);">General
-          <br>Information<br>
-        </p>
-      </div>
-      <div style="background-color: rgba(0, 0, 0, 0);border-radius: 5px;">
-        <div class="link-logo">
-          <a href="page-depth-01/Semesters.html"><img src="images\Section-Logo\logo (2).webp" height="100px"
-              width="100px" style="box-shadow: 0.5px 0.5px 10px rgb(0, 0, 0);border-radius: 100%;"></a>
-        </div>
-        <p style="text-align: center;margin-top: -2px;font-size: medium;color: rgba(255, 255, 255, 0.696);">
-          Course<br>Materials</p>
-      </div>
-      <div style="background-color: rgba(0, 0, 0, 0);border-radius: 5px;">
-        <div class="link-logo"><a href="page-depth-01\Extracurriculars.html"><img
-              src="images\Section-Logo\logo (4).webp" height="100px" width="100px"
-              style="box-shadow: 0.5px 0.5px 10px rgb(0, 0, 0);border-radius: 100%;"></a>
-        </div>
-        <p style="text-align: center;margin-top: -2px;font-size: medium;color: rgba(255, 255, 255, 0.696);">
-          Extra<br>Curriculars</p>
-      </div>
-
-      <div style="background-color: rgba(0, 0, 0, 0);border-radius: 5px;">
-        <div class="link-logo"><a href="page-depth-01\Tutorials.html"><img src="images\Section-Logo\logo (6).webp"
-              height="100px" width="100px" style="box-shadow: 0.5px 0.5px 10px rgb(0, 0, 0);border-radius: 100%;"></a>
-        </div>
-        <p style="text-align: center;margin-top: -2px;font-size: medium;color: rgba(255, 255, 255, 0.696);">Tutorials
-        </p>
-      </div>
-      <div style="background-color: rgba(0, 0, 0, 0);border-radius: 5px;">
-        <div class="link-logo"><a href="page-depth-01\Blog.html"><img src="images\Section-Logo\logo (7).webp"
-              height="100px" width="100px" style="box-shadow: 0.5px 0.5px 10px rgb(0, 0, 0);border-radius: 100%;"></a>
-        </div>
-        <p style="text-align: center;margin-top: -2px;font-size: medium;color: rgba(255, 255, 255, 0.696);">Blog</p>
-      </div>
-      <div style="background-color: rgba(0, 0, 0, 0);border-radius: 5px;">
-        <div class="link-logo"><a href="page-depth-01\References.html"><img src="images\Section-Logo\logo (5).webp"
-              height="100px" width="100px" style="box-shadow: 0.5px 0.5px 10px rgb(0, 0, 0);border-radius: 100%;"></a>
-        </div>
-        <p style="text-align: center;margin-top: -2px;font-size: medium;color: rgba(255, 255, 255, 0.696);">References
-        </p>
-      </div>
+      <div class="navigation2" id="link-2"></div>
+      <script src="js\Links\drop-link-02.js"></script>
+      <br>
+      <div class="navigation3" id="link-3"></div>
+      <script src="js\Links\drop-link-03.js"></script>
+      <br>
+      <div class="navigation4" id="link-4"></div>
+      <script src="js\Links\drop-link-04.js"></script>
+      <br>
+      <div class="navigation5" id="link-5"></div>
+      <script src="js\Links\drop-link-99.js"></script>
+      <!-- <div class="loader"></div> -->
     </div>
-    <p align=center style="font-size: x-small;color: #00000086;margin-top: 10px;">This Section was inspired by <a
-        href="https://notebot.netlify.app/" target="_blank" style="color: #0244f99d;">https://notebot.netlify.app/</a>
-    </p>
-    <br>
-    <div class="section"
-      data-faq="If you feel like the resources are lacking, and you can solve that, don't be shy and share your resources!">
-      <div class="faq-icon">?</div>
-      <div class="faq-box"></div>
-    </div>
-
-    <!-- -------------------------------------------------------------------- -->
-    <div class="container-5"
-      style="width:76%;max-width: 600px;border-radius: 30px 0 30px 0;background-color: #1B262C;margin-top: 25px;">
-
-
-      <p style="text-align: center;color: #ffffffcd;margin-top: -5px;margin-bottom: -5px;">Feeling generous?</p>
-
-      <div class="container-6" style="margin-bottom: 15px;">
-        <div>
-          <a class="cell-link" href="https://forms.gle/uFq1vBSUbRhY5CZk6" target="_blank"
-            style="color: #ffffff;paddingp:15%;background-color: #a5ca88;border-radius: 10px;width: 100px;box-shadow: 1px 2px 10px #000000;text-align: center;padding: 10%;display: block;text-shadow: 1px 2px 1px #000000;">
-            <img src="images\Section-Logo\logo (8).webp" height="120px" width="120px"
-              style="margin-top: -30px;margin-bottom: -25px;">
-            Upload<br>Questions
-            <!-- <i style="font-size: x-small;">(.pdf Upload)</i> -->
-          </a>
-        </div>
-        <div>
-          <a class="cell-link" href="https://forms.gle/ovz4p5VAEsB6G7fp7" target="_blank"
-            style="color: #ffffff;paddingp:15%;background-color: #3282B8;border-radius: 10px;width: 100px;box-shadow: 1px 2px 10px #000000;text-align: center;padding: 10%;display: block;text-shadow: 1px 2px 1px #000000;">
-            <img src="images\Section-Logo\logo (9).webp" height="120px" width="120px"
-              style="margin-top: -30px;margin-bottom: -25px;">
-            Upload<br>Notes
-            <!-- <i style="font-size: x-small;">(.zip Upload)</i> -->
-          </a>
-        </div>
-
-      </div>
-
-      <p align="center" style="font-size: small;margin: -5px;color: #ffffffb4;">( to be listed in the semester folders )
-      </p>
-
-    </div>
-
-
-
-    <!-- -------------------------------------------------------------------- -->
-    <!-- -------------------------------------------------------------------- -->
-    <!-- -------------------------------------------------------------------- -->
-
-
-
-    <div style="justify-content: center;display:flex;">
-      <hr style="border: 5px solid rgba(0, 0, 0, 0);
-  border-radius: 5px;margin-left: 150px;margin-right: 150px;margin-bottom: 20px;min-width: 200px;width:50%">
-    </div>
-
     <!-- ---------------------------------------------------- -->
 
     <div class="container" style="width: 90%;max-width: 500px;">
@@ -353,106 +159,24 @@
           </p>
           <hr>
 
-          <p class="dropdown-item2" style="text-align: left;margin-top: -2px;color: #000000bb;font-size: medium;">
-            #My Information for donation<br>
-          <div class="description" style="margin: 15px;color: #00000082;font-size: small;">
-            <h3>Blood Group: O+ve</h3>
-            <ul>
-              <li style="font-size: medium;">Last donated on: <b>21.01.25</b></li>
-              <!-- <li></li> -->
-            </ul>
-            <b>Note:</b><br>
-            Attending nurse told me that my last blood donation must be 4 months before donating again, otherwise
-            haemoglobin levels might drop. Therefore, please do the math from my last donation date before reaching out.
-          </div>
-          </p>
-          <hr>
+
 
 
         </div>
       </div>
-      <!-- ------------------------------------------------------------------------- -->
-
-      <br>
-      <div class="dropdown-container resources" style="border-radius: 20px;">
-        <div class="dropdown-header2" style="background-color: #1B262C;">
-          <p></p>FAQ
-        </div>
-        <div class="dropdown-content-1">
-          <p class="dropdown-item2" style="text-align: left;margin-top: -2px;color: #000000bb;font-size: medium;">
-            #General Information<br>
-          <div class="description" style="margin: 15px;color: #00000082;font-size: small;">
-            This section contains common resources like Notice, course list, outlines etc.
-
-          </div>
-          </p>
-          <hr>
-
-          <p class="dropdown-item2" style="text-align: left;margin-top: -2px;color: #000000bb;font-size: medium;">
-            #Course materials (formerly, "Browse Semesters")<br>
-          <div class="description" style="margin: 15px;color: #00000082;font-size: small;">
-            This section contains a Semester Selector to find course materials for your specific semesters. I have also
-            included a Search Bar to search for the exact courses you are looking for. (The results list is a bit bugged
-            on mobile, so try hiding the keyboard first before trying to scroll.)
-
-          </div>
-          </p>
-          <hr>
-
-          <p class="dropdown-item2" style="text-align: left;margin-top: -2px;color: #000000bb;font-size: medium;">
-            #Extracurriculars<br>
-          <div class="description" style="margin: 15px;color: #00000082;font-size: small;">
-            Academics are all about CGPA, but Job Market asks more from you. Are you willing to put the effort?
-
-          </div>
-          </p>
-          <hr>
-
-        </div>
-      </div>
-
-      <!-- ------------------------------------------------------------------------- -->
-
-      <script src="js/drop-down.js">
-      </script>
-
-      <!-- -------------------------------------------------------- -->
-      <br>
-      <!-- <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br> -->
 
 
-      <div style="justify-content: center;display:flex;">
+
+      <!-- <div style="justify-content: center;display:flex;">
         <hr
           style="border: 5px solid rgba(0, 0, 0, 0.619);
       border-radius: 5px;margin-left: 150px;margin-right: 150px;margin-bottom: 50px;min-width: 200px;width:50%;max-width: 500px;;">
-      </div>
+      </div> -->
 
       <!-- TABLE FOR SOCIALS AND END CREDIT -->
 
 
+      <br><br><br>
       <!-- END CREDIT  -->
       <div align="center">
         <div>
@@ -485,7 +209,7 @@
 
 
 
-        <div style="margin-bottom: 20px;margin-top: 10px;">
+        <div style="margin-bottom: 10px;margin-top: 10px;">
           <!-- BOTTOM CREDITS -->
           <p align=center style="color:rgba(0, 0, 0, 0.422);width: 80%;max-width:550px;font-size: small;"><small
               style="font-size: x-small;"><b>UNOFFICIAL</b>
@@ -503,77 +227,28 @@
           </script>
         </div>
       </div>
-      <!-- <div style="justify-content: center;display:flex;">
-    <hr style="border: 5px solid rgba(0, 0, 0, 0.127);
-  border-radius: 5px;margin-bottom: 0px;margin-top: -5px;width:150px">
-  </div> -->
 
 
 
-      <!-- GO TOP RELATIVE LINK -->
+      <script src="js/faq.dropdown.js"></script>
+      <script src="js/faq.tooltip.js"></script>
 
-      <!-- <p id="bottom" align="right"><small><a href="#top" style="color:rgba(0, 0, 0, 0.24);">go to top</a></small></p> -->
 
+      <!-- <h1 align="center">oUITS-Resources</h1> -->
+
+      <p class="highlights-5" align="center" style="color: rgba(0, 0, 0, 0.649);margin-top: 15px;">
+        <!-- <i>Browse resources for UITS Students</i> -->
+        <br>
+        <small style="font-size: small;">[mirror: <a href="https://ouits-res.netlify.app/"
+            style="color:rgba(4, 0, 128, 0.806);">Netlify</a> / <a href="https://b1tranger.github.io/oUITS-Resources/"
+            style="color:rgba(4, 0, 128, 0.806);">
+            GitHub</a>]</small>
+      </p>
       <br>
-      <br>
-
-      <!-- BOTTOM BAR "navbar" -->
-
-
-
-      <!-- -------------------------------------------------------------------- -->
-      <!-- FAQ Section -->
-      <!-- 
-  <div class="section" data-faq="What is HTML?|How do I use CSS?">
-    <div class="faq-icon">?</div>
-    <div class="faq-box"></div>
-  </div> 
-  <script src="faq.js"></script>
-  -->
-
-      <script src="js/faq.js"></script>
-
-
-      <!-- -------------------------------------------------------------------- -->
-
-      <!-- TO WORK OFFLINE -->
-
-      <!-- <script src="offline.js"></script> -->
-
-      <script>
-        if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/service-worker.js');
-        }
-      </script>
-
-      <script>
-        let preloaderDelay = 2000; // Time before preloader disappears (in ms)
-
-        // Check if user has already seen the preloader
-        if (localStorage.getItem("seenPreloader")) {
-          document.getElementById("preloader").style.display = "none";
-          document.getElementById("content").style.display = "block";
-          document.getElementById("content").classList.add("fade-in");
-        } else {
-          // Show the preloader only for first-time visitors
-          localStorage.setItem("seenPreloader", "true");
-
-          window.onload = function () {
-            setTimeout(function () {
-              document.getElementById("preloader").classList.add("fade-out");
-
-              setTimeout(function () {
-                document.getElementById("preloader").style.display = "none";
-                document.getElementById("content").style.display = "block";
-                document.getElementById("content").classList.add("fade-in");
-              }, 1000); // Match fade-out duration
-            }, preloaderDelay);
-          };
-        }
-      </script>
-
 
     </div>
+
+
 
     <div class="navbar-5">
       <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>oUITS Resources</i></p>

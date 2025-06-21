@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/top.navbar.css">
+    <link rel="stylesheet" href="css/faq.dropdown.css">
+    <link rel="stylesheet" href="css/faq.tooltip.css">
+    <link rel="stylesheet" href="css/credit.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/academics.menubtn.css">
+
+    <style>
+        li {
+            padding: 5px;
+        }
+
+
+        body {
+            font-size: large;
+        }
+
+        /* HIDE SCROLLBAR */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid rgba(31, 106, 168, 0);
+            border-radius: 10px;
+        }
+
+        td {
+            min-width: 200px;
+        }
+
+        .parent-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 16px;
+            margin: auto;
+            width: 95%;
+            max-width: 500px;
+        }
+
+        .link-logo:hover {
+            transform: translateY(-5px);
+            transition: transform 1s
+        }
+
+        .container-6 {
+            display: grid;
+            place-items: center;
+            grid-template-columns: auto auto;
+            border-radius: 15px;
+            padding: 10px;
+            margin: 20px auto;
+            width: 79%;
+            max-width: 350px;
+            /*the button visibility*/
+            position: relative;
+            column-gap: 30px;
+            row-gap: 12%;
+
+        }
+
+        .container-6 a:hover {
+            transform: translateY(-5px);
+            transition: transform 1s
+        }
+
+        /* .container-6>div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+        }  */
+
+        .container-6>div>div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+            /* margin-top: 50px; */
+
+        }
+    </style>
+</head>
+
+<body style="background-color: #333;">
+    <div style="background-color: #333;display: block;width: 100%;height: 40px;position: fixed;top:0;z-index: 1;">
+    </div>
+
+    <div
+        style="background-color: 	#FAF9F6; margin: 20px;border-radius: 20px;margin-bottom: 50px;box-shadow: 0.5px 0.5px 10px black;">
+
+
+
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Academics.html">Academics</a></li>
+                    <li><a href="#" class="active">Extracurriculars</a></li>
+                    <li><a href="References.html">References</a></li>
+                    <!-- <li><a href="https://ouits-res.netlify.app/" target="_blank">Resources</a></li> -->
+                    <!-- <li><a href="contact.html">Contact</a></li> -->
+                </ul>
+            </div>
+        </nav>
+        <br><br><br><br><br><br><br>
+
+
+
+        <p class="highlights-5" align="center"
+            style="color: rgba(0, 0, 0, 0.649);margin-bottom: -5px;margin-top: 15px;">
+            <small><i>Portal for Extracurriculars</i></small>
+        </p>
+
+        <div class="section"
+            data-faq="Academics are all about CGPA, but Job Market asks more from you.||Are you willing to put the effort?">
+            <div class="faq-icon">?</div>
+            <div class="faq-box"></div>
+        </div>
+
+        <div style="width:76%;max-width: 600px; background-color: #1B262C;" class="container-5" align="center">
+            <table class="resources-table-5" align="center" style="width:90%; margin: auto;">
+
+                <tr>
+                    <td style="max-width: 300px;margin: auto;border-radius: 20px;">
+                        <a href="D1/CP-aux.html" class="cell-link">
+                            Programming
+                    </td>
+
+                    <td style="max-width: 300px;margin: auto;margin-top: 10px;border-radius: 20px;">
+                        <a href="D1/Curated-Resources.html" class="cell-link">
+                            Curated Resources
+                        </a>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <!-- ------------------------------------------------------------ -->
+
+        <div class="container-5" align=center style="max-width:500px;background-color: #1B262C;">
+            <table class="resources-table-5" align=center>
+                <tr>
+                    <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">Tutorials Collection
+                    </p>
+                </tr>
+
+                <tr>
+                    <!-- 3rd container with different menu button -->
+                    <td class="menu-button" id="menuButton3" align="center" style="color: rgba(240, 248, 255, 0.85);margin-left: auto;
+                margin-right: auto;">
+
+                        <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);padding: 5%;">
+                            UITS-affiliate
+                        </p>
+                    </td>
+                </tr>
+
+               
+                <tr><!-- 2ndcontainer with menu button -->
+                    <td class="menu-button" id="menuButton1" align="center" style="color: rgba(240, 248, 255, 0.85);margin-left: auto;
+                margin-right: auto;">
+
+                        <p class="cell-link" align="center" style="color: rgba(240, 248, 255, 0.649);padding: 5%;">
+                            People I
+                            want to
+                            keep following</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="margin-left: auto;
+    margin-right: auto;">
+                        <!-- <p> -->
+                        <a class="cell-link" href="D1/My-guides.html">
+                            b1tranger @YT
+                        </a>
+                        <!-- </p> -->
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <!-- First popup -->
+        <div class="popup-menu" id="popupMenu1" style="max-width:400px; width: 60%;">
+            <div class="popup-close popup-close-btn"></div>
+            <!-- <div class="popup-menu-title">Resources & Tools</div> -->
+            <div class="popup-menu-categories">
+                <div class="popup-menu-category" align="center">
+                    <!-- <div class="category-title">Coding Resources</div> -->
+                    <div class="link-item">
+                        <a href="https://en.wikipedia.org/wiki/Ashik_Chowdhury" target="_blank">
+                            Ashik Chowdhury <br>(BIDA)
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a href="https://en.wikipedia.org/wiki/Mahmudul_Hasan_Sohag" target="_blank">
+                            Mahmudul Hasan Sohag<br> (Onnorokom Group)
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a href="https://www.linkedin.com/in/md-maksudul-hossain-4300a095" target="_blank">
+                            Md Maksudul Hossain <br>(Onnorokom Pathshala)
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a href="https://github.com/ShahjalalShohag" target="_blank">
+                            youkn0wwho <br>(Shahjalal Shohag)
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a href="https://thebigcb.com/" target="_blank">
+                            Code Bullet
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a href="https://www.3blue1brown.com/" target="_blank">
+                            3blue1brown<br> (Grant Sanderson)
+                        </a>
+                    </div>
+
+                    <!-- More links here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 3rd popup menu with different content -->
+        <div class="popup-menu" id="popupMenu3" style="max-width:400px; width: 60%;">
+            <div class="popup-close popup-close-btn"></div>
+            <!-- <div class="popup-menu-title">Resources & Tools</div> -->
+            <div class="popup-menu-categories">
+                <div class="popup-menu-category" align="center">
+                    <!-- <div class="category-title">Coding Resources</div> -->
+                    <!-- <div class="link-item">
+                    <a href="https://www.youtube.com/@CPSAcademy" target="_blank">
+                        Sakib bhai (Batch-52) ###Suggested it
+                    </a>
+                </div> -->
+                    <div class="link-item">
+                        <a href="https://www.youtube.com/@gowithhabib" target="_blank">
+                            Habibur Rahman (Batch-??)
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a href="https://www.youtube.com/@safridbhuiyan" target="_blank">
+                            Safrid Bhuiyan (Batch-53)
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a href="https://www.youtube.com/@TechTalkBangla" target="_blank">
+                            Mr. Al-Imtiaz (Faculty)
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a href="#" target="_blank">
+                            #
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a href="#" target="_blank">
+                            #
+                        </a>
+                    </div>
+                    <!-- More links here -->
+                </div>
+            </div>
+        </div>
+        <!-- Shared backdrop for all popups -->
+        <div class="popup-backdrop" id="popupBackdrop">
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Button and popup pairs
+                    const menuPairs = [
+                        { button: 'menuButton1', popup: 'popupMenu1' },
+                        //  { button: 'menuButton2', popup: 'popupMenu2' },
+                        { button: 'menuButton3', popup: 'popupMenu3' }
+                        //  { button: 'menuButton4', popup: 'popupMenu4' }
+                        // Add more pairs as needed
+                    ];
+
+                    const popupBackdrop = document.getElementById('popupBackdrop');
+                    let activePopup = null;
+
+                    // Set up each button-popup pair
+                    menuPairs.forEach(pair => {
+                        const button = document.getElementById(pair.button);
+                        const popup = document.getElementById(pair.popup);
+
+                        button.addEventListener('click', function () {
+                            // Open this specific popup
+                            popup.classList.add('open');
+                            popupBackdrop.classList.add('open');
+                            button.classList.add('active');
+                            activePopup = popup;
+                        });
+                    });
+
+                    // Close buttons for all popups
+                    const closeButtons = document.querySelectorAll('.popup-close-btn');
+                    closeButtons.forEach(btn => {
+                        btn.addEventListener('click', closeActivePopup);
+                    });
+
+                    // Backdrop click closes any open popup
+                    popupBackdrop.addEventListener('click', closeActivePopup);
+
+                    function closeActivePopup() {
+                        // Remove active class from all buttons
+                        document.querySelectorAll('.menu-button').forEach(btn => {
+                            btn.classList.remove('active');
+                        });
+
+                        // Close all popups
+                        document.querySelectorAll('.popup-menu').forEach(popup => {
+                            popup.classList.remove('open');
+                        });
+
+                        // Hide backdrop
+                        popupBackdrop.classList.remove('open');
+                        activePopup = null;
+                    }
+                });
+            </script>
+        </div>
+
+        <!-- ------------------------------------------------------- -->
+
+
+        <div class="container-5" align=center style="max-width:500px;width:75%;background-color: #1B262C;">
+            <table class="resources-table-5" align=center style="width:90%;">
+                <tr>
+                    <p class="highlights" style="color: rgba(240, 248, 255, 0.649);">Blog collection
+                    </p>
+                </tr>
+                <tr>
+                    <!-- <td style="background-color: #00000000;margin: auto;min-width: 150px;" align=center> -->
+                    <div class="container-6"
+                        style="background-color: #00000000;margin: auto;justify-content: center;column-gap: 10%;">
+
+                        <div class="menu-button" id="blogbtn1" align="center"
+                            style="background-color: rgba(0, 0, 0, 0.247);height:60px;width:100px;font-size:medium;max-width: 300px;">
+                            <p class="cell-link" align="center" style="color: rgb(255, 255, 255);">
+                                UITS blog
+                            </p>
+
+                        </div>
+                        <div class="menu-button" id="blogbtn2" align="center"
+                            style="background-color: rgba(0, 0, 0, 0.247);height:60px;width:100px;font-size:medium;max-width: 300px;">
+                            <p class="cell-link" align="center" style="color: rgb(255, 255, 255);">
+                                Coder's blog
+                            </p>
+
+                        </div>
+                        <div class="menu-button" id="blogbtn3" align="center"
+                            style="background-color: rgba(0, 0, 0, 0.247);height:60px;width:100px;font-size:medium;max-width: 300px;">
+                            <p class="cell-link" align="center" style="color: rgb(255, 255, 255);">
+                                Online blog
+                            </p>
+
+                        </div>
+                        <div class="menu-button" id="blogbtn4" align="center"
+                            style="background-color: rgba(0, 0, 0, 0.247);height:60px;width:100px;font-size:medium;max-width: 300px;">
+                            <p class="cell-link" align="center" style="color: rgb(255, 255, 255);">
+                                Friends' blog
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <!-- </td> -->
+                </tr>
+
+            </table>
+        </div>
+
+
+        <!-- BLOGGER IFRAME -->
+
+        <table style="width:90%; max-width:700px; min-width:300px;border-color: #00000000;margin: auto;">
+            <tr>
+                <th>
+
+                    <!-- "topnav3" -->
+
+                    <div class="topnav-3">
+                        <h3>
+                            <p align=center style="color:rgba(255, 255, 255, 0.776);padding-top: 15px;">
+                                <i>b1tranger</i>'s blog
+                            </p>
+                        </h3>
+                    </div>
+
+                    <!-- "top-bar2" -->
+
+                    <div class="top-bar-2">
+                        <div class="iframe-container-2">
+                            <iframe class="scroll-text" src="https://b1tranger-coding.blogspot.com/"
+                                title="Blog Preview"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="overlay-2"></div>
+                    <a href="https://b1tranger-coding.blogspot.com/" class="view-more-link-2" target="_blank">View
+                        More</a>
+                </th>
+            </tr>
+        </table>
+
+        <!-- First popup menu -->
+        <div class="popup-menu" id="blogmenu1" style="max-width:400px; width: 60%;">
+            <div class="popup-close popup-close-btn"></div>
+            <!-- <div class="popup-menu-title">Content Creators</div> -->
+            <div class="popup-menu-categories">
+                <div class="popup-menu-category" align="center">
+                    <!-- <div class="category-title">People I Follow</div> -->
+                    <div>
+                        <p style="color: #f1f1f1;"><i>Faculties' work</i></p>
+                    </div>
+                    <div class="link-item">
+                        <a href="https://mrinmoyakash.blogspot.com/" target="_blank">
+                            Mrinmoy Biswas Akash<br><small style="font-size: small;"><i>@blogspot</i></small>
+                        </a>
+                    </div>
+                    <div>
+                        <p style="color: #f1f1f1;"><i>Students' work</i></p>
+                    </div>
+                    <div class="link-item">
+                        <a href="https://uitscse.hashnode.dev/" target="_blank">
+                            @xnocode<br><small style="font-size: small;"><i>@hashnode</i></small>
+                        </a>
+                    </div>
+
+                    <!-- More links here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Second popup menu with different content -->
+        <div class="popup-menu" id="blogmenu2" style="max-width:400px; width: 60%;">
+            <div class="popup-close popup-close-btn"></div>
+            <!-- <div class="popup-menu-title">Resources & Tools</div> -->
+            <div class="popup-menu-categories">
+                <div class="popup-menu-category" align="center">
+                    <!-- <div class="category-title">Coding Resources</div> -->
+                    <div class="link-item">
+                        <a href="https://codeforces.com/blog/YouKn0wWho" target="_blank">
+                            YouKn0wWho<br><small style="font-size: small;"><i>@codeforces</i></small>
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <a href="https://www.shafaetsplanet.com/" target="_blank">
+                            Shafaet's blog<br><small style="font-size: small;"><i>(FSC Suggested)</i></small>
+                        </a>
+                    </div>
+                    <!--                 <div class="link-item">
+                    <a href="#" target="_blank">
+                        #
+                    </a>
+                </div> -->
+
+
+                    <!-- More links here -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 3rd popup menu with different content -->
+        <div class="popup-menu" id="blogmenu3" style="max-width:400px; width: 60%;">
+            <div class="popup-close popup-close-btn"></div>
+            <!-- <div class="popup-menu-title">Resources & Tools</div> -->
+            <div class="popup-menu-categories">
+                <div class="popup-menu-category" align="center">
+                    <!-- <div class="category-title">Coding Resources</div> -->
+                    <div class="link-item">
+                        <a href="https://www.reddit.com/r/programming/" target="_blank">
+                            r/programming<br><small style="font-size: small;"><i> @reddit</i></small>
+                        </a>
+                    </div>
+                    <!--                 <div class="link-item">
+                    <a href="#" target="_blank">
+                        #
+                    </a>
+                </div> -->
+                    <!-- More links here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 4th popup menu with different content -->
+        <div class="popup-menu" id="blogmenu4" style="max-width:400px; width: 60%;">
+            <div class="popup-close popup-close-btn"></div>
+            <!-- <div class="popup-menu-title">Resources & Tools</div> -->
+            <div class="popup-menu-categories">
+                <div class="popup-menu-category" align="center">
+                    <!-- <div class="category-title">Coding Resources</div> -->
+                    <div class="link-item">
+                        <a href="https://walinahmed.blogspot.com/" target="_blank">
+                            Walin Ahmed <br><small style="font-size: small;"><i>(DU, Banking and Insurance)</i></small>
+                        </a>
+                    </div>
+                    <!--                 <div class="link-item">
+                    <a href="#" target="_blank">
+                        #
+                    </a>
+                </div> -->
+                    <!-- More links here -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Shared backdrop for all popups -->
+        <div class="popup-backdrop" id="popupBackdrop"></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Button and popup pairs
+                const menuPairs = [
+                    { button: 'blogbtn1', popup: 'blogmenu1' },
+                    { button: 'blogbtn2', popup: 'blogmenu2' },
+                    { button: 'blogbtn3', popup: 'blogmenu3' },
+                    { button: 'blogbtn4', popup: 'blogmenu4' }
+
+                    // Add more pairs as needed
+                ];
+
+                const popupBackdrop = document.getElementById('popupBackdrop');
+                let activePopup = null;
+
+                // Set up each button-popup pair
+                menuPairs.forEach(pair => {
+                    const button = document.getElementById(pair.button);
+                    const popup = document.getElementById(pair.popup);
+
+                    button.addEventListener('click', function () {
+                        // Open this specific popup
+                        popup.classList.add('open');
+                        popupBackdrop.classList.add('open');
+                        button.classList.add('active');
+                        activePopup = popup;
+                    });
+                });
+
+                // Close buttons for all popups
+                const closeButtons = document.querySelectorAll('.popup-close-btn');
+                closeButtons.forEach(btn => {
+                    btn.addEventListener('click', closeActivePopup);
+                });
+
+                // Backdrop click closes any open popup
+                popupBackdrop.addEventListener('click', closeActivePopup);
+
+                function closeActivePopup() {
+                    // Remove active class from all buttons
+                    document.querySelectorAll('.menu-button').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    // Close all popups
+                    document.querySelectorAll('.popup-menu').forEach(popup => {
+                        popup.classList.remove('open');
+                    });
+
+                    // Hide backdrop
+                    popupBackdrop.classList.remove('open');
+                    activePopup = null;
+                }
+            });
+        </script>
+
+
+        <!-- ---------------------------------------------------------- -->
+
+        <br><br><br> 
+        
+
+        <script src="js/faq.dropdown.js"></script>
+        <script src="js/faq.tooltip.js"></script>
+
+        <!-- END CREDIT  -->
+        <div align="center">
+            <div>
+                <!-- SOCIAL LINKS -->
+
+                <p align=center style="color: #00000086;">Join our Socials </p>
+                <p align=center style="color: #00000061;font-size: x-small;margin-top: -10px;"><i>for Updates and
+                        Feedback</i>
+                </p>
+
+                <a href="https://discord.gg/weetUpfS5X" target="_blank"><img src=images\Social-logo\discord-logo.webp
+                        alt="Discord Server (Protein Shake)" width="70" height="70"></a>
+
+                <a href="https://t.me/s/oUITS_ORnU" target="_blank"><img src=images\Social-logo\telegram-logo2.webp
+                        alt="Telegram Channel (oUITS - Online Resources and Updates)" width="70" height="70"></a>
+
+                <a href="https://facebook.com/groups/1074592960836263/" target="_blank"><img
+                        src=images\Social-logo\fb-logo.webp alt="Facebook Group (oUITS - Online Resources)" width="70"
+                        height="70"></a>
+
+                <a href="https://github.com/oU1TS" target="_blank"><img src=images\Social-logo\github-logo2.webp
+                        alt="Facebook Group (oUITS - Online Resources)" width="70" height="70"></a>
+
+            </div>
+
+
+
+            <p align=center
+                style="color:rgba(0, 0, 0, 0.422);width: 95%;max-width:500px;font-size: small;font-style: italic;">
+                Copyright
+                &copy; 2024-<span id="year"></span>
+                b1tranger. </p>
+
+
+
+            <div style="margin-bottom: 20px;margin-top: 10px;">
+                <!-- BOTTOM CREDITS -->
+                <p align=center style="color:rgba(0, 0, 0, 0.422);width: 80%;max-width:550px;font-size: small;"><small
+                        style="font-size: x-small;"><b>UNOFFICIAL</b>
+                        Online
+                        Resources Archiver for UITS<br>This project is licensed under the <a
+                            href="https://www.apache.org/licenses/LICENSE-2.0" style="color:rgba(4, 0, 128, 0.806);"
+                            target="_blank">Apache License 2.0</a>.
+                        You may use, modify, and distribute its contents, but you must provide attribution and include
+                        the
+                        original
+                        license.</small></p>
+
+
+                <script>
+                    document.getElementById("year").textContent = new Date().getFullYear();
+                </script>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+    <div class="navbar-5">
+        <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>oUITS Resources</i></p>
+        </font>
+
+    </div>
+</body>
+
+</html>
