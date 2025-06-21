@@ -923,4 +923,8 @@ now Browse Curated Resources*/
     display: block !important;
     margin-bottom: 100px !important;
   }
+
+  .randomBS-2{
+    display: none;
+  }
 }
